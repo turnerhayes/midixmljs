@@ -1,0 +1,46 @@
+{
+	"extends": "eslint:recommended",
+	"parser": "typescript-eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": 7
+	},
+	"plugins": [
+		"typescript"
+	],
+	"rules": {
+		"strict": "error",
+		"no-use-before-define": "error",
+		"curly": "error",
+		"eqeqeq": "error",
+		"dot-notation": "error",
+		"no-var": "error",
+		"no-caller": "error",
+		"guard-for-in": "warn",
+		"no-eq-null": "error",
+		"no-console": "warn",
+		"no-lone-blocks": "error",
+		"no-magic-numbers": [
+			"warn",
+			{
+				"ignore": [
+					-1,
+					0,
+					1
+				],
+				"ignoreArrayIndexes": true
+			}
+		],
+		"quotes": [
+			"error",
+			"double",
+			{
+				"allowTemplateLiterals": true,
+				"avoidEscape": true
+			}
+		],
+		"quote-props": ["warn", "as-needed"],
+		"semi": ["error", "always"],
+		"indent": ["error", 2, { "SwitchCase": 1 }],
+		"no-debugger": "warn"
+	}
+}

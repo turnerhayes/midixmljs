@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>midi2mxml output</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./highlight.js/styles/a11y-dark.css" />
+    <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css" />
+</head>
+<body>
+    <ul id="tablist" class="tablist">
+        <li class="selected" data-tab="score">Score</li>
+        <li data-tab="xml">XML</li>
+    </ul>
+    <div class="tab score">
+        <div id="container"></div>
+        <div class="spinner"></div>
+    </div>
+
+    <div class="tab xml hidden">
+        <textarea id="xml-display"></textarea>
+    </div>
+
+    <script src="./opensheetmusicdisplay.js"></script>
+    <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="highlight.js/highlight.pack.js"></script>
+    <script src="./xml-formatter.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
