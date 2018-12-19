@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "outDir": "./lib",
+        "target": "es6"
+    },
+    "include": [
+        "./src/**/*.ts"
+    ]
+}
