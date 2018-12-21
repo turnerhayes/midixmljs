@@ -42,8 +42,6 @@
     "midijs": "^0.12.0",
     "opensheetmusicdisplay": "^0.5.1",
     "text-encoding": "^0.7.0",
-    "wgxpath": "^1.2.0",
-    "xml-writer": "^1.7.0",
-    "xmldom": "^0.1.27"
+    "xml-writer": "^1.7.0"
   }
 }
