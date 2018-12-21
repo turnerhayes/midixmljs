@@ -1,5 +1,4 @@
 import createDebugger from "debug";
-import { writeFileSync } from "fs";
 
 import Channel from "./Channel";
 import IKeySignature from "./IKeySignature";
@@ -408,26 +407,6 @@ class MIDIFile {
 
   toArrayBuffer(): ArrayBuffer {
     const buffers = this.sortBuffers();
-
-    try {
-      writeFileSync(
-        "./midifile.json",
-        JSON.stringify(
-          buffers/* .reduce(
-            (buffers: IBufferInfo[], bufferInfo) => {
-              if (bufferInfo.meta) {
-                buffers.push(bufferInfo.meta);
-              }
-
-              return buffers;
-            },
-            []
-          ) */,
-          null,
-          "  "
-        )
-      )
-    } catch (ex) {}
 
     const trackCount: number = Object.keys(this.tracks).length;
 
