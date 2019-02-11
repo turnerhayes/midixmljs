@@ -185,7 +185,7 @@ class MIDIFile {
       offset: number,
       program: number,
       track?: number,
-      channel: Channel,
+      channel?: Channel,
     }
   ): void {
     const programChangeEvent = getProgramChangeEvent({ channel, program });
@@ -316,7 +316,7 @@ class MIDIFile {
       channel?: Channel,
       velocity?: number,
       release?: number,
-      meta: object,
+      meta?: object,
     }
   ): void {
     const noteOnEvent = getNoteOnEvent(note, channel, velocity);
