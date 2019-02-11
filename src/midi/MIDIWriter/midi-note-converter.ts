@@ -1,5 +1,5 @@
-import IPitch from "./IPitch";
-import NoteStep from "./NoteStep";
+import { IPitch } from "./IPitch";
+import { NoteStep } from "./NoteStep";
 
 export function NoteNumberToName(note: number): IPitch {
   let step;

@@ -1,5 +1,3 @@
-#!/usr/bin/env nodejs
-
 /* eslint-disable */
 
 type NoteItem = { note: number, channel: number, duration: number, instrumentId: number };
