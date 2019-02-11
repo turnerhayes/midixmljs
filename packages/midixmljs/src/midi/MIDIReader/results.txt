@@ -1,0 +1,3231 @@
+header: { fileType: 1, trackCount: 2, division: { ticks: 256 } }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 121, controllerValue: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 64, controllerValue: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 91, controllerValue: 48 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 10, controllerValue: 51 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 7, controllerValue: 88 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 121, controllerValue: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 64, controllerValue: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 91, controllerValue: 48 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 10, controllerValue: 51 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: ControllerChangeEvent { type: 8, channel: 0, controllerNumber: 7, controllerValue: 88 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 55 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 73 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 72 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 54, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 71 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 54, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 62, velocity: 69 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 62, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 51 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 41, velocity: 55 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 41, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 51 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 74 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 71, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 71, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 71 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 72 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 72 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 69 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 54, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 54, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 62, velocity: 69 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 62, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 3,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 116,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 41, velocity: 52 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 49 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 41, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 100,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 26,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 72 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 55 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 79, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 69 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 79, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 52 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 51 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 56, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 59, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 56, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 59, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 59, velocity: 69 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 56, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 59, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 56, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 59, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 59, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 56, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 59, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 56, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 59, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 46 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 55 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 69 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 54, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 54, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 62, velocity: 73 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 62, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 41, velocity: 55 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 41, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 74 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 106,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 55 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 54 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 38, velocity: 50 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 38, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 54, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 54, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 62, velocity: 71 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 106,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 62, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 54, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 54, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 40, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 54 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 40, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 47, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 72 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 47, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 47, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 106,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 47, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 67, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 47, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 47, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 67, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 72 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 73 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 53 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 54 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 52 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 74 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 77 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 89 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 71, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 108,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 71, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 83 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 74 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 80 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 93 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 108,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 66, velocity: 84 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 74 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 54, velocity: 75 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 75 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 54, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 62, velocity: 96 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 254,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 57 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 108,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 62, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 66, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 65, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 79 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 77 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 55 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 85 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 80 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 90 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 135,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 65, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 80 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 89,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 39,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 97 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 97 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 76 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 90 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 88 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 58 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 57, velocity: 92 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 57, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 79, velocity: 54 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 84 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 84 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 84 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 74 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 77 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 103 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 55, velocity: 98 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 79, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 63 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 60, velocity: 91 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 55, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 60, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 68, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 71, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 56 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 81 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 56, velocity: 75 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 59, velocity: 75 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 56, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 95 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 59, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 56, velocity: 91 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 59, velocity: 84 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 56, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 59, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 77 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 384,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 68, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 71, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 71 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 71 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 40, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 256,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 68 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 73 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 73 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 40, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 33, velocity: 65 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 36, velocity: 74 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 40, velocity: 77 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 36, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 93 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 40, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 254,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 43 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 108,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 67, velocity: 64 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 33, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 36, velocity: 80 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 60 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 40, velocity: 76 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 43, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 40, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 91 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 43, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 254,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 108,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 67, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 67 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 66, velocity: 79 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 79 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 36, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 38, velocity: 84 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 62 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 42, velocity: 76 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 42, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 54 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 50, velocity: 94 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 42, velocity: 89 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 50, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 126,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 53 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 80 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 42, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 119,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 7,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 66, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 61 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 65, velocity: 71 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 38, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 41, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 54 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 83 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 53, velocity: 88 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 256,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 65, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 70 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 69 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 41, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 53, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 40, velocity: 82 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 52, velocity: 82 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 84, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 88, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 56,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 74, velocity: 66 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 362,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 74, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 72 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 256,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 84 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 71 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 59 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 362,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 20,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 64, velocity: 78 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 128,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 64, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 67, velocity: 82 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 51,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 2,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 84, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 1,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 88, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 35,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 39,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 67, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 83 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 40, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 52, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 33, velocity: 37 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 37 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 384,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 35 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 35 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 35 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 35 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 276,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 48 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 84, velocity: 48 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 88, velocity: 48 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 93, velocity: 48 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 276,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 33, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 36, velocity: 41 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 41 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 384,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 84, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 88, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 93, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 36, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 33, velocity: 36 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 36 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 384,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 69, velocity: 31 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 72, velocity: 31 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 76, velocity: 31 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 31 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 276,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 69, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 72, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 76, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 81, velocity: 47 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 84, velocity: 47 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 88, velocity: 47 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 93, velocity: 47 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 660,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 81, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 84, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 88, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 93, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 33, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 36, velocity: 18 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 48, velocity: 18 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 768,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 88, velocity: 22 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 36, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 48, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 33, velocity: 21 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 45, velocity: 21 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 93, velocity: 22 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 96, velocity: 22 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 36,
+     event: NoteOnEvent { type: 2, channel: 0, noteNumber: 100, velocity: 22 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 1044,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 88, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 93, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 96, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 100, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 33, release: 0 } },
+  done: false }
+{ value: 
+   { trackNumber: 2,
+     deltaTime: 0,
+     event: NoteOffEvent { type: 1, channel: 0, noteNumber: 45, release: 0 } },
+  done: false }

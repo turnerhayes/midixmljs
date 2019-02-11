@@ -1,9 +1,9 @@
 import createDebugger from "debug";
 
-import Channel from "./Channel";
-import IKeySignature from "./IKeySignature";
+import { Channel } from "./Channel";
+import { IKeySignature } from "./IKeySignature";
 import { NoteNumberToName } from "./midi-note-converter";
-import getVariableLengthBuffer from "./variable-length-value";
+import { toVariableLengthValue } from "../utils/variable-length-value";
 
 const debug = createDebugger("xml2midi:MIDIFile");
 
@@ -29,8 +29,12 @@ interface IBufferInfo {
   meta?: any;
 }
 
-const stringToCharCodeArray = (str: string): number[] => {
-  return str.split("").map((chr) => chr.charCodeAt(0));
+const stringToCharCodeArray = (str: string): Uint8Array => {
+  return new Uint8Array(
+    str.split("").map(
+      (chr) => chr.charCodeAt(0)
+    )
+  );
 };
 
 const mthdString = stringToCharCodeArray("MThd");
@@ -38,7 +42,7 @@ const mtrkString = stringToCharCodeArray("MTrk");
 
 const END_OF_TRACK_EVENT: Uint8Array = new Uint8Array([ 0xFF, 0x2F, 0x00]);
 
-const numberToBytes = (num: number, minBytes: number): number[] => {
+const numberToBytes = (num: number, minBytes: number): Uint8Array => {
   const bytes: number[] = [];
 
   do {
@@ -47,7 +51,7 @@ const numberToBytes = (num: number, minBytes: number): number[] => {
     num = num >> 8;
   } while (num > 0 || bytes.length < minBytes);
 
-  return bytes;
+  return new Uint8Array(bytes);
 };
 
 const getNoteOnEvent = (
@@ -105,18 +109,34 @@ const getFileHeader = (
     1;
 
   // # of divisions per quarter note (15 bits only)
-  const divisionsBytes: number[] = numberToBytes(divisions & 0x7FFF, 2);
+  const divisionsBytes = numberToBytes(divisions & 0x7FFF, 2);
 
-  return new Uint8Array([
-    ...mthdString,
-    // Length field, MSB first
-    0, 0, 0, 6,
-    // Format field, MSB first
-    0, format,
-    // number of tracks in the file
-    ...numberToBytes(trackCount, 2),
-    ...divisionsBytes
-  ]);
+  const trackCountBytes = numberToBytes(trackCount, 2);
+
+  const totalLength = mthdString.byteLength +
+    // 4 bytes for length field  
+    4 +
+    // 2 bytes for format field
+    2 +
+    trackCountBytes.byteLength +
+    divisionsBytes.byteLength;
+
+  const header = new Uint8Array(totalLength);
+
+  let index = 0;
+  header.set(mthdString, index);
+  index += mthdString.byteLength;
+  // Length field, MSB first
+  header.set(Uint8Array.of(0, 0, 0, 6), index);
+  index += 4;
+  header.set(Uint8Array.of(0, format), index);
+  index += 2;
+  header.set(trackCountBytes, index);
+  index += trackCountBytes.byteLength;
+  header.set(divisionsBytes, index);
+  index += divisionsBytes.byteLength;
+
+  return header;
 };
 
 const getTrackHeader = (
@@ -247,13 +267,29 @@ class MIDIFile {
   }
 
   setTitle(title: string): void {
-    const event = new Uint8Array([
-      MIDIMessageStatus.Meta,
-      MIDIMessageSubtype.TrackName,
-      // add 1 for null terminator byte
-      ...getVariableLengthBuffer(title.length + 1),
-      ...stringToCharCodeArray(title + "\0"),
-    ]);
+    // add 1 for null terminator byte
+    const length = toVariableLengthValue(title.length + 1);
+    const chars = stringToCharCodeArray(title + "\0");
+
+    const totalLength = 2 + // 1 byte each for status and subtype
+      length.byteLength +
+      chars.byteLength;
+
+    const event = new Uint8Array(totalLength);
+    
+    let index = 0;
+    event.set(
+      Uint8Array.of(
+        MIDIMessageStatus.Meta,
+        MIDIMessageSubtype.TrackName,
+      ),
+      index
+    );
+    index += 2;
+    event.set(length, index);
+    index += length.byteLength;
+    event.set(chars, index);
+    index += chars.byteLength;
 
     this.buffers.push({
       event,
@@ -342,14 +378,27 @@ class MIDIFile {
   }
 
   setTempo(tempo: number): void {
-    let microsecondsPerQuarterNote: number = 6e7 / tempo;
+    const microsecondsPerQuarterNote: number = 6e7 / tempo;
+    const tempoBytes = numberToBytes(microsecondsPerQuarterNote, 3);
 
-    const event = new Uint8Array([
-      MIDIMessageStatus.Meta,
-      MIDIMessageSubtype.SetTempo,
-      3,
-      ...numberToBytes(microsecondsPerQuarterNote, 3),
-    ]);
+    // 1 byte each for status type and meta type, and 1 for constant value 0x03 after meta type
+    const totalLength = 3 +
+      tempoBytes.byteLength;
+
+    const event = new Uint8Array(totalLength);
+
+    let index = 0;
+    event.set(
+      Uint8Array.of(
+        MIDIMessageStatus.Meta,
+        MIDIMessageSubtype.SetTempo,
+        3,
+      ),
+      index
+    );
+    index += 3;
+    event.set(tempoBytes, index);
+    index += tempoBytes.byteLength;
 
     this.omniTrackEvents.push({
       event,
@@ -422,7 +471,7 @@ class MIDIFile {
     
             const deltaTime = midiEventInfo.divisionOffset - prevDuration;
     
-            const deltaTimeBuffer = getVariableLengthBuffer(deltaTime);
+            const deltaTimeBuffer = toVariableLengthValue(deltaTime);
     
             total += deltaTimeBuffer.length;
     

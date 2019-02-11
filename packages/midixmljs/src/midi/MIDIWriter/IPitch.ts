@@ -1,6 +1,6 @@
-import NoteStep from "./NoteStep";
+import { NoteStep } from "./NoteStep";
 
-export default interface IPitch {
+export interface IPitch {
   step: NoteStep,
   octave: number,
   alter?: number,
