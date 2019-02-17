@@ -32,20 +32,20 @@ export class MIDIReader {
   public readonly header:IMIDIFileHeader;
 
   constructor(
-    buffer: ArrayBufferLike|Buffer
+    buffer: ArrayBuffer|DataView
   ) {
-    if (buffer instanceof Buffer) {
+    if (buffer instanceof DataView) {
       this.bufferOffset = buffer.byteOffset;
       this.bufferLength = buffer.byteLength;
       this.buffer = buffer.buffer;
+      this.dataView = buffer;
     }
     else {
       this.bufferOffset = 0;
       this.bufferLength = buffer.byteLength;
       this.buffer = buffer;
+      this.dataView = new DataView(this.buffer, this.bufferOffset, this.bufferLength);
     }
-
-    this.dataView = new DataView(this.buffer, this.bufferOffset, this.bufferLength);
 
     const fileHeaderChunk = this.readString(0, 4);
 

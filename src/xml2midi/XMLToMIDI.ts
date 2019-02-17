@@ -8,12 +8,12 @@
  */
 
 
-import { NoteStep } from "../midi/MIDIWriter/NoteStep";
+import { NoteStep } from "../midi/utils/NoteStep";
 import { Channel } from "../midi/MIDIWriter/Channel";
 import { IKeySignature, KeySharps } from "../midi/MIDIWriter/IKeySignature";
-import { IPitch } from "../midi/MIDIWriter/IPitch";
+import { IPitch } from "../midi/utils/IPitch";
 import MIDIFile from "../midi/MIDIWriter/MIDIFile";
-import { NoteNameToNumber } from "../midi/MIDIWriter/midi-note-converter";
+import { NoteNameToNumber } from "../midi/utils/midi-note-converter";
 
 
 interface ITimeSignature {

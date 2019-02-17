@@ -2,7 +2,7 @@ import createDebugger from "debug";
 
 import { Channel } from "./Channel";
 import { IKeySignature } from "./IKeySignature";
-import { NoteNumberToName } from "./midi-note-converter";
+import { NoteNumberToName } from "../utils/midi-note-converter";
 import { toVariableLengthValue } from "../utils/variable-length-value";
 
 const debug = createDebugger("xml2midi:MIDIFile");

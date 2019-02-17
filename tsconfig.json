@@ -4,10 +4,11 @@
         "target": "es5",
         "lib": [
             "dom",
-            "es2015"
+            "es2017"
         ]
     },
     "include": [
         "./src/**/*.ts"
-    ]
+    ],
+    "preset": "ts-jest"
 }

@@ -5,8 +5,8 @@ import { JSDOM } from "jsdom";
 import getMIDI from "./XMLToMIDI";
 
 // const filePath = resolve(__dirname, "musicxml", "Tim Minchin - Not Perfect.musicxml");
-// const filePath = resolve(__dirname, "musicxml", "Tim Minchin - Rock N Roll Nerd.musicxml");
-const filePath = resolve(__dirname, "musicxml", "Tim Minchin - You Grew on Me.musicxml");
+const filePath = resolve(__dirname, "musicxml", "Tim Minchin - Rock N Roll Nerd.musicxml");
+// const filePath = resolve(__dirname, "musicxml", "Tim Minchin - You Grew on Me.musicxml");
 
 new Promise(
   (resolve, reject) => readFile(
