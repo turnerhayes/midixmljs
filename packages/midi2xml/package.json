@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "browser": "build/lib.js",
   "dependencies": {
-    "@thayes/midi-tools": "file:../midi-tools",
+    "@thayes/midi-tools": "^0.1.0",
     "codemirror": "^5.40.2",
     "jasmid.ts": "^2.1.0",
     "object.values": "^1.1.0",
@@ -42,5 +42,6 @@
     "clean": "npm run clean:compile && npm run clean:build"
   },
   "author": "Turner Hayes <dev@turnerhayes.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "581abdda547762dfcded07e2701781cb9edea54f"
 }

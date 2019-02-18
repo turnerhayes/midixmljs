@@ -1,5 +1,5 @@
 {
-  "name": "xml2midi",
+  "name": "@thayes/xml2midi",
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
@@ -43,7 +43,8 @@
   "author": "Turner Hayes <dev@turnerhayes.com>",
   "license": "ISC",
   "dependencies": {
-    "@thayes/midi-tools": "file:../midi-tools",
+    "@thayes/midi-tools": "^0.1.0",
     "commander": "^2.19.0"
-  }
+  },
+  "gitHead": "581abdda547762dfcded07e2701781cb9edea54f"
 }
