@@ -1,0 +1,46 @@
+{
+  "name": "@thayes/midi2xml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "browser": "build/lib.js",
+  "dependencies": {
+    "@thayes/midi-tools": "file:../midi-tools",
+    "codemirror": "^5.40.2",
+    "jasmid.ts": "^2.1.0",
+    "object.values": "^1.1.0",
+    "text-encoding": "^0.7.0",
+    "xml-writer": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.5",
+    "@types/jsdom": "^12.2.2",
+    "@types/node": "^11.9.4",
+    "@typescript-eslint/eslint-plugin": "^1.3.0",
+    "@typescript-eslint/parser": "^1.3.0",
+    "eslint": "^5.14.0",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:dev": "jest --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "precompile": "npm run clean:compile",
+    "compile": "tsc",
+    "prebuild": "npm run clean:build",
+    "build": "webpack",
+    "clean:build": "rimraf build",
+    "clean:compile": "rimraf lib",
+    "clean": "npm run clean:compile && npm run clean:build"
+  },
+  "author": "Turner Hayes <dev@turnerhayes.com>",
+  "license": "ISC"
+}
