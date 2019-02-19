@@ -18,6 +18,10 @@
     "clean:compile": "rimraf lib",
     "clean": "npm run clean:compile && npm run clean:build"
   },
+  "files": [
+    "lib",
+    "build"
+  ],
   "author": "Turner Hayes<dev@turnerhayes.com>",
   "license": "ISC",
   "devDependencies": {
