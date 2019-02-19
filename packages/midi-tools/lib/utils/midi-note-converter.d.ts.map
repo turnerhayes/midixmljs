@@ -1,0 +1,1 @@
+{"version":3,"file":"midi-note-converter.d.ts","sourceRoot":"","sources":["../../src/utils/midi-note-converter.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAGlC,wBAAgB,gBAAgB,CAAC,IAAI,EAAE,MAAM,GAAG,MAAM,CAsDrD;AAcD,wBAAgB,gBAAgB,CAAC,QAAQ,EAAE,MAAM,GAAC,MAAM,GAAG,MAAM,CAqDhE"}

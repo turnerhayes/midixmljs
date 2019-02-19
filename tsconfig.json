@@ -1,14 +1,13 @@
 {
     "compilerOptions": {
-        "outDir": "./lib",
         "target": "es5",
         "lib": [
             "dom",
-            "es2017"
-        ]
-    },
-    "include": [
-        "./src/**/*.ts"
-    ],
-    "preset": "ts-jest"
+            "es2015"
+        ],
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node"
+    }
 }

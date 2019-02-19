@@ -1,0 +1,1 @@
+{"version":3,"file":"Marker.d.ts","sourceRoot":"","sources":["../../../../src/MIDIReader/MIDIEvents/Meta/Marker.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAClD,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,WAAY,YAAW,cAAc;IAChD,SAAgB,MAAM,EAAC,MAAM,CAAC;IAE9B,SAAgB,IAAI,EAAC,aAAa,CAA4B;gBAG5D,EACE,MAAM,GACP,EACD;QACE,MAAM,EAAC,MAAM,CAAC;KACf;CAIJ"}
