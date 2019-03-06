@@ -34,3 +34,4 @@ exports.Meta = {
     SMPTEOffsetEvent: Meta_1.SMPTEOffsetEvent,
     SequencerSpecificEvent: Meta_1.SequencerSpecificEvent,
 };
+//# sourceMappingURL=index.js.map

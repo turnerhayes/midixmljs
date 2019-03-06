@@ -7,25 +7,6 @@ import commander from "commander";
 
 import { getMIDI } from "./XMLToMIDI";
 
-
-/*
-const args = yargs.command(
-  "$0", "Converts a MusicXML file to MIDI.", (yargs) => {
-    return yargs.options({
-      out: {
-        alias: "o",
-        description: "Path to file where the resulting MIDI file should be written (relative to current working directory)",
-      },
-    }).positional("file", {
-      description: "Path to the MusicXML file to parse (relative to current working directory)",
-      type: "string",
-    }).demand(1);
-  }
-)
-.usage("convert-to-midi <file>")
-.help().argv;
-*/
-
 let filePathArg;
 
 commander.option(

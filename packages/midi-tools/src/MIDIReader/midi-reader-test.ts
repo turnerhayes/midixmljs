@@ -6,7 +6,7 @@ import { IMIDIFileHeader } from './IMIDIFileHeader';
 import { MIDIEventType } from './MIDIEventType';
 
 
-const samplePath:string = path.resolve(__dirname, "..", "..", "..", "sample-midi", "house_of_the_rising_sun.mid");
+const samplePath:string = path.resolve(__dirname, "..", "..", "Tim Minchin - Rock N Roll Nerd.midi");
 // const samplePath:string = path.resolve(__dirname, "..", "..", "..", "sample-midi", "Aha - Take On Me.mid");
 
 const buffer:Buffer = readFileSync(samplePath);

@@ -16,7 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var debug_1 = __importDefault(require("debug"));
 var utils_1 = require("../utils");
-var debug = debug_1.default("xml2midi:MIDIFile");
+var debug = debug_1.default("midi-tools:MIDIFile");
 var stringToCharCodeArray = function (str) {
     return new Uint8Array(str.split("").map(function (chr) { return chr.charCodeAt(0); }));
 };
@@ -281,6 +281,8 @@ var MIDIFile = /** @class */ (function () {
                 prevDuration = midiEventInfo.divisionOffset;
                 return total;
             }, 0);
+            totals[trackNumber] += 1 + // The delta time offset for end of track is 0, which takes 1 byte in VLV
+                END_OF_TRACK_EVENT.length;
             return totals;
         }, {});
         var headerChunk = getFileHeader({
@@ -296,7 +298,6 @@ var MIDIFile = /** @class */ (function () {
         var totalLength = headerChunk.length;
         totalLength += Object.keys(trackHeaders).reduce(function (total, trackNumber) { return total + trackHeaders[trackNumber].length; }, 0);
         totalLength += Object.keys(buffers).reduce(function (total, trackNumber) { return total + trackLengths[trackNumber]; }, 0);
-        totalLength += END_OF_TRACK_EVENT.length;
         var buff = new ArrayBuffer(totalLength);
         var arr = new Uint8Array(buff);
         var offset = 0;
@@ -312,11 +313,16 @@ var MIDIFile = /** @class */ (function () {
                 arr.set(midiEventInfo.event, offset);
                 offset += midiEventInfo.event.length;
             });
+            // Delta time for end of track event is 0, so the buffer for it is always
+            // the same
+            arr.set(Uint8Array.from([0]), offset);
+            offset += 1;
+            arr.set(END_OF_TRACK_EVENT, offset);
+            offset += END_OF_TRACK_EVENT.length;
         });
-        arr.set(END_OF_TRACK_EVENT, offset);
-        offset += END_OF_TRACK_EVENT.length;
         return buff;
     };
     return MIDIFile;
 }());
 exports.MIDIFile = MIDIFile;
+//# sourceMappingURL=MIDIFile.js.map

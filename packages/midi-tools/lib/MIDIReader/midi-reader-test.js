@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var path = __importStar(require("path"));
 var fs_1 = require("fs");
 var midi_reader_1 = require("./midi-reader");
-var samplePath = path.resolve(__dirname, "..", "..", "..", "sample-midi", "house_of_the_rising_sun.mid");
+var samplePath = path.resolve(__dirname, "..", "..", "Tim Minchin - Rock N Roll Nerd.midi");
 // const samplePath:string = path.resolve(__dirname, "..", "..", "..", "sample-midi", "Aha - Take On Me.mid");
 var buffer = fs_1.readFileSync(samplePath);
 var reader = new midi_reader_1.MIDIReader(buffer);
@@ -24,3 +24,4 @@ while (!iterItem.done) {
     console.log(iterItem);
     iterItem = gen.next();
 }
+//# sourceMappingURL=midi-reader-test.js.map

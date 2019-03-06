@@ -12,7 +12,7 @@ var MIDIMetaEventCreator_1 = require("./MIDIMetaEventCreator");
 var variable_length_value_1 = require("../utils/variable-length-value");
 var createNoteOffEventFromBytes = function (statusByte, dataView, startIndex) {
     if (startIndex === void 0) { startIndex = 0; }
-    var channel = statusByte & 0xF;
+    var channel = (statusByte & 0xF) + 1;
     var noteNumber = dataView.getUint8(startIndex);
     var release = dataView.getUint8(startIndex + 1);
     return [
@@ -26,7 +26,7 @@ var createNoteOffEventFromBytes = function (statusByte, dataView, startIndex) {
 };
 var createNoteOnEventFromBytes = function (statusByte, dataView, startIndex) {
     if (startIndex === void 0) { startIndex = 0; }
-    var channel = statusByte & 0xF;
+    var channel = (statusByte & 0xF) + 1;
     var noteNumber = dataView.getUint8(startIndex);
     var velocity = dataView.getUint8(startIndex + 1);
     return [
@@ -50,7 +50,7 @@ var createSysexEventFromBytes = function (statusByte, dataView, startIndex) {
 };
 var createProgramChangeEventFromBytes = function (statusByte, dataView, startIndex) {
     if (startIndex === void 0) { startIndex = 0; }
-    var channel = statusByte & 0xF;
+    var channel = (statusByte & 0xF) + 1;
     var programNumber = dataView.getUint8(startIndex);
     return [
         1,
@@ -62,7 +62,7 @@ var createProgramChangeEventFromBytes = function (statusByte, dataView, startInd
 };
 var createControllerChangeEventFromBytes = function (statusByte, dataView, startIndex) {
     if (startIndex === void 0) { startIndex = 0; }
-    var channel = statusByte & 0xF;
+    var channel = (statusByte & 0xF) + 1;
     var controllerNumber = dataView.getUint8(startIndex);
     var controllerValue = dataView.getUint8(startIndex + 1);
     return [
@@ -75,7 +75,7 @@ var createControllerChangeEventFromBytes = function (statusByte, dataView, start
     ];
 };
 var createPolyphonicAftertouchEventFromBytes = function (statusByte, dataView, startIndex) {
-    var channel = statusByte & 0xF;
+    var channel = (statusByte & 0xF) + 1;
     var noteNumber = dataView.getUint8(startIndex);
     var pressure = dataView.getUint8(startIndex + 1);
     return [
@@ -88,7 +88,7 @@ var createPolyphonicAftertouchEventFromBytes = function (statusByte, dataView, s
     ];
 };
 var createChannelAftertouchEventFromBytes = function (statusByte, dataView, startIndex) {
-    var channel = statusByte & 0xF;
+    var channel = (statusByte & 0xF) + 1;
     var pressure = dataView.getUint8(startIndex + 1);
     return [
         1,
@@ -99,7 +99,7 @@ var createChannelAftertouchEventFromBytes = function (statusByte, dataView, star
     ];
 };
 var createPitchBendEventFromBytes = function (statusByte, dataView, startIndex) {
-    var channel = statusByte & 0xF;
+    var channel = (statusByte & 0xF) + 1;
     var leastSignificantByte = dataView.getUint8(startIndex);
     var mostSignificantByte = dataView.getUint8(startIndex + 1);
     var value = ((mostSignificantByte & 0x7F) << 7) + (leastSignificantByte & 0x7F);
@@ -167,3 +167,4 @@ exports.eventFromBytes = function (dataView, startIndex, previousStatusByte) {
     }
     return null;
 };
+//# sourceMappingURL=MIDIEventCreator.js.map

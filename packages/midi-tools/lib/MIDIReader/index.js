@@ -18,3 +18,4 @@ var MIDIParseError_1 = require("./MIDIParseError");
 exports.MIDIParseError = MIDIParseError_1.MIDIParseError;
 var midi_reader_1 = require("./midi-reader");
 exports.MIDIReader = midi_reader_1.MIDIReader;
+//# sourceMappingURL=index.js.map

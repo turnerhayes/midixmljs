@@ -103,3 +103,4 @@ function NoteNameToNumber(noteName) {
     return number + ((octave + 1) * 12);
 }
 exports.NoteNameToNumber = NoteNameToNumber;
+//# sourceMappingURL=midi-note-converter.js.map

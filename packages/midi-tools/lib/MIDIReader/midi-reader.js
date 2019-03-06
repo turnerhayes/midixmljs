@@ -40,6 +40,12 @@ var MIDIReader = /** @class */ (function () {
             this.buffer = buffer.buffer;
             this.dataView = buffer;
         }
+        else if (buffer instanceof Buffer) {
+            this.bufferOffset = buffer.byteOffset;
+            this.bufferLength = buffer.byteLength;
+            this.buffer = buffer.buffer;
+            this.dataView = new DataView(this.buffer, this.bufferOffset, this.bufferLength);
+        }
         else {
             this.bufferOffset = 0;
             this.bufferLength = buffer.byteLength;
@@ -178,3 +184,4 @@ var MIDIReader = /** @class */ (function () {
     return MIDIReader;
 }());
 exports.MIDIReader = MIDIReader;
+//# sourceMappingURL=midi-reader.js.map

@@ -7,6 +7,7 @@
   "dependencies": {
     "@thayes/midi-tools": "^0.1.0",
     "codemirror": "^5.40.2",
+    "fraction.js": "^4.0.12",
     "jasmid.ts": "^2.1.0",
     "object.values": "^1.1.0",
     "text-encoding": "^0.7.0",

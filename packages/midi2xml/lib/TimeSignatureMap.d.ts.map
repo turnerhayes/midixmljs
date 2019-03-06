@@ -1,0 +1,1 @@
+{"version":3,"file":"TimeSignatureMap.d.ts","sourceRoot":"","sources":["../src/TimeSignatureMap.ts"],"names":[],"mappings":"AAAA,OAAO,EACL,cAAc,EACf,MAAM,oBAAoB,CAAC;AAE5B,qBAAa,gBAAgB;IAC3B,OAAO,CAAC,QAAQ,CAAC,SAAS,CAKxB;IAEF,OAAO,CAAC,aAAa,CAAgB;IAErC,YAAY,CAAC,MAAM,EAAC,MAAM,EAAE,aAAa,EAAC,cAAc,GAAE,IAAI;IAK9D,YAAY,CAAC,MAAM,EAAC,MAAM,GAAE,cAAc;CAW3C"}

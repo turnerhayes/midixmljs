@@ -20,6 +20,10 @@ export {
 } from './IKeySignature';
 
 export {
+  ITimeSignature,
+} from './ITimeSignature';
+
+export {
   Channel,
 } from './Channel';
 

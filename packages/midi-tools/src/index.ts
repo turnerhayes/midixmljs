@@ -24,6 +24,7 @@ export {
   NoteNumberToName,
   IPitch,
   IKeySignature,
+  ITimeSignature,
   KeySharps,
   Channel,
   NoteStep,

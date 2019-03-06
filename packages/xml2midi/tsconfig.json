@@ -2,7 +2,11 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "./lib",
-    "module": "commonjs"
+    "module": "commonjs",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ]
   },
   "include": [
     "./**/*.ts"

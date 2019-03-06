@@ -1,13 +1,18 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "lib": [
-            "dom",
-            "es2015"
-        ],
-        "declaration": true,
-        "declarationMap": true,
-        "esModuleInterop": true,
-        "moduleResolution": "node"
-    }
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "declaration": true,
+    "declarationMap": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true
+  },
+  "exclude": [
+    "**/*.test.ts"
+  ]
 }

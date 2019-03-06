@@ -205,7 +205,7 @@ const readMeasuresFromPart = (partNode: Element, document: Document): MeasureMap
 
             const notes: IPitch[] = chordNotes.map(
               (noteNode) => {
-                const pitchNode = itemNode.querySelector("pitch");
+                const pitchNode = noteNode.querySelector("pitch");
       
                 const step: NoteStep = pitchNode.querySelector("step").textContent as NoteStep;
                 const octave = Number(pitchNode.querySelector("octave").textContent);

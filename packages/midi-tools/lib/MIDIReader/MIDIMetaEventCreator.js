@@ -185,3 +185,4 @@ exports.createMetaEventFromBytes = function (statusByte, dataView, startIndex) {
         event,
     ];
 };
+//# sourceMappingURL=MIDIMetaEventCreator.js.map

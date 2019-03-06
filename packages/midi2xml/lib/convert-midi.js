@@ -34,6 +34,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -47,17 +57,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var xml_writer_1 = __importDefault(require("xml-writer"));
-var object_values_1 = require("object.values");
 var midi_tools_1 = require("@thayes/midi-tools");
-var NoteOnEvent = midi_tools_1.MIDIEvents.NoteOnEvent;
-var _a = midi_tools_1.MIDIEvents.Meta, TimeSignatureEvent = _a.TimeSignatureEvent, KeySignatureEvent = _a.KeySignatureEvent;
-console.log({
-    MIDIEvents: midi_tools_1.MIDIEvents,
-    NoteOnEvent: NoteOnEvent,
-});
-if (!Object.values) {
-    object_values_1.shim();
-}
+var MeasureChord_1 = require("./MeasureChord");
+var MeasureRest_1 = require("./MeasureRest");
+var get_measures_by_track_1 = require("./get-measures-by-track");
 var getArrayBuffer = function (midiFile) { return __awaiter(_this, void 0, void 0, function () {
     var buffer, byteOffset, byteLength, fs_1;
     return __generator(this, function (_a) {
@@ -99,235 +102,316 @@ var getArrayBuffer = function (midiFile) { return __awaiter(_this, void 0, void 
         }
     });
 }); };
-var divisionsToQuarterNotes = function (divisions, ppqn) {
-    return divisions / ppqn;
-};
-var divisionsToBeats = function (divisions, ppqn, timeSignature) {
-    var quarterNotes = divisionsToQuarterNotes(divisions, ppqn);
-    var beatsPerQuarterNote = 4 / timeSignature.denominator;
-    return beatsPerQuarterNote * quarterNotes;
-};
-/**
- * Gets what measure the beat is in at the specified number of divisions.
- *
- * @param {number} divisions - the number of divisions at this point in the piece
- * @param {number} ppqn - Pulses (divisions) Per Quarter Note--constant for a given
- * MIDI file
- * @param {ITimeSignature} timeSignature - the current time signature of the piece,
- * as numerator over denominator (e.g. 4/4)
- */
-var getMeasureNumber = function (divisions, ppqn, timeSignature) {
-    if (timeSignature === void 0) { timeSignature = {
-        numerator: 4,
-        denominator: 4,
-    }; }
-    var quarterNotes = divisions / ppqn;
-    var beatsPerQuarterNote = 4 / timeSignature.denominator;
-    var beats = divisionsToBeats(divisions, ppqn, timeSignature);
-    // Measures start at 1, not 0
-    var measureNumber = Math.floor(beats / timeSignature.numerator) + 1;
-    // console.log({
-    //   divisions,
-    //   ppqn,
-    //   timeSignature,
-    //   quarterNotes,
-    //   beatsPerQuarterNote,
-    //   beats,
-    //   rawMeasureNumber: beats / timeSignature.numerator,
-    //   measureNumber,
-    // });
-    return measureNumber;
-};
-var getNotesByTrack = function (reader) {
-    var notesPlaying;
-    var trackNotes;
-    var notesByTrack = {};
-    var tracks = [];
-    var ppqn = reader.header.division.ticks;
-    var currentOffset;
-    var currentTrackNumber;
-    var timeSignaturesByOffset;
-    var currentTimeSignatureOffset;
-    var keySignaturesByOffset;
-    var currentKeySignatureOffset;
-    var _loop_1 = function (gen, item) {
-        var _a = item.value, deltaTime = _a.deltaTime, event_1 = _a.event, trackNumber = _a.trackNumber;
-        if (trackNumber !== currentTrackNumber) {
-            if (currentTrackNumber !== undefined) {
-                tracks[currentTrackNumber] = {
-                    keySignaturesByOffset: keySignaturesByOffset,
-                    timeSignaturesByOffset: timeSignaturesByOffset,
-                    notes: Object.values(trackNotes),
-                };
-            }
-            trackNotes = [];
-            notesPlaying = {};
-            currentOffset = 0;
-            timeSignaturesByOffset = {
-                0: {
-                    numerator: 4,
-                    denominator: 4,
+var writeMeasureNotes = function (xmlWriter, measure, clefNumber, ppqn) {
+    // const { timeSignature } = measure;
+    var e_1, _a;
+    try {
+        // let beatGroup:IMeasureElement[] = [];
+        // const beatGroups:Array<IMeasureElement[]> = [
+        //   beatGroup,
+        // ];
+        // const beatLength:number = ticksPerBeat(timeSignature, ppqn);
+        // type AudibleItem = MeasureNote|MeasureChord;
+        // type MeasureGroupItem = {
+        //   start:number;
+        //   startBeat:number;
+        //   end:number;
+        //   endBeat:number;
+        //   nextInBeat:MeasureGroupItem|null;
+        //   previousInBeat:MeasureGroupItem|null;
+        //   noteType:INoteType;
+        //   isRest:boolean;
+        //   noteItem?:AudibleItem;
+        // }
+        // const measureItems:MeasureGroupItem[] = [];
+        // let currentOffset = 0;
+        // for (let element of measure.notes) {
+        //   let item:MeasureGroupItem = {
+        //     start: currentOffset,
+        //     startBeat: Math.floor(currentOffset / beatLength),
+        //     end: currentOffset + element.duration,
+        //     endBeat: Math.floor((currentOffset + element.duration) / beatLength),
+        //     nextInBeat: null,
+        //     previousInBeat: null,
+        //     noteType: element.noteType,
+        //     isRest: element instanceof MeasureRest,
+        //     noteItem: element instanceof MeasureRest ?
+        //       undefined :
+        //       element as AudibleItem,
+        //   };
+        //   currentOffset += element.duration;
+        //   let previousAudibleItem:MeasureGroupItem;
+        //   let previousMeasureItem:MeasureGroupItem;
+        //   if (measureItems.length > 0) {
+        //     previousMeasureItem = measureItems[measureItems.length - 1];
+        //     for (
+        //       let itemIndex = measureItems.length - 1;
+        //       itemIndex >= 0 && !previousAudibleItem;
+        //       itemIndex--
+        //     ) {
+        //       if (!measureItems[itemIndex].isRest) {
+        //         previousAudibleItem = measureItems[itemIndex];
+        //       }
+        //     }
+        //   }
+        //   const nextItemStart = previousMeasureItem ?
+        //     previousMeasureItem.end :
+        //     0;
+        //   if (nextItemStart < item.start) {
+        //     const restDuration = item.start - nextItemStart;
+        //     measureItems.push({
+        //       start: nextItemStart,
+        //       startBeat: Math.floor(nextItemStart / beatLength),
+        //       end: item.start - 1,
+        //       endBeat: Math.floor((item.start) / beatLength),
+        //       nextInBeat: null,
+        //       previousInBeat: null,
+        //       noteType: findNoteType(restDuration, ppqn),
+        //       isRest: true,
+        //     });
+        //   }
+        //   measureItems.push(item);
+        //   if (!item.isRest && previousAudibleItem && previousAudibleItem.startBeat === item.endBeat) {
+        //     previousAudibleItem.nextInBeat = item;
+        //     item.previousInBeat = previousAudibleItem;
+        //   }
+        // }
+        // const measureDuration = beatLength * timeSignature.numerator;
+        // const lastMeasureItem = measureItems[measureItems.length - 1];
+        // // It's possible that a measure has no items, in which case it should just have a rest
+        // // for the duration of the measure
+        // const nextItemStart = lastMeasureItem ?
+        //   lastMeasureItem.end :
+        //   0;
+        // for (let measureItem of measureItems) {
+        for (var _b = __values(measure.measureItems), _c = _b.next(); !_c.done; _c = _b.next()) {
+            var measureItem = _c.value;
+            if (measureItem.element instanceof MeasureRest_1.MeasureRest) {
+                xmlWriter.startElement("note");
+                xmlWriter.startElement("rest").endElement();
+                xmlWriter.writeElement("type", measureItem.element.noteType.typeName);
+                if (measureItem.element.noteType.dot) {
+                    xmlWriter.startElement("dot").endElement();
                 }
-            };
-            currentTimeSignatureOffset = 0;
-            keySignaturesByOffset = {
-                0: 0
-            };
-            currentKeySignatureOffset = 0;
-            currentTrackNumber = trackNumber;
-        }
-        currentOffset += deltaTime;
-        if (event_1.type & 131072 /* MetaTimeSignature */) {
-            // Typescript is being weird and claiming it can't find the name TimeSignatureEvent...
-            var _b = event_1, numerator = _b.numerator, denominator = _b.denominator;
-            // const { numerator, denominator } = (event as TimeSignatureEvent);
-            timeSignaturesByOffset[currentOffset] = {
-                numerator: numerator,
-                denominator: denominator,
-            };
-            currentTimeSignatureOffset = currentOffset;
-            return "continue";
-        }
-        if (event_1.type & 524288 /* MetaKeySignature */) {
-            // Typescript is being weird and claiming it can't find the name KeySignatureEvent...
-            var sharps = event_1.sharps;
-            // const { sharps } = (event as KeySignatureEvent);
-            keySignaturesByOffset[currentOffset] = sharps;
-            currentKeySignatureOffset = currentOffset;
-            return "continue";
-        }
-        if (event_1.type & (2 /* NoteOn */ | 1 /* NoteOff */)) {
-            var type = event_1.type;
-            var noteNumber = void 0;
-            if (type === 2 /* NoteOn */) {
-                // Typescript is being weird and claiming it can't find the name NoteOnEvent...
-                noteNumber = event_1.noteNumber;
-                // noteNumber = (event as NoteOnEvent).noteNumber;
-                var velocity = event_1.velocity;
-                // let velocity = (event as NoteOnEvent).velocity;
-                if (velocity === 0) {
-                    type = 1 /* NoteOff */;
+                xmlWriter.writeElement("duration", measureItem.element.noteType.duration);
+                xmlWriter.writeElement("staff", clefNumber);
+                xmlWriter.writeElement("voice", clefNumber);
+                xmlWriter.endElement(); // end <note>
+                continue;
+            }
+            var notes = void 0;
+            if (measureItem.element instanceof MeasureChord_1.MeasureChord) {
+                notes = measureItem.element.notes;
+            }
+            else {
+                notes = [
+                    measureItem.element,
+                ];
+            }
+            for (var noteIndex = 0; noteIndex < notes.length; noteIndex++) {
+                var note = notes[noteIndex];
+                xmlWriter.startElement("note");
+                if (note instanceof MeasureRest_1.MeasureRest) {
+                    xmlWriter.startElement("rest").endElement();
                 }
                 else {
-                    if (!notesPlaying[currentOffset]) {
-                        notesPlaying[currentOffset] = [];
+                    xmlWriter.startElement("pitch");
+                    xmlWriter.writeElement("step", note.pitch.step);
+                    xmlWriter.writeElement("octave", note.pitch.octave);
+                    if (note.pitch.alter !== undefined) {
+                        xmlWriter.writeElement("alter", note.pitch.alter);
                     }
-                    var note = midi_tools_1.NoteNumberToName(noteNumber);
-                    notesPlaying[currentOffset].push(note);
-                }
-            }
-            if (type === 1 /* NoteOff */) {
-                var note_1 = midi_tools_1.NoteNumberToName(noteNumber);
-                var startOffset = void 0;
-                var noteIndex = void 0;
-                var offsets = Object.keys(notesPlaying);
-                for (var i = offsets.length - 1; i >= 0; i--) {
-                    var offset = Number(offsets[i]);
-                    var index = notesPlaying[offset].findIndex(function (pitch) { return pitch.MIDINumber === note_1.MIDINumber; });
-                    if (index >= 0) {
-                        startOffset = offset;
-                        noteIndex = index;
-                        break;
-                    }
-                }
-                if (startOffset !== undefined) {
-                    if (!trackNotes[startOffset]) {
-                        trackNotes[startOffset] = [];
-                    }
-                    var duration = currentOffset - startOffset;
-                    trackNotes[startOffset].push({
-                        pitch: note_1,
-                        duration: duration,
-                        beats: divisionsToBeats(duration, ppqn, timeSignaturesByOffset[currentTimeSignatureOffset]),
-                        quarterNotes: divisionsToQuarterNotes(duration, ppqn),
-                        measure: getMeasureNumber(currentOffset, ppqn, timeSignaturesByOffset[currentTimeSignatureOffset]),
-                    });
-                    notesPlaying[startOffset].splice(noteIndex, 1);
-                    if (notesPlaying[startOffset].length === 0) {
-                        delete notesPlaying[startOffset];
+                    xmlWriter.endElement(); // end <pitch>
+                    if (measureItem.previousInBeat || measureItem.nextInBeat) {
+                        xmlWriter.startElement("beam");
+                        xmlWriter.writeAttribute("number", 1);
+                        if (!measureItem.previousInBeat) {
+                            xmlWriter.text("begin");
+                        }
+                        else if (!measureItem.nextInBeat) {
+                            xmlWriter.text("end");
+                        }
+                        else {
+                            xmlWriter.text("continue");
+                        }
+                        xmlWriter.endElement(); // end <beam>
                     }
                 }
+                xmlWriter.writeElement("duration", note.noteType.duration);
+                xmlWriter.writeElement("type", note.noteType.typeName);
+                if (note.noteType.dot) {
+                    xmlWriter.startElement("dot").endElement();
+                }
+                if (measureItem.element instanceof MeasureChord_1.MeasureChord && noteIndex > 0) {
+                    xmlWriter.startElement("chord").endElement();
+                }
+                xmlWriter.writeElement("staff", clefNumber);
+                xmlWriter.writeElement("voice", clefNumber);
+                xmlWriter.endElement(); // end <note>
             }
         }
-    };
-    for (var gen = reader.readTracks(), item = gen.next(); !item.done; item = gen.next()) {
-        _loop_1(gen, item);
     }
-    if (currentTrackNumber !== undefined && !tracks[currentTrackNumber]) {
-        var notes = Object.values(trackNotes);
-        if (notes.length > 0) {
-            tracks[currentTrackNumber] = {
-                keySignaturesByOffset: keySignaturesByOffset,
-                timeSignaturesByOffset: timeSignaturesByOffset,
-                notes: notes,
-            };
+    catch (e_1_1) { e_1 = { error: e_1_1 }; }
+    finally {
+        try {
+            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
         }
+        finally { if (e_1) throw e_1.error; }
     }
-    return tracks;
 };
 function convertMIDI(_a) {
     var midiFile = _a.midiFile;
     return __awaiter(this, void 0, void 0, function () {
-        var dataView, reader, xmlWriter, eventTypes, generator, result, _b, event_2, deltaTime, trackNumber, tracks;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
+        var e_2, _b, e_3, _c, e_4, _d, dataView, reader, xmlWriter, ppqn, measuresByTrack, tracksByProgramNumber, measuresByTrack_1, measuresByTrack_1_1, track, programNumberToPartID, partID, _e, _f, programNumber, tracks, id, clefNumber, _g, _h, programNumber, tracks, trebleClefTrack, bassCleffTrack, trebleClefNumber, bassCleffNumber, measureNumber, measure, bassCleffMeasure;
+        return __generator(this, function (_j) {
+            switch (_j.label) {
                 case 0: return [4 /*yield*/, getArrayBuffer(midiFile)];
                 case 1:
-                    dataView = _c.sent();
+                    dataView = _j.sent();
                     reader = new midi_tools_1.MIDIReader(dataView);
-                    xmlWriter = new xml_writer_1.default(true);
-                    eventTypes = 127 /* ChannelEvents */ |
-                        16384 /* MetaTrackName */ |
-                        65536 /* MetaInstrumentName */;
-                    generator = reader.readTracks({ eventTypes: eventTypes });
-                    xmlWriter.startDocument("1.0", "UTF-8");
-                    xmlWriter.writeDocType("score-timewise", "-//Recordare//DTD MusicXML 3.1 Partwise//EN", "http://www.musicxml.org/dtds/partwise.dtd");
-                    xmlWriter.startElement("score-timewise");
-                    xmlWriter.startElement("part-list");
-                    xmlWriter.startElement("score-part");
-                    xmlWriter.writeAttribute("id", "P1");
-                    xmlWriter.endElement(); // end <score-part>
-                    xmlWriter.endElement(); // end <part-list>
-                    xmlWriter.startElement("measure");
-                    xmlWriter.writeAttribute("number", 1);
-                    xmlWriter.startElement("attributes");
+                    xmlWriter = new xml_writer_1.default("  ");
                     // TODO: handle SMPTE
                     if (reader.header.division.ticks) {
-                        xmlWriter.writeElement("divisions", reader.header.division.ticks);
+                        ppqn = reader.header.division.ticks;
                     }
-                    xmlWriter.endElement(); // end <attributes>
-                    xmlWriter.startElement("part");
-                    xmlWriter.writeAttribute("id", "P1");
-                    for (result = generator.next(); !result.done; result = generator.next()) {
-                        _b = result.value, event_2 = _b.event, deltaTime = _b.deltaTime, trackNumber = _b.trackNumber;
-                        if (event_2.type & (65536 /* MetaInstrumentName */ | 16384 /* MetaTrackName */)) {
-                            // console.log(trackNumber, event);
-                        }
-                        if (event_2.type & 2 /* NoteOn */) {
-                            // const note = NoteNumberToName((event as NoteOnEvent).noteNumber);
-                            // // console.log({
-                            // //   note,
-                            // // });
-                            // xmlWriter.startElement("note");
-                            // xmlWriter.startElement("pitch");
-                            // xmlWriter.writeElement("step", note.step);
-                            // xmlWriter.writeElement("octave", note.octave);
-                            // if (note.alter !== undefined) {
-                            //   xmlWriter.writeElement("alter", note.alter);
-                            // }
-                            // xmlWriter.endElement(); // end <pitch>
-                            // xmlWriter.endElement(); // end <note>
+                    else {
+                        throw new Error("SMPTE divisions are not yet supported");
+                    }
+                    measuresByTrack = get_measures_by_track_1.getMeasuresByTrack(reader);
+                    xmlWriter.startDocument("1.0", "UTF-8");
+                    xmlWriter.writeDocType("score-partwise", "-//Recordare//DTD MusicXML 3.1 Partwise//EN", "http://www.musicxml.org/dtds/partwise.dtd");
+                    xmlWriter.startElement("score-partwise");
+                    xmlWriter.startElement("part-list");
+                    tracksByProgramNumber = {};
+                    try {
+                        for (measuresByTrack_1 = __values(measuresByTrack), measuresByTrack_1_1 = measuresByTrack_1.next(); !measuresByTrack_1_1.done; measuresByTrack_1_1 = measuresByTrack_1.next()) {
+                            track = measuresByTrack_1_1.value;
+                            if (!track) {
+                                continue;
+                            }
+                            if (!tracksByProgramNumber[track.info.programNumber]) {
+                                tracksByProgramNumber[track.info.programNumber] = [];
+                            }
+                            tracksByProgramNumber[track.info.programNumber].push(track);
                         }
                     }
-                    xmlWriter.endElement(); // end <part>
-                    xmlWriter.endElement(); // end <measure>
-                    xmlWriter.endElement(); // end <score-timewise>
+                    catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                    finally {
+                        try {
+                            if (measuresByTrack_1_1 && !measuresByTrack_1_1.done && (_b = measuresByTrack_1.return)) _b.call(measuresByTrack_1);
+                        }
+                        finally { if (e_2) throw e_2.error; }
+                    }
+                    programNumberToPartID = {};
+                    partID = 0;
+                    try {
+                        for (_e = __values(Object.keys(tracksByProgramNumber)), _f = _e.next(); !_f.done; _f = _e.next()) {
+                            programNumber = _f.value;
+                            tracks = tracksByProgramNumber[programNumber];
+                            id = "P" + ++partID;
+                            programNumberToPartID[programNumber] = id;
+                            xmlWriter.startElement("score-part");
+                            xmlWriter.writeAttribute("id", id);
+                            xmlWriter.startElement("midi-instrument");
+                            xmlWriter.writeElement("midi-program", Number(programNumber) + 1);
+                            xmlWriter.endElement(); // end <midi-instrument>
+                            xmlWriter.endElement(); // end <score-part>
+                        }
+                    }
+                    catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                    finally {
+                        try {
+                            if (_f && !_f.done && (_c = _e.return)) _c.call(_e);
+                        }
+                        finally { if (e_3) throw e_3.error; }
+                    }
+                    xmlWriter.endElement(); // end <part-list>
+                    clefNumber = 0;
+                    try {
+                        for (_g = __values(Object.keys(tracksByProgramNumber)), _h = _g.next(); !_h.done; _h = _g.next()) {
+                            programNumber = _h.value;
+                            tracks = tracksByProgramNumber[programNumber];
+                            trebleClefTrack = void 0;
+                            bassCleffTrack = void 0;
+                            trebleClefNumber = ++clefNumber;
+                            bassCleffNumber = ++clefNumber;
+                            // TODO: Better detection of appropriate clefs
+                            if (tracks.length === 1) {
+                                trebleClefTrack = tracks[0];
+                            }
+                            else if (tracks.length === 2) {
+                                if (tracks[0].info.averageNoteNumber > tracks[1].info.averageNoteNumber) {
+                                    trebleClefTrack = tracks[0];
+                                    bassCleffTrack = tracks[1];
+                                }
+                                else {
+                                    trebleClefTrack = tracks[1];
+                                    bassCleffTrack = tracks[0];
+                                }
+                            }
+                            else {
+                                throw new Error("Don't know how to handle more than 2 tracks");
+                            }
+                            xmlWriter.startElement("part");
+                            xmlWriter.writeAttribute("id", programNumberToPartID[programNumber]);
+                            for (measureNumber = 1; measureNumber < trebleClefTrack.measures.length; measureNumber++) {
+                                measure = trebleClefTrack.measures[measureNumber];
+                                bassCleffMeasure = bassCleffTrack ?
+                                    bassCleffTrack.measures[measureNumber] :
+                                    null;
+                                xmlWriter.startElement("measure");
+                                xmlWriter.writeAttribute("number", measureNumber);
+                                if (measureNumber === 1) {
+                                    xmlWriter.startElement("attributes");
+                                    xmlWriter.writeElement("divisions", ppqn);
+                                    xmlWriter.startElement("key");
+                                    xmlWriter.writeElement("fifths", measure.keySignature.sharps);
+                                    if (measure.keySignature.mode === "minor") {
+                                        xmlWriter.writeElement("mode", measure.keySignature.mode);
+                                    }
+                                    xmlWriter.endElement(); // end <key>
+                                    xmlWriter.startElement("time");
+                                    xmlWriter.writeElement("beats", measure.timeSignature.numerator);
+                                    xmlWriter.writeElement("beat-type", measure.timeSignature.denominator);
+                                    xmlWriter.endElement(); // end <time>
+                                    xmlWriter.writeElement("staves", tracks.length);
+                                    xmlWriter.startElement("clef");
+                                    xmlWriter.writeAttribute("number", trebleClefNumber);
+                                    xmlWriter.writeElement("sign", "G");
+                                    xmlWriter.writeElement("line", 2);
+                                    xmlWriter.endElement(); // end <clef>
+                                    xmlWriter.startElement("clef");
+                                    xmlWriter.writeAttribute("number", bassCleffNumber);
+                                    xmlWriter.writeElement("sign", "F");
+                                    xmlWriter.writeElement("line", 4);
+                                    xmlWriter.endElement(); // end <clef>
+                                    xmlWriter.endElement(); // end <attributes>
+                                }
+                                writeMeasureNotes(xmlWriter, measure, trebleClefNumber, ppqn);
+                                if (bassCleffMeasure) {
+                                    xmlWriter.startElement("backup");
+                                    xmlWriter.writeElement("duration", measure.totalQuarterNotes * ppqn);
+                                    xmlWriter.endElement(); // end <backup>
+                                    writeMeasureNotes(xmlWriter, bassCleffMeasure, bassCleffNumber, ppqn);
+                                }
+                                xmlWriter.endElement(); // end <measure>
+                            }
+                            xmlWriter.endElement(); // end <part>
+                        }
+                    }
+                    catch (e_4_1) { e_4 = { error: e_4_1 }; }
+                    finally {
+                        try {
+                            if (_h && !_h.done && (_d = _g.return)) _d.call(_g);
+                        }
+                        finally { if (e_4) throw e_4.error; }
+                    }
+                    xmlWriter.endElement(); // end <score-partwise>
                     xmlWriter.endDocument();
-                    tracks = getNotesByTrack(reader);
-                    console.log(JSON.stringify(tracks, null, '  '));
-                    return [2 /*return*/, ''];
+                    return [2 /*return*/, xmlWriter.toString()];
             }
         });
     });
 }
 exports.convertMIDI = convertMIDI;
+//# sourceMappingURL=convert-midi.js.map

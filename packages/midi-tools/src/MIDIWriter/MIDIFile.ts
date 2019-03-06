@@ -6,8 +6,9 @@ import {
   Channel,
   toVariableLengthValue,
 } from "../utils";
+import { ITimeSignature } from "../utils/ITimeSignature";
 
-const debug = createDebugger("xml2midi:MIDIFile");
+const debug = createDebugger("midi-tools:MIDIFile");
 
 const enum MIDIMessageStatus {
   NoteOn = 0x90,
@@ -216,10 +217,7 @@ export class MIDIFile {
     {
       numerator,
       denominator,
-    }: {
-      numerator: number,
-      denominator: number,
-    }
+    }:ITimeSignature
   ): void {
     const event = new Uint8Array([
       MIDIMessageStatus.Meta,
@@ -459,7 +457,7 @@ export class MIDIFile {
   toArrayBuffer(): ArrayBuffer {
     const buffers = this.sortBuffers();
 
-    const trackCount: number = Object.keys(this.tracks).length;
+    const trackCount:number = Object.keys(this.tracks).length;
 
     let trackLengths = Object.keys(buffers).reduce(
       (
@@ -486,10 +484,13 @@ export class MIDIFile {
           0
         );
 
+        totals[trackNumber] += 1 + // The delta time offset for end of track is 0, which takes 1 byte in VLV
+          END_OF_TRACK_EVENT.length;
+
         return totals;
       },
       {}
-    );
+    );    
 
     const headerChunk: Uint8Array = getFileHeader({
       divisions: this.divisions,
@@ -515,14 +516,13 @@ export class MIDIFile {
       (total: number, trackNumber: string) => total + trackHeaders[trackNumber].length,
       0
     );
+    
 
     totalLength += Object.keys(buffers).reduce(
       (total: number, trackNumber: string) => total + trackLengths[trackNumber],
       0
     );
-
-    totalLength += END_OF_TRACK_EVENT.length;
-
+    
     const buff = new ArrayBuffer(totalLength);
 
     const arr = new Uint8Array(buff);
@@ -546,11 +546,16 @@ export class MIDIFile {
             offset += midiEventInfo.event.length;
           }
         );
+
+        // Delta time for end of track event is 0, so the buffer for it is always
+        // the same
+        arr.set(Uint8Array.from([0]), offset);
+        offset += 1;
+
+        arr.set(END_OF_TRACK_EVENT, offset);
+        offset += END_OF_TRACK_EVENT.length;
       }
     );
-
-    arr.set(END_OF_TRACK_EVENT, offset);
-    offset += END_OF_TRACK_EVENT.length;
 
     return buff;
   }

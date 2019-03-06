@@ -1,0 +1,1 @@
+{"version":3,"file":"KeySignatureMap.d.ts","sourceRoot":"","sources":["../src/KeySignatureMap.ts"],"names":[],"mappings":"AAAA,OAAO,EAEL,aAAa,EACd,MAAM,oBAAoB,CAAC;AAE5B,qBAAa,eAAe;IAC1B,OAAO,CAAC,QAAQ,CAAC,SAAS,CAKxB;IAEF,OAAO,CAAC,aAAa,CAAgB;IAErC,YAAY,CAAC,MAAM,EAAC,MAAM,EAAE,YAAY,EAAC,aAAa,GAAE,IAAI;IAK5D,YAAY,CAAC,MAAM,EAAC,MAAM,GAAE,aAAa;CAW1C"}

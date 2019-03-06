@@ -11,3 +11,4 @@ var PolyphonicAftertouchEvent = /** @class */ (function () {
     return PolyphonicAftertouchEvent;
 }());
 exports.PolyphonicAftertouchEvent = PolyphonicAftertouchEvent;
+//# sourceMappingURL=PolyphonicAftertouch.js.map

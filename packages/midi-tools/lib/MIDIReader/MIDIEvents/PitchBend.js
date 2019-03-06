@@ -10,3 +10,4 @@ var PitchBendEvent = /** @class */ (function () {
     return PitchBendEvent;
 }());
 exports.PitchBendEvent = PitchBendEvent;
+//# sourceMappingURL=PitchBend.js.map
