@@ -1,4 +1,20 @@
 "use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
@@ -40,7 +56,7 @@ var createNoteOnEventFromBytes = function (statusByte, dataView, startIndex) {
 };
 var createSysexEventFromBytes = function (statusByte, dataView, startIndex) {
     if (startIndex === void 0) { startIndex = 0; }
-    var _a = variable_length_value_1.fromVariableLengthValue(dataView.buffer, dataView.byteOffset + startIndex), bytesRead = _a[0], dataLength = _a[1];
+    var _a = __read(variable_length_value_1.fromVariableLengthValue(dataView.buffer, dataView.byteOffset + startIndex), 2), bytesRead = _a[0], dataLength = _a[1];
     return [
         bytesRead + dataLength,
         new Events.SysExEvent({
@@ -157,7 +173,7 @@ exports.eventFromBytes = function (dataView, startIndex, previousStatusByte) {
         bytesRead += 1;
     }
     if (createFunction !== null) {
-        var _a = createFunction(statusByte, dataView, startIndex), eventBytesRead = _a[0], event_1 = _a[1];
+        var _a = __read(createFunction(statusByte, dataView, startIndex), 2), eventBytesRead = _a[0], event_1 = _a[1];
         bytesRead += eventBytesRead;
         return {
             bytesRead: bytesRead,

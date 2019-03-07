@@ -26,6 +26,22 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var MIDIFileType_1 = require("./MIDIFileType");
 var MIDIParseError_1 = require("./MIDIParseError");
@@ -56,7 +72,7 @@ var MIDIReader = /** @class */ (function () {
         if (fileHeaderChunk !== 'MThd') {
             throw new MIDIParseError_1.MIDIParseError('File does not start with a header chunk');
         }
-        var _a = this.readFileHeader(4), trackStartOffset = _a[0], header = _a[1];
+        var _a = __read(this.readFileHeader(4), 2), trackStartOffset = _a[0], header = _a[1];
         this.trackStartOffset = trackStartOffset + 4;
         this.header = header;
     }
@@ -73,7 +89,7 @@ var MIDIReader = /** @class */ (function () {
         return variable_length_value_1.fromVariableLengthValue(this.buffer, this.bufferOffset + startIndex);
     };
     MIDIReader.prototype.readMIDIEvent = function (startIndex, trackNumber, previousStatusByte) {
-        var _a = this.readVariableLength(startIndex), bytesRead = _a[0], deltaTime = _a[1];
+        var _a = __read(this.readVariableLength(startIndex), 2), bytesRead = _a[0], deltaTime = _a[1];
         var index = startIndex + bytesRead;
         var eventOrNull = MIDIEventCreator_1.eventFromBytes(this.dataView, index, previousStatusByte);
         if (eventOrNull === null) {
