@@ -150,7 +150,7 @@ const addRests = (
     toOffset:number,
     ppqn:number,
   }
-):void => {
+):number => {
   let startOffset = fromOffset;
   
   while (startOffset < toOffset) {
@@ -175,14 +175,15 @@ const addRests = (
     measure.addRest({
       offset: startOffset,
       rest: new MeasureRest({
-        duration: restDuration,
         noteType: restNoteType,
         measureNumber: measure.number,
       }),
     });
 
-    startOffset += restDuration;
+    startOffset += restNoteType.duration;
   }
+
+  return startOffset;
 };
 
 export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
@@ -217,6 +218,8 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
   let trackNoteNumbers:number[];
 
   let measures:Measure[];
+
+  let lastOffsetAdjustment:number = 0;
 
   for (let { event, trackNumber, deltaTime } of reader.readTracks()) {
     // track change
@@ -257,7 +260,13 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
       measures = [];
     }
 
-    currentOffset += deltaTime;
+    if (deltaTime > 0) {
+      currentOffset += Math.max(
+        0,
+        deltaTime - lastOffsetAdjustment
+      );
+      lastOffsetAdjustment = 0;
+    }
 
     let type = event.type;
 
@@ -344,7 +353,7 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
           lastNoteOffOffset + 1 < currentOffset &&
           Object.keys(currentlyPlayingNotes).length === 0
         ) {
-          addRests({
+          currentOffset = addRests({
             measures,
             fromOffset: lastNoteOffOffset,
             toOffset: currentOffset,
@@ -374,7 +383,6 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
         const note = new MeasureNote({
           pitch,
           measureNumber: playingNote.startMeasure,
-          duration,
           noteType: findNoteType(duration, ppqn),
         });
 
@@ -390,7 +398,9 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
         // be an eighth note and note.noteType.duration will be 240. In that case, we want
         // to add 1 to the currentOffset so that it aligns with the adjusted duration.
         if (note.noteType.duration !== duration) {
-          currentOffset += note.noteType.duration - duration;
+          const adjustment = note.noteType.duration - duration;
+          currentOffset += adjustment;
+          lastOffsetAdjustment = adjustment;
         }
 
         delete currentlyPlayingNotes[noteNumber];

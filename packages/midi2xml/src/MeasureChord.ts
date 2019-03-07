@@ -7,10 +7,6 @@ export class MeasureChord implements IMeasureElement {
 
   public readonly measureNumber:number;
 
-  public get duration():number {
-    return this.noteType.duration;
-  }
-
   public get noteType():INoteType {
     return this.notes[0].noteType;
   }
@@ -35,12 +31,5 @@ export class MeasureChord implements IMeasureElement {
 
     this.notes = notes;
     this.measureNumber = measureNumber;
-  }
-
-  toJSON() {
-    return {
-      notes: this.notes,
-      measureNumber: this.measureNumber,
-    };
   }
 }
