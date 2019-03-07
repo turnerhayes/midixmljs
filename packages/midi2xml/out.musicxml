@@ -1259,7 +1259,6 @@
           <step>F</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <staff>1</staff>
@@ -1270,7 +1269,6 @@
           <step>A</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -1282,7 +1280,6 @@
           <step>C</step>
           <octave>5</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -1294,7 +1291,6 @@
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <beam number="1">end</beam>
         <duration>480</duration>
         <type>quarter</type>
         <staff>1</staff>
@@ -1305,7 +1301,6 @@
           <step>C</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">end</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -1317,7 +1312,6 @@
           <step>F</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">end</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -1418,7 +1412,7 @@
           <step>F</step>
           <octave>2</octave>
         </pitch>
-        <beam number="1">begin</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -1580,7 +1574,7 @@
           <step>E</step>
           <octave>2</octave>
         </pitch>
-        <beam number="1">begin</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -1651,7 +1645,6 @@
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <staff>1</staff>
@@ -1662,7 +1655,6 @@
           <step>C</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -1674,7 +1666,6 @@
           <step>E</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -1742,7 +1733,7 @@
           <step>A</step>
           <octave>2</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -1753,6 +1744,7 @@
           <step>C</step>
           <octave>3</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -1934,6 +1926,7 @@
           <step>A</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">begin</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -1951,6 +1944,7 @@
           <step>A</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -1979,7 +1973,7 @@
           <step>G</step>
           <octave>1</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -1990,6 +1984,7 @@
           <step>G</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2143,6 +2138,7 @@
           <step>G</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">begin</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2160,6 +2156,7 @@
           <step>G</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2378,7 +2375,7 @@
           <step>C</step>
           <octave>3</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2396,6 +2393,7 @@
           <step>C</step>
           <octave>3</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2417,7 +2415,7 @@
           <step>B</step>
           <octave>2</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2435,6 +2433,7 @@
           <step>B</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2629,7 +2628,7 @@
           <step>A</step>
           <octave>2</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2647,6 +2646,7 @@
           <step>A</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2668,7 +2668,7 @@
           <step>G</step>
           <octave>2</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2686,6 +2686,7 @@
           <step>G</step>
           <octave>2</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -2698,7 +2699,6 @@
           <step>D</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <staff>1</staff>
@@ -2710,7 +2710,6 @@
           <octave>4</octave>
           <alter>1</alter>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -2722,7 +2721,6 @@
           <step>A</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">begin</beam>
         <duration>480</duration>
         <type>quarter</type>
         <chord/>
@@ -3139,7 +3137,7 @@
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -3157,6 +3155,7 @@
           <step>A</step>
           <octave>3</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -3178,7 +3177,7 @@
           <step>D</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -3196,6 +3195,7 @@
           <step>D</step>
           <octave>4</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -3383,7 +3383,7 @@
           <step>B</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -3401,6 +3401,7 @@
           <step>B</step>
           <octave>4</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -3422,7 +3423,7 @@
           <step>C</step>
           <octave>4</octave>
         </pitch>
-        <beam number="1">end</beam>
+        <beam number="1">continue</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>
@@ -3440,6 +3441,7 @@
           <step>C</step>
           <octave>4</octave>
         </pitch>
+        <beam number="1">end</beam>
         <duration>240</duration>
         <type>eighth</type>
         <staff>2</staff>

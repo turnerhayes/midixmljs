@@ -219,7 +219,17 @@ const writeMeasureNotes = (xmlWriter:XMLWriter, measure:Measure, clefNumber:numb
         }
         xmlWriter.endElement(); // end <pitch>
 
-        if (measureItem.previousInBeat || measureItem.nextInBeat) {
+        if (
+          (
+            // No beams for quarter note and longer
+            measureItem.element.noteType.typeName !== "whole" &&
+            measureItem.element.noteType.typeName !== "half" &&
+            measureItem.element.noteType.typeName !== "quarter"
+          ) && (
+            measureItem.previousInBeat ||
+            measureItem.nextInBeat
+          )
+        ) {
           xmlWriter.startElement("beam");
           xmlWriter.writeAttribute("number", 1);
 
@@ -366,6 +376,7 @@ export async function convertMIDI(
       xmlWriter.writeAttribute("number", measureNumber);
 
       if (measureNumber === 1) {
+        // TODO: write attributes element in case of any change mid-piece (e.g key change, time change)
         xmlWriter.startElement("attributes");
         xmlWriter.writeElement("divisions", ppqn);
         xmlWriter.startElement("key");

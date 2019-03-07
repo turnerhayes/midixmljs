@@ -17,17 +17,9 @@ export class Measure {
 
   private readonly measureElementsByOffset:{[offset:number]: IMeasureElement[]} = {};
 
-  public get timeSignature():ITimeSignature {
-    return this.timeSignatureMap.getSignature(this.startOffset);
-  }
+  public readonly timeSignature:ITimeSignature;
 
-  public get keySignature():IKeySignature {
-    return this.keySignatureMap.getSignature(this.startOffset);
-  }
-
-  private readonly timeSignatureMap:TimeSignatureMap;
-
-  private readonly keySignatureMap:KeySignatureMap;
+  public readonly keySignature:IKeySignature;
 
   public readonly startOffset:number;
 
@@ -62,63 +54,27 @@ export class Measure {
     return list;
   }
 
-  public get isFull():boolean {
-    return this.measureItems.lengthInQuarterNotes === 
-        this.timeSignature.numerator * (4 / this.timeSignature.denominator);
-  }
-
   constructor(
     {
-      timeSignatureMap,
-      keySignatureMap,
+      timeSignature,
+      keySignature,
       startOffset,
       endOffset,
       number,
     }:
     {
-      timeSignatureMap:TimeSignatureMap,
-      keySignatureMap:KeySignatureMap,
+      timeSignature:ITimeSignature,
+      keySignature:IKeySignature,
       startOffset:number,
       endOffset:number,
       number:number,
     }
   ) {
-    this.timeSignatureMap = timeSignatureMap;
-    this.keySignatureMap = keySignatureMap;
+    this.timeSignature = timeSignature;
+    this.keySignature = keySignature;
     this.startOffset = startOffset;
     this.endOffset = endOffset;
     this.number = number;
-  }
-
-  public get notes():IMeasureElement[] {
-    if (this._notes === null) {
-      this._notes = Object.keys(this.measureElementsByOffset).sort(
-        (a, b) => Number(a) - Number(b)
-      ).reduce(
-        (notes, offset) => {          
-          const notesAtOffset:MeasureNote[] = Object.values(this.measureElementsByOffset[offset]);
-  
-          if (notesAtOffset.length > 1) {
-            notes.push(
-              new MeasureChord({
-                notes: notesAtOffset,
-                measureNumber: this.number,
-              })
-            );
-          }
-          else {
-            notes.push(
-              notesAtOffset[0]
-            );
-          }
-  
-          return notes;
-        },
-        []
-      );
-    }
-
-    return this._notes;
   }
 
   public get totalQuarterNotes() {
@@ -169,7 +125,7 @@ export class Measure {
     return {
       keySignature: this.keySignature,
       timeSignature: this.timeSignature,
-      notes: this.notes,
+      measureItems: this.measureItems,
     };
   }
 }

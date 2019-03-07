@@ -12,7 +12,7 @@ import {
   NoteOffEvent,
   ProgramChangeEvent
 } from "@thayes/midi-tools/lib/MIDIReader/MIDIEvents";
-import { MIDIEventType } from "@thayes/midi-tools/lib/MIDIReader";
+import { MIDIEventType, MIDIFileType } from "@thayes/midi-tools/lib/MIDIReader";
 import {
   KeySignatureEvent,
   TimeSignatureEvent,
@@ -127,8 +127,8 @@ const ensureMeasures = (
         timeSignatureMap.getSignature(currentOffset),
         ppqn
       ),
-      keySignatureMap: keySignatureMap,
-      timeSignatureMap,
+      keySignature: keySignatureMap.getSignature(currentOffset),
+      timeSignature: timeSignatureMap.getSignature(currentOffset),
       number: measureNumber,
     });
 
@@ -199,9 +199,9 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
 
   let lastNoteOffOffset:number|null;
 
-  let keySignatureMap:KeySignatureMap;
+  let keySignatureMap:KeySignatureMap = new KeySignatureMap();
 
-  let timeSignatureMap:TimeSignatureMap;
+  let timeSignatureMap:TimeSignatureMap = new TimeSignatureMap();
 
   let currentlyPlayingNotes:PlayingNotes;
 
@@ -251,11 +251,16 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
       trackName = undefined;
       trackInstrumentName = undefined;
       trackSequenceNumber = undefined;
+      // In a type 2 file, each track should contain its own time and key signatures.
+      // In types 0 and 1, the info should be (at least) at the beginning of the first
+      // track.
+      if (reader.header.fileType === MIDIFileType.Format2) {
+        keySignatureMap = new KeySignatureMap();
+        timeSignatureMap = new TimeSignatureMap();
+      }
       trackTexts = [];
       trackNoteNumbers = [];
       lastNoteOffOffset = null;
-      keySignatureMap = new KeySignatureMap();
-      timeSignatureMap = new TimeSignatureMap();
       currentlyPlayingNotes = {};
       measures = [];
     }
