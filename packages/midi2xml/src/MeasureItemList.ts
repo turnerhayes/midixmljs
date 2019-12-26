@@ -47,11 +47,19 @@ export class MeasureItemList implements Iterable<MeasureItemListNode> {
   constructor(
     {
       timeSignature,
+      items,
     }: {
       timeSignature:ITimeSignature,
+      items?:Iterable<IMeasureElement>,
     }
   ) {
     this.timeSignature = timeSignature;
+
+    if (items) {
+      for (let item of items) {
+        this.add(item);
+      }
+    }
   }
 
   public add(element:IMeasureElement):this {

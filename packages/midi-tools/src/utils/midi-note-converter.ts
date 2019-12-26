@@ -48,6 +48,7 @@ export function NoteNumberToName(note: number): IPitch {
   const noteObj: IPitch = {
     step,
     octave,
+    MIDINumber: note,
   };
 
   if (alter) {

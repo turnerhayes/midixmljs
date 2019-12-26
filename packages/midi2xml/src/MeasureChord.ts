@@ -20,14 +20,14 @@ export class MeasureChord implements IMeasureElement {
       measureNumber:number,
     }
   ) {
-    let duration:number = null;
-    for (let note of notes) {
-      if (duration !== null && duration !== note.noteType.duration) {
-        throw new Error(`Cannot create a chord of notes with differing durations`);
-      }
+    // let duration:number = null;
+    // for (let note of notes) {
+    //   if (duration !== null && duration !== note.noteType.duration) {
+    //     throw new Error(`Cannot create a chord of notes with differing durations`);
+    //   }
 
-      duration = note.noteType.duration;
-    }
+    //   duration = note.noteType.duration;
+    // }
 
     this.notes = notes;
     this.measureNumber = measureNumber;

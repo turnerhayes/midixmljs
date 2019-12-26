@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 import { convertMIDI } from './src/convert-midi';
+import { TrackReadError } from './src/TrackReadError';
 
 const samplePath:string = path.resolve(__dirname, "Tim Minchin - Rock N Roll Nerd.musescore.midi");
 // const samplePath:string = path.resolve(__dirname, "Tim Minchin - Rock N Roll Nerd.midi");
@@ -14,7 +15,12 @@ const samplePath:string = path.resolve(__dirname, "Tim Minchin - Rock N Roll Ner
   console.log(xml);
 })().catch(
   (err) => {
-    console.error(err);
+    if (err instanceof TrackReadError) {
+      console.error(`Error reading track ${err.trackNumber}: ${err.message}\n\n`, err.trackData);
+    }
+    else {
+      console.error(err);
+    }
     process.exit(1);
   }
 )

@@ -45,6 +45,7 @@ function NoteNumberToName(note) {
     var noteObj = {
         step: step,
         octave: octave,
+        MIDINumber: note,
     };
     if (alter) {
         noteObj.alter = alter;

@@ -93,6 +93,41 @@ export class Measure {
     if (this.measureElementsByOffset[offset] === undefined) {
       this.measureElementsByOffset[offset] = [];
     }
+    // else if (
+    //   this.measureElementsByOffset[offset][0].noteType.duration !== note.noteType.duration
+    // ) {
+    //   const pitchToName = (note:MeasureNote):string => {
+    //     let alter = "";
+
+    //     if (note.pitch.alter === -1) {
+    //       alter = "b";
+    //     }
+    //     else if (note.pitch.alter === 1) {
+    //       alter = "#";
+    //     }
+
+    //     return `${note.pitch.step}${alter}${note.pitch.octave}`;
+    //   };
+
+    //   const dotCountString = (note:MeasureNote):string => {
+    //     if (note.noteType.dotCount === 0) {
+    //       return "";
+    //     }
+    //     else if (note.noteType.dotCount === 1) {
+    //       return "dotted ";
+    //     }
+    //     else {
+    //       return `${note.noteType.dotCount}-dotted `;
+    //     }
+    //   };
+    //   const existingNote = this.measureElementsByOffset[offset][0] as MeasureNote;
+    //   const existingNoteString = `${dotCountString(existingNote)}${existingNote.noteType.typeName} ${pitchToName(existingNote)} (${existingNote.pitch.MIDINumber})`;
+    //   const newNoteString = `${dotCountString(note)}${note.noteType.typeName} ${pitchToName(note)} (${note.pitch.MIDINumber})`;
+    //   throw new Error(
+    //     `[Measure #${this.number}] Cannot add note at offset ${offset}: there are one or more notes there with a different duration ` + 
+    //     `(existing note: ${existingNoteString}, new note: ${newNoteString})`
+    //   );
+    // }
 
     this.measureElementsByOffset[offset].push(note);
 

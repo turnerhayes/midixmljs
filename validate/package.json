@@ -1,0 +1,14 @@
+{
+  "name": "validate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "Turner Hayes <dev@turnerhayes.com>",
+  "license": "ISC",
+  "dependencies": {
+    "xml.js": "0.0.8"
+  }
+}

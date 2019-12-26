@@ -1,18 +1,23 @@
 import { MIDIFile, MIDIReader } from "@thayes/midi-tools";
+import { ITimeSignature } from "@thayes/midi-tools/lib/utils";
+import Fraction from "fraction.js";
+
 
 import { getMeasuresByTrack } from "./get-measures-by-track";
 import { MeasureNote } from "./MeasureNote";
 import { MeasureRest } from "./MeasureRest";
-import Fraction from "fraction.js";
+import { MeasureItemList } from "./MeasureItemList";
 
 describe("get-measures-by-track", () => {
   it("should properly place rests across measure lines", () => {
     const file = new MIDIFile({ divisions: 8 });
 
-    file.timeSignature({
+    const timeSignature:ITimeSignature = {
       numerator: 2,
       denominator: 4,
-    });
+    }
+
+    file.timeSignature(timeSignature);
 
     file.note({
       note: 64,
@@ -34,64 +39,67 @@ describe("get-measures-by-track", () => {
 
     const measByTrack = getMeasuresByTrack(reader);
 
-    expect(measByTrack[1].measures[1].notes).toEqual(
-      [
-        new MeasureNote({
-          pitch: {
-            step: "E",
-            octave: 4,
-            alter: undefined,
-          },
-          duration: 8,
-          noteType: {
-            typeName: "quarter",
-            dot: false,
-            duration: 8,
-            fraction: new Fraction(1, 1),
-          },
-          measureNumber: 1,
-        }),
-        new MeasureRest({
-          duration: 8,
-          noteType: {
-            typeName: "quarter",
-            dot: false,
-            duration: 8,
-            fraction: new Fraction(1, 1),
-          },
-          measureNumber: 1,
-        }),
-      ]
+    expect(measByTrack[1].measures[1].measureItems).toEqual(
+      new MeasureItemList({
+        timeSignature,
+        items: [
+          new MeasureNote({
+            pitch: {
+              step: "E",
+              octave: 4,
+              MIDINumber: 64,
+            },
+            noteType: {
+              typeName: "quarter",
+              dotCount: 0,
+              duration: 8,
+              fraction: new Fraction(1, 1),
+            },
+            measureNumber: 1,
+          }),
+          new MeasureRest({
+            noteType: {
+              typeName: "quarter",
+              dotCount: 0,
+              duration: 8,
+              fraction: new Fraction(1, 1),
+            },
+            measureNumber: 1,
+          }),
+        ],
+      })
     );
 
-    expect(measByTrack[1].measures[2].notes).toEqual(
-      [
-        new MeasureRest({
-          duration: 12,
-          noteType: {
-            typeName: "quarter",
-            dot: true,
-            duration: 12,
-            fraction: new Fraction(3, 2),
-          },
-          measureNumber: 2,
-        }),
-        new MeasureNote({
-          pitch: {
-            step: "F",
-            octave: 4,
-            alter: 1,
-          },
-          duration: 4,
-          noteType: {
-            typeName: "eighth",
-            dot: false,
-            duration: 4,
-            fraction: new Fraction(1, 2),
-          },
-          measureNumber: 2,
-        }),
-      ]
+    expect(measByTrack[1].measures[2].measureItems).toEqual(
+      new MeasureItemList({
+        timeSignature,
+        items: [
+          new MeasureRest({
+            noteType: {
+              typeName: "quarter",
+              dotCount: 1,
+              duration: 12,
+              fraction: new Fraction(3, 2),
+            },
+            measureNumber: 2,
+          }),
+          new MeasureNote({
+            pitch: {
+              step: "F",
+              octave: 4,
+              alter: 1,
+              MIDINumber: 66,
+            },
+            noteType: {
+              typeName: "eighth",
+              dotCount: 0,
+              duration: 4,
+              fraction: new Fraction(1, 2),
+            },
+            measureNumber: 2,
+          }),
+        ],
+      })
     );
   });
 });

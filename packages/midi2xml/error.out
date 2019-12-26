@@ -1,0 +1,3097 @@
+[ <1 empty item>,
+  { info: 
+     { trackNumber: 1,
+       programNumber: 0,
+       averageNoteNumber: 66.29608938547486 },
+    keySignatureMap: 
+     KeySignatureMap {
+       offsetMap: { '0': { sharps: 0, mode: 'major' } },
+       sortedOffsets: [ 0 ] },
+    timeSignatureMap: 
+     TimeSignatureMap {
+       offsetMap: { '0': { numerator: 2, denominator: 2 } },
+       sortedOffsets: [ 0 ] },
+    measures: 
+     [ undefined,
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '0': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 1 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 1 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 1 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 5, MIDINumber: 81 },
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 1 } ],
+            '960': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ],
+            '1080': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ],
+            '1200': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ],
+            '1320': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ],
+            '1440': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ],
+            '1560': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ],
+            '1680': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ],
+            '1800': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 1 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 0,
+         endOffset: 1920,
+         number: 1 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '1920': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 2 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 2 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 1920,
+         endOffset: 3840,
+         number: 2 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '3840': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 3 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 3 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 3 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 3840,
+         endOffset: 5760,
+         number: 3 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '5760': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 4 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 4 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 4 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 5760,
+         endOffset: 7680,
+         number: 4 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '7680': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ],
+            '7920': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ],
+            '8160': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ],
+            '8400': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ],
+            '8640': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ],
+            '8880': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ],
+            '9120': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ],
+            '9360': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 5 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 7680,
+         endOffset: 9600,
+         number: 5 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '9600': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 6 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 6 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 9600,
+         endOffset: 11520,
+         number: 6 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '11520': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 7 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 7 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 7 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 11520,
+         endOffset: 13440,
+         number: 7 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '13440': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 8 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 8 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 8 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 13440,
+         endOffset: 15360,
+         number: 8 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '15360': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ],
+            '15600': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ],
+            '15840': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ],
+            '16080': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ],
+            '16320': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ],
+            '16560': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ],
+            '16800': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ],
+            '17040': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 9 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 15360,
+         endOffset: 17280,
+         number: 9 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '17280': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 10 } ],
+            '18240': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 4, MIDINumber: 65 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 10 } ],
+            '18480': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 10 } ],
+            '18720': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 10 } ],
+            '18960': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 5, MIDINumber: 77 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 10 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 17280,
+         endOffset: 19200,
+         number: 10 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '19200': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 11 } ],
+            '20160': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 11 } ],
+            '20400': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 11 } ],
+            '20640': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 11 } ],
+            '20880': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 5, MIDINumber: 79 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 11 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 19200,
+         endOffset: 21120,
+         number: 11 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '21120': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 } ],
+            '21360': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 5, MIDINumber: 79 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 } ],
+            '21600': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 } ],
+            '21840': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 } ],
+            '22080': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 5, MIDINumber: 79 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 } ],
+            '22320': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 12 } ],
+            '22560': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 12 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 21120,
+         endOffset: 23040,
+         number: 12 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '23040': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 } ],
+            '23280': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 } ],
+            '23520': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 } ],
+            '23760': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 } ],
+            '24000': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 } ],
+            '24240': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 13 } ],
+            '24480': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 13 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 23040,
+         endOffset: 24960,
+         number: 13 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '24960': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 4, MIDINumber: 65 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 } ],
+            '25440': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'F', octave: 4, MIDINumber: 65 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 } ],
+            '25920': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 } ],
+            '26160': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 } ],
+            '26400': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 24960,
+         endOffset: 26880,
+         number: 14 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '26880': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 15 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 15 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 15 } ],
+            '27360': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 15 } ],
+            '27840': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 15 } ],
+            '28080': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 15 } ],
+            '28320': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 15 } ],
+            '28560': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 15 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 26880,
+         endOffset: 28800,
+         number: 15 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '28800': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29040': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29280': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29520': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29760': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 16 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 16 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 16 } ],
+            '30240': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '30480': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 28800,
+         endOffset: 30720,
+         number: 16 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '30720': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '30960': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31200': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31440': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31680': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31920': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '32160': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 17 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 30720,
+         endOffset: 32640,
+         number: 17 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '32640': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '32880': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33120': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33360': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33600': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33840': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 1,
+                    fraction: { s: 1, n: 3, d: 2 },
+                    duration: 720 },
+                 measureNumber: 18 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 32640,
+         endOffset: 34560,
+         number: 18 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '34560': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '34800': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35040': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35280': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35520': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35760': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '36000': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'B', octave: 3, MIDINumber: 59 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '36240': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 34560,
+         endOffset: 36480,
+         number: 19 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '36480': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '36720': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '36960': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37200': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37440': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37680': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37920': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '38160': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 36480,
+         endOffset: 38400,
+         number: 20 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '38400': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'F', octave: 4, MIDINumber: 66, alter: 1 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 21 } ],
+            '38880': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 6, MIDINumber: 86 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 } ],
+            '39000': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 6, MIDINumber: 86 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 } ],
+            '39120': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 6, MIDINumber: 86 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 } ],
+            '39240': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 6, MIDINumber: 84 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 } ],
+            '39360': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 5, MIDINumber: 81 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 } ],
+            '39480': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 5, MIDINumber: 79 },
+                 noteType: 
+                  { typeName: '16th',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 4 },
+                    duration: 120 },
+                 measureNumber: 21 } ],
+            '39600': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 21 } ],
+            '40080': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 5, MIDINumber: 79 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 21 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 38400,
+         endOffset: 40320,
+         number: 21 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '40320': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'F', octave: 4, MIDINumber: 66, alter: 1 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '40560': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '40800': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'F', octave: 4, MIDINumber: 65 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41040': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41280': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 70, alter: 1 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41520': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41760': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 4, MIDINumber: 67 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 70, alter: 1 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 5, MIDINumber: 74 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '42000': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 40320,
+         endOffset: 42240,
+         number: 22 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '42240': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 5, MIDINumber: 79 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '42480': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '42720': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 5, MIDINumber: 76 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 5, MIDINumber: 79 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '42960': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '43200': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'F', octave: 5, MIDINumber: 77 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '43440': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '43680': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 4, MIDINumber: 69 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 5, MIDINumber: 72 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 },
+               MeasureNote {
+                 pitch: { step: 'F', octave: 5, MIDINumber: 77 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 42240,
+         endOffset: 44160,
+         number: 23 } ] },
+  { info: 
+     { trackNumber: 2,
+       programNumber: 1,
+       averageNoteNumber: 48.41975308641975 },
+    keySignatureMap: 
+     KeySignatureMap {
+       offsetMap: { '0': { sharps: 0, mode: 'major' } },
+       sortedOffsets: [ 0 ] },
+    timeSignatureMap: 
+     TimeSignatureMap {
+       offsetMap: { '0': { numerator: 2, denominator: 2 } },
+       sortedOffsets: [ 0 ] },
+    measures: 
+     [ undefined,
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '0': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 1 },
+               MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 1 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 0,
+         endOffset: 1920,
+         number: 1 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '1920': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 2 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 2 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 1920,
+         endOffset: 3840,
+         number: 2 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '3840': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 2, MIDINumber: 41 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 3 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 3, MIDINumber: 48 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 3 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 3840,
+         endOffset: 5760,
+         number: 3 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '5760': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 4 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 3, MIDINumber: 50 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 4 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 5760,
+         endOffset: 7680,
+         number: 4 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '7680': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 5 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 5 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 7680,
+         endOffset: 9600,
+         number: 5 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '9600': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 6 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 6 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 9600,
+         endOffset: 11520,
+         number: 6 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '11520': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 2, MIDINumber: 41 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 7 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 3, MIDINumber: 48 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 7 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 11520,
+         endOffset: 13440,
+         number: 7 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '13440': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 8 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 3, MIDINumber: 50 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 8 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 13440,
+         endOffset: 15360,
+         number: 8 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '15360': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 9 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'whole',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 4, d: 1 },
+                    duration: 1920 },
+                 measureNumber: 9 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 15360,
+         endOffset: 17280,
+         number: 9 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '17280': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 3, MIDINumber: 53 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 10 } ],
+            '17520': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 10 } ],
+            '17760': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 1,
+                    fraction: { s: 1, n: 3, d: 1 },
+                    duration: 1440 },
+                 measureNumber: 10 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 17280,
+         endOffset: 19200,
+         number: 10 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '19200': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 11 } ],
+            '19440': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 11 } ],
+            '19680': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 1,
+                    fraction: { s: 1, n: 3, d: 1 },
+                    duration: 1440 },
+                 measureNumber: 11 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 19200,
+         endOffset: 21120,
+         number: 11 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '21120': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 3, MIDINumber: 48 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 12 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 12 } ],
+            '21600': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 2, MIDINumber: 47 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 12 },
+               MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 12 } ],
+            '22080': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 12 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 21120,
+         endOffset: 23040,
+         number: 12 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '23040': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 13 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 13 } ],
+            '23520': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 13 },
+               MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 13 } ],
+            '24000': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 13 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 23040,
+         endOffset: 24960,
+         number: 13 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '24960': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 3, MIDINumber: 53 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 } ],
+            '25440': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 2, MIDINumber: 41 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 } ],
+            '25680': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 3, MIDINumber: 48 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 } ],
+            '25920': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 } ],
+            '26160': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 3, MIDINumber: 50 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 14 } ],
+            '26640': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 14 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 24960,
+         endOffset: 26880,
+         number: 14 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '26880': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 2, MIDINumber: 40 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 15 },
+               MeasureNote {
+                 pitch: { step: 'D', octave: 3, MIDINumber: 50 },
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 15 } ],
+            '27360': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 2, MIDINumber: 40 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 15 } ],
+            '27600': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 2, MIDINumber: 47 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 15 } ],
+            '27840': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 2, d: 1 },
+                    duration: 960 },
+                 measureNumber: 15 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 26880,
+         endOffset: 28800,
+         number: 15 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '28800': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29040': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29280': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 3, MIDINumber: 48 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29520': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '29760': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 1, MIDINumber: 33 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '30000': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 16 } ],
+            '30240': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 16 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 28800,
+         endOffset: 30720,
+         number: 16 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '30720': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '30960': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31200': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31440': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31680': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '31920': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 1, MIDINumber: 31 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '32160': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ],
+            '32400': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 17 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 30720,
+         endOffset: 32640,
+         number: 17 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '32640': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '32880': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33120': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33360': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33600': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '33840': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 18 } ],
+            '34080': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'quarter',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 1 },
+                    duration: 480 },
+                 measureNumber: 18 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 32640,
+         endOffset: 34560,
+         number: 18 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '34560': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 2, MIDINumber: 38 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '34800': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 3, MIDINumber: 48 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35040': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35280': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 3, MIDINumber: 48 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35520': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 2, MIDINumber: 36 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '35760': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 2, MIDINumber: 47 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '36000': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ],
+            '36240': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 2, MIDINumber: 47 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 19 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 34560,
+         endOffset: 36480,
+         number: 19 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '36480': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 1, MIDINumber: 33 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '36720': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '36960': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37200': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 2, MIDINumber: 45 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37440': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 1, MIDINumber: 31 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37680': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '37920': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ],
+            '38160': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 2, MIDINumber: 43 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 20 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 36480,
+         endOffset: 38400,
+         number: 20 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '38400': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 1, MIDINumber: 34, alter: 1 },
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 1,
+                    fraction: { s: 1, n: 3, d: 1 },
+                    duration: 1440 },
+                 measureNumber: 21 },
+               MeasureNote {
+                 pitch: { step: 'F', octave: 2, MIDINumber: 42, alter: 1 },
+                 noteType: 
+                  { typeName: 'half',
+                    dotCount: 1,
+                    fraction: { s: 1, n: 3, d: 1 },
+                    duration: 1440 },
+                 measureNumber: 21 } ],
+            '39840': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 3, MIDINumber: 52 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 21 } ],
+            '40080': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 21 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 38400,
+         endOffset: 40320,
+         number: 21 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '40320': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 3, MIDINumber: 50 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '40560': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '40800': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41040': 
+             [ MeasureNote {
+                 pitch: { step: 'A', octave: 3, MIDINumber: 57 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41280': 
+             [ MeasureNote {
+                 pitch: { step: 'G', octave: 3, MIDINumber: 55 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41520': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '41760': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ],
+            '42000': 
+             [ MeasureNote {
+                 pitch: { step: 'D', octave: 4, MIDINumber: 62 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 22 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 40320,
+         endOffset: 42240,
+         number: 22 },
+       Measure {
+         _notes: null,
+         measureElementsByOffset: 
+          { '42240': 
+             [ MeasureNote {
+                 pitch: { step: 'E', octave: 4, MIDINumber: 64 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '42480': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '42720': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '42960': 
+             [ MeasureNote {
+                 pitch: { step: 'B', octave: 4, MIDINumber: 71 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '43200': 
+             [ MeasureNote {
+                 pitch: { step: 'F', octave: 3, MIDINumber: 53 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '43440': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '43680': 
+             [ MeasureRest {
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ],
+            '43920': 
+             [ MeasureNote {
+                 pitch: { step: 'C', octave: 4, MIDINumber: 60 },
+                 noteType: 
+                  { typeName: 'eighth',
+                    dotCount: 0,
+                    fraction: { s: 1, n: 1, d: 2 },
+                    duration: 240 },
+                 measureNumber: 23 } ] },
+         timeSignature: { numerator: 2, denominator: 2 },
+         keySignature: { sharps: 0, mode: 'major' },
+         startOffset: 42240,
+         endOffset: 44160,
+         number: 23 } ] } ]

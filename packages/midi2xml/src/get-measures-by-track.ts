@@ -12,7 +12,7 @@ import {
   NoteOffEvent,
   ProgramChangeEvent
 } from "@thayes/midi-tools/lib/MIDIReader/MIDIEvents";
-import { MIDIEventType, MIDIFileType } from "@thayes/midi-tools/lib/MIDIReader";
+import { MIDIEventType, MIDIFileType, IMIDIChannelEvent } from "@thayes/midi-tools/lib/MIDIReader";
 import {
   KeySignatureEvent,
   TimeSignatureEvent,
@@ -30,6 +30,7 @@ import { Measure } from "./Measure";
 import { MeasureNote } from "./MeasureNote";
 import { MeasureRest } from "./MeasureRest";
 import { getNoteTypes, INoteType, findNoteType } from "./NoteTypes";
+import { TrackReadError } from "./TrackReadError";
 
 export interface ITrackInfo {
   trackNumber:number;
@@ -43,6 +44,8 @@ export interface ITrackInfo {
 
 export interface ITrackData {
   info:ITrackInfo,
+  timeSignatureMap:TimeSignatureMap;
+  keySignatureMap:KeySignatureMap;
   measures:Measure[],
 }
 
@@ -67,6 +70,8 @@ export const ticksPerBeat = (
 ):number => {
   return ppqn * quarterNotesPerBeat(timeSignature);
 };
+
+const DEFAULT_PROGRAM_NUMBER = 0;
 
 const getMeasureEndOffset = (
   startOffset:number,
@@ -117,7 +122,7 @@ const ensureMeasures = (
   
   let currentOffset = lastMeasureEnd;
 
-  const measureNumber = measures.length;
+  let measureNumber = measures.length;
 
   while (currentOffset <= endOffset) {
     const measure = new Measure({
@@ -135,6 +140,7 @@ const ensureMeasures = (
     measures[measureNumber] = measure;
 
     currentOffset = measure.endOffset + 1;
+    measureNumber += 1;
   }
 };
 
@@ -191,248 +197,313 @@ export const getMeasuresByTrack = (reader:MIDIReader):MeasuresByTrack => {
 
   const ppqn = (reader.header.division as ITicksPerQuarterNote).ticks;
 
+  const useChannelsAsTracks = reader.header.fileType === MIDIFileType.Format0;
+
   let currentTrack = -1;
 
   let currentMeasureNumber = 1;
 
   let currentOffset = 0;
 
-  let lastNoteOffOffset:number|null;
+  const lastNoteOffOffsetByTrack:{[trackNumber:number]: number} = {};
 
   let keySignatureMap:KeySignatureMap = new KeySignatureMap();
 
   let timeSignatureMap:TimeSignatureMap = new TimeSignatureMap();
 
-  let currentlyPlayingNotes:PlayingNotes;
+  const currentlyPlayingNotesByTrack:{[trackNumber:number]: PlayingNotes} = {};
 
-  let currentProgramNumber:number;
-
-  let trackName:string;
-
-  let trackInstrumentName:string;
-
-  let trackSequenceNumber:number;
-
-  let trackTexts:string[];
-
-  let trackNoteNumbers:number[];
+  const noteNumbersByTrack:{[trackNumber:number]: number[]} = {};
 
   let measures:Measure[];
 
   let lastOffsetAdjustment:number = 0;
 
-  for (let { event, trackNumber, deltaTime } of reader.readTracks()) {
-    // track change
-    if (trackNumber !== currentTrack) {
-      if (currentTrack > 0) {
-        measuresByTrack[currentTrack] = {
+  for (let { event, trackNumber:eventTrackNumber, deltaTime } of reader.readTracks()) {
+    let trackNumber:number;
+    
+    if (useChannelsAsTracks) {
+      if ("channel" in (event as IMIDIChannelEvent)) {
+        trackNumber = (event as IMIDIChannelEvent).channel;
+      }
+    }
+    
+    if (trackNumber === undefined) {
+      trackNumber = eventTrackNumber;
+    }
+
+    try {
+      let trackData:ITrackData = measuresByTrack[trackNumber];
+
+      if (!trackData) {
+        trackData = {
           info: {
-            trackNumber: currentTrack,
-            programNumber: currentProgramNumber,
-            averageNoteNumber: trackNoteNumbers.reduce(
-              (sum, noteNumber) => sum + noteNumber,
-              0
-            ) / trackNoteNumbers.length,
-            instrumentName: trackInstrumentName,
-            sequenceNumber: trackSequenceNumber,
-            name: trackName,
-            texts: trackTexts.length > 0 ?
-              trackTexts :
-              undefined,
+            trackNumber,
+            programNumber: DEFAULT_PROGRAM_NUMBER,
+            averageNoteNumber: 0,
           },
-          measures,
+          keySignatureMap: reader.header.fileType === MIDIFileType.Format2 ?
+            new KeySignatureMap() :
+            keySignatureMap,
+          timeSignatureMap: reader.header.fileType === MIDIFileType.Format2 ?
+            new TimeSignatureMap() :
+            timeSignatureMap,
+          measures: [],
         };
-      }
 
-      currentTrack = trackNumber;
-      currentMeasureNumber = 1;
-      currentOffset = 0;
-      currentProgramNumber = 0;
-      trackName = undefined;
-      trackInstrumentName = undefined;
-      trackSequenceNumber = undefined;
-      // In a type 2 file, each track should contain its own time and key signatures.
-      // In types 0 and 1, the info should be (at least) at the beginning of the first
-      // track.
-      if (reader.header.fileType === MIDIFileType.Format2) {
-        keySignatureMap = new KeySignatureMap();
-        timeSignatureMap = new TimeSignatureMap();
-      }
-      trackTexts = [];
-      trackNoteNumbers = [];
-      lastNoteOffOffset = null;
-      currentlyPlayingNotes = {};
-      measures = [];
-    }
+        measuresByTrack[trackNumber] = trackData;
 
-    if (deltaTime > 0) {
-      currentOffset += Math.max(
-        0,
-        deltaTime - lastOffsetAdjustment
-      );
-      lastOffsetAdjustment = 0;
-    }
+        currentlyPlayingNotesByTrack[trackNumber] = {};
 
-    let type = event.type;
-
-    if (type & MIDIEventType.MetaKeySignature) {
-      const { sharps, isMajor } = event as KeySignatureEvent;
-
-      keySignatureMap.addSignature(
-        currentOffset,
-        {
-          sharps: sharps as KeySharps,
-          mode: isMajor ?
-            "major":
-            "minor",
-        }
-      );
-    }
-    else if (type & MIDIEventType.MetaTimeSignature) {
-      const { numerator, denominator } = event as TimeSignatureEvent;
-
-      timeSignatureMap.addSignature(
-        currentOffset,
-        {
-          numerator,
-          denominator,
-        }
-      );
-    }
-    else if (type & MIDIEventType.MetaTrackName) {
-      const { name } = event as TrackNameEvent;
-
-      trackName = name;
-    }
-    else if (type & MIDIEventType.MetaInstrumentName) {
-      const { name } = event as InstrumentNameEvent;
-
-      trackInstrumentName = name;
-    }
-    else if (type & MIDIEventType.MetaSequenceNumber) {
-      const { sequenceNumber } = event as SequenceNumberEvent;
-      
-      trackSequenceNumber = sequenceNumber;
-    }
-    else if (type & MIDIEventType.MetaText) {
-      const { text } = event as TextEvent;
-      
-      trackTexts.push(text);
-    }
-    else if (type & MIDIEventType.ProgramChange) {
-      const { programNumber } = event as ProgramChangeEvent;
-
-      currentProgramNumber = programNumber;
-
-      if (currentOffset > 0) {
-        console.warn(`Encountered a program change event that was not at the beginning of the track; the resulting MusicXML may not reflect this properly`);
-      }
-    }
-    else if (type & (MIDIEventType.NoteOn | MIDIEventType.NoteOff)) {
-      let noteNumber;
-
-      ensureMeasures({
-        measures,
-        timeSignatureMap,
-        keySignatureMap,
-        endOffset: currentOffset,
-        ppqn
-      });
-
-      currentMeasureNumber = measures.length - 1;
-
-      if (type & MIDIEventType.NoteOn) {
-        noteNumber = (event as NoteOnEvent).noteNumber;
-
-        if ((event as NoteOnEvent).velocity === 0) {
-          type = MIDIEventType.NoteOff;
+        // For type 0, there's only 1 track, so only 1 offset. For the other types,
+        // we need to reset offset each time we change tracks.
+        if (!useChannelsAsTracks) {
+          currentOffset = 0;
         }
       }
-      else {
-        noteNumber = (event as NoteOffEvent).noteNumber;
+
+      if (deltaTime > 0) {
+        currentOffset += Math.max(
+          0,
+          deltaTime - lastOffsetAdjustment
+        );
+        lastOffsetAdjustment = 0;
       }
 
-      if (type & MIDIEventType.NoteOn) {
+      let type = event.type;
+
+      if (type & MIDIEventType.MetaKeySignature) {
+        const { sharps, isMajor } = event as KeySignatureEvent;
+
+        trackData.keySignatureMap.addSignature(
+          currentOffset,
+          {
+            sharps: sharps as KeySharps,
+            mode: isMajor ?
+              "major":
+              "minor",
+          }
+        );
+      }
+      else if (type & MIDIEventType.MetaTimeSignature) {
+        const { numerator, denominator } = event as TimeSignatureEvent;
+
+        trackData.timeSignatureMap.addSignature(
+          currentOffset,
+          {
+            numerator,
+            denominator,
+          }
+        );
+      }
+      else if (type & MIDIEventType.MetaTrackName) {
+        const { name } = event as TrackNameEvent;
+
+        if (reader.header.fileType === MIDIFileType.Format2) {
+          trackData.info.name = name;
+        }
+        else {
+          Object.values(measuresByTrack).forEach(
+            (trackData) => trackData.info.name = name
+          );
+        }
+      }
+      else if (type & MIDIEventType.MetaInstrumentName) {
+        const { name } = event as InstrumentNameEvent;
+
+        if (reader.header.fileType === MIDIFileType.Format2) {
+          trackData.info.instrumentName = name;
+        }
+        else {
+          Object.values(measuresByTrack).forEach(
+            (trackData) => trackData.info.instrumentName = name
+          );
+        }
+      }
+      else if (type & MIDIEventType.MetaSequenceNumber) {
+        const { sequenceNumber } = event as SequenceNumberEvent;
+        
+        if (reader.header.fileType === MIDIFileType.Format2) {
+          trackData.info.sequenceNumber = sequenceNumber;
+        }
+        else {
+          Object.values(measuresByTrack).forEach(
+            (trackData) => trackData.info.sequenceNumber = sequenceNumber
+          );
+        }
+      }
+      else if (type & MIDIEventType.MetaText) {
+        const { text } = event as TextEvent;
+        
+        if (!trackData.info.texts) {
+          trackData.info.texts = [];
+        }
+
+        trackData.info.texts.push(text);
+        if (reader.header.fileType === MIDIFileType.Format2) {
+          if (!trackData.info.texts) {
+            trackData.info.texts = [];
+          }
+
+          trackData.info.texts.push(text);
+        }
+        else {
+          Object.values(measuresByTrack).forEach(
+            (trackData) => {
+              if (!trackData.info.texts) {
+                trackData.info.texts = [];
+              }
+
+              trackData.info.texts.push(text);
+            }
+          );
+        }
+      }
+      else if (type & MIDIEventType.ProgramChange) {
+        const { programNumber, channel } = event as ProgramChangeEvent;
+
+        trackData.info.programNumber = programNumber + 1;
+
         if (
-          lastNoteOffOffset !== null &&
-          lastNoteOffOffset + 1 < currentOffset &&
-          Object.keys(currentlyPlayingNotes).length === 0
+          trackData.measures.length > 1 ||
+          Object.keys(currentlyPlayingNotesByTrack[trackNumber]).length > 0
         ) {
-          currentOffset = addRests({
-            measures,
-            fromOffset: lastNoteOffOffset,
-            toOffset: currentOffset,
-            ppqn,
-          });
+          console.warn(
+            `Encountered a program change event after notes started playing ` +
+            `(offset was ${currentOffset}); the resulting MusicXML may not reflect this properly`
+          );
         }
-
-        currentlyPlayingNotes[noteNumber] = {
-          startOffset: currentOffset,
-          startMeasure: currentMeasureNumber,
-        };
-
-        trackNoteNumbers.push(noteNumber);
       }
-      else if (type & MIDIEventType.NoteOff) {
-        const playingNote = currentlyPlayingNotes[noteNumber];
+      else if (type & (MIDIEventType.NoteOn | MIDIEventType.NoteOff)) {
+        let noteNumber;
 
-        if (!playingNote) {
-          console.warn(`Got a noteOff event for note number ${noteNumber} with no matching noteOn`);
-          continue;
-        }
-
-        const pitch = NoteNumberToName(noteNumber);
-
-        const duration = currentOffset - playingNote.startOffset;
-
-        const note = new MeasureNote({
-          pitch,
-          measureNumber: playingNote.startMeasure,
-          noteType: findNoteType(duration, ppqn),
+        ensureMeasures({
+          measures: trackData.measures,
+          timeSignatureMap: trackData.timeSignatureMap,
+          keySignatureMap: trackData.keySignatureMap,
+          endOffset: currentOffset,
+          ppqn,
         });
 
-        measures[playingNote.startMeasure].addNote({
-          offset: playingNote.startOffset,
-          note,
-        });
+        currentMeasureNumber = trackData.measures.length - 1;
 
-        // Canonicalize offset; if the actual duration was not a proper duration (i.e.
-        // corresponding exactly to a half note, quarter note, eighth note, etc.) then
-        // noteType.duration will not be the same as the duration calculated from the
-        // deltaTime--for instance, if ppqn = 480 and duration = 239, note.noteType will
-        // be an eighth note and note.noteType.duration will be 240. In that case, we want
-        // to add 1 to the currentOffset so that it aligns with the adjusted duration.
-        if (note.noteType.duration !== duration) {
-          const adjustment = note.noteType.duration - duration;
-          currentOffset += adjustment;
-          lastOffsetAdjustment = adjustment;
+        if (type & MIDIEventType.NoteOn) {
+          noteNumber = (event as NoteOnEvent).noteNumber;
+
+          if ((event as NoteOnEvent).velocity === 0) {
+            type = MIDIEventType.NoteOff;
+          }
+        }
+        else {
+          noteNumber = (event as NoteOffEvent).noteNumber;
         }
 
-        delete currentlyPlayingNotes[noteNumber];
+        if (type & MIDIEventType.NoteOn) {
+          if (
+            lastNoteOffOffsetByTrack[trackNumber] !== undefined &&
+            lastNoteOffOffsetByTrack[trackNumber] + 1 < currentOffset &&
+            Object.keys(currentlyPlayingNotesByTrack[trackNumber]).length === 0
+          ) {
+            const toOffset = currentOffset;
+            currentOffset = addRests({
+              measures: trackData.measures,
+              fromOffset: lastNoteOffOffsetByTrack[trackNumber],
+              toOffset,
+              ppqn,
+            });
 
-        lastNoteOffOffset = currentOffset;
+            if (currentOffset !== toOffset) {
+              lastOffsetAdjustment = currentOffset - toOffset;
+            }
+
+            delete lastNoteOffOffsetByTrack[trackNumber];
+
+            /// DEBUG
+            let prevMeasure:Measure = null;
+            for (let _measure of trackData.measures) {
+              if (!_measure) {
+                continue;
+              }
+
+              if (prevMeasure !== null && Math.abs(_measure.startOffset - prevMeasure.endOffset) > 1) {
+                throw new Error(`Non-contiguous measures ${prevMeasure.number} - ${_measure.number}`);
+              }
+
+              prevMeasure = _measure;
+            }
+
+            /// END DEBUG
+          }
+
+          currentlyPlayingNotesByTrack[trackNumber][noteNumber] = {
+            startOffset: currentOffset,
+            startMeasure: currentMeasureNumber,
+          };
+
+          if (!noteNumbersByTrack[trackNumber]) {
+            noteNumbersByTrack[trackNumber] = [];
+          }
+
+          noteNumbersByTrack[trackNumber].push(noteNumber);
+          trackData.info.averageNoteNumber = noteNumbersByTrack[trackNumber].reduce(
+            (sum, noteNumber) => sum + noteNumber,
+            0
+          ) / noteNumbersByTrack[trackNumber].length;
+        }
+        else if (type & MIDIEventType.NoteOff) {
+          const playingNote = currentlyPlayingNotesByTrack[trackNumber][noteNumber];
+
+          if (!playingNote) {
+            console.warn(`Got a noteOff event for note number ${noteNumber} with no matching noteOn`);
+            continue;
+          }
+
+          const pitch = NoteNumberToName(noteNumber);
+
+          const duration = currentOffset - playingNote.startOffset;
+
+          const note = new MeasureNote({
+            pitch,
+            measureNumber: playingNote.startMeasure,
+            noteType: findNoteType(duration, ppqn),
+          });
+
+          trackData.measures[playingNote.startMeasure].addNote({
+            offset: playingNote.startOffset,
+            note,
+          });
+
+          // Canonicalize offset; if the actual duration was not a proper duration (i.e.
+          // corresponding exactly to a half note, quarter note, eighth note, etc.) then
+          // noteType.duration will not be the same as the duration calculated from the
+          // deltaTime--for instance, if ppqn = 480 and duration = 239, note.noteType will
+          // be an eighth note and note.noteType.duration will be 240. In that case, we want
+          // to add 1 to the currentOffset so that it aligns with the adjusted duration.
+          if (note.noteType.duration !== duration) {
+            const adjustment = note.noteType.duration - duration;
+            currentOffset += adjustment;
+            lastOffsetAdjustment = adjustment;
+          }
+
+          delete currentlyPlayingNotesByTrack[trackNumber][noteNumber];
+
+          lastNoteOffOffsetByTrack[trackNumber] = currentOffset;
+        }
       }
     }
-  }
-
-  if (measures.length > 0) {
-    measuresByTrack[currentTrack] = {
-      info: {
-        trackNumber: currentTrack,
-        programNumber: currentProgramNumber,
-        averageNoteNumber: trackNoteNumbers.reduce(
-          (sum, noteNumber) => sum + noteNumber,
-          0
-        ) / trackNoteNumbers.length,
-        instrumentName: trackInstrumentName,
-        sequenceNumber: trackSequenceNumber,
-        name: trackName,
-        texts: trackTexts.length > 0 ?
-          trackTexts :
-          undefined,
-      },
-      measures,
-    };
+    catch (ex) {
+      throw new TrackReadError(
+        ex.message,
+        trackNumber,
+        {
+          trackName: measuresByTrack[trackNumber].info.name,
+          trackInstrumentName: measuresByTrack[trackNumber].info.instrumentName,
+          trackSequenceNumber: measuresByTrack[trackNumber].info.sequenceNumber,
+          trackTexts: measuresByTrack[trackNumber].info.texts,
+        },
+        ex.stack
+      );
+    }
   }
 
   return measuresByTrack;

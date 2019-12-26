@@ -4,33 +4,33 @@ export type NoteTypeName = "whole"|"half"|"quarter"|"eighth"|"16th"|"32nd"|"64th
 
 export interface INoteType {
   typeName:NoteTypeName;
-  dot:boolean;
+  dotCount:number;
   duration:number;
   fraction:Fraction; // numerator, denominator
 };
 
 const types:{[typeName:string]: Fraction} = {
-  whole_dot: new Fraction(6, 1),
+  whole_1dot: new Fraction(6, 1),
   whole: new Fraction(4, 1),
-  half_dot: new Fraction(3, 1),
+  half_1dot: new Fraction(3, 1),
   half: new Fraction(2, 1),
-  quarter_dot: new Fraction(3, 2),
+  quarter_1dot: new Fraction(3, 2),
   quarter: new Fraction(1, 1),
-  eighth_dot: new Fraction(3, 4),
+  eighth_1dot: new Fraction(3, 4),
   eighth: new Fraction(1, 2),
-  "16th_dot": new Fraction(3, 8),
+  "16th_1dot": new Fraction(3, 8),
   "16th": new Fraction(1, 4),
-  "32nd_dot": new Fraction(3, 16),
+  "32nd_1dot": new Fraction(3, 16),
   "32nd": new Fraction(1, 8),
-  "64th_dot": new Fraction(3, 32),
+  "64th_1dot": new Fraction(3, 32),
   "64th": new Fraction(1, 16),
-  "128th_dot": new Fraction(3, 64),
+  "128th_1dot": new Fraction(3, 64),
   "128th": new Fraction(1, 32),
-  "256th_dot": new Fraction(3, 128),
+  "256th_1dot": new Fraction(3, 128),
   "256th": new Fraction(1, 64),
-  "512th_dot": new Fraction(3, 256),
+  "512th_1dot": new Fraction(3, 256),
   "512th": new Fraction(1, 128),
-  "1024th_dot": new Fraction(3, 512),
+  "1024th_1dot": new Fraction(3, 512),
   "1024th": new Fraction(1, 256),
 };
 
@@ -41,13 +41,23 @@ export const getNoteTypes = (ppqn:number):{[duration:number]: INoteType} => {
     const fraction = types[key];
     const [ typeName, dot ] = key.split("_");
 
+    let dotCount:number = 0;
+
+    if (dot) {
+      const matches = dot.match(/(\d+)dot$/);
+  
+      if (matches) {
+        dotCount = Number(matches[1]);
+      }
+    }
+
     const pulses = fraction.mul(ppqn);
 
     // Only add if an integer
     if (pulses.equals(pulses.floor())) {
       noteTypes[pulses.valueOf()] = {
         typeName: typeName as NoteTypeName,
-        dot: !!dot,
+        dotCount,
         fraction,
         duration: pulses.valueOf(),
       };

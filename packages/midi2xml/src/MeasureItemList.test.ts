@@ -14,14 +14,13 @@ describe("MeasureItemList", () => {
 
     const element1 = new MeasureNote({
       measureNumber: 1,
-      duration: 4,
       pitch: {
         step: "B",
         octave: 4,
       },
       noteType: {
         typeName: "eighth",
-        dot: false,
+        dotCount: 0,
         duration: 4,
         fraction: new Fraction(1, 2),
       },
@@ -29,14 +28,13 @@ describe("MeasureItemList", () => {
 
     const element2 = new MeasureNote({
       measureNumber: 1,
-      duration: 4,
       pitch: {
         step: "C",
         octave: 4,
       },
       noteType: {
         typeName: "eighth",
-        dot: false,
+        dotCount: 0,
         duration: 4,
         fraction: new Fraction(1, 2),
       },
@@ -44,10 +42,9 @@ describe("MeasureItemList", () => {
 
     const element3 = new MeasureRest({
       measureNumber: 1,
-      duration: 4,
       noteType: {
         typeName: "eighth",
-        dot: false,
+        dotCount: 0,
         duration: 4,
         fraction: new Fraction(1, 2),
       },
@@ -55,14 +52,13 @@ describe("MeasureItemList", () => {
 
     const element4 = new MeasureNote({
       measureNumber: 1,
-      duration: 4,
       pitch: {
         step: "E",
         octave: 4,
       },
       noteType: {
         typeName: "eighth",
-        dot: false,
+        dotCount: 0,
         duration: 4,
         fraction: new Fraction(1, 2),
       },
@@ -70,14 +66,13 @@ describe("MeasureItemList", () => {
 
     const element5 = new MeasureNote({
       measureNumber: 1,
-      duration: 16,
       pitch: {
         step: "D",
         octave: 4,
       },
       noteType: {
         typeName: "half",
-        dot: false,
+        dotCount: 0,
         duration: 16,
         fraction: new Fraction(2, 1),
       },

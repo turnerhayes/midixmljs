@@ -21,8 +21,21 @@ import {
 } from "./get-measures-by-track";
 import { IMeasureElement } from "./IMeasureElement";
 import { INoteType, findNoteType } from "./NoteTypes";
+import { isPiano } from "./is-piano";
 
 type FileInput = ArrayBuffer|DataView|Uint8Array|Buffer|string;
+
+type TrackClefInfo = {
+  [trackNumber:number]: {
+    data:ITrackData,
+    clef:"G"|"F",
+    clefNumber:number,
+  }
+};
+
+type TracksByProgram = {
+  [programNumber:number]: TrackClefInfo
+};
 
 const getArrayBuffer = async (
   midiFile:FileInput
@@ -77,121 +90,7 @@ const getArrayBuffer = async (
 
 
 const writeMeasureNotes = (xmlWriter:XMLWriter, measure:Measure, clefNumber:number, ppqn:number) => {
-  // const { timeSignature } = measure;
-  
-  // let beatGroup:IMeasureElement[] = [];
-  
-  // const beatGroups:Array<IMeasureElement[]> = [
-  //   beatGroup,
-  // ];
-
-  // const beatLength:number = ticksPerBeat(timeSignature, ppqn);
-
-  // type AudibleItem = MeasureNote|MeasureChord;
-
-  // type MeasureGroupItem = {
-  //   start:number;
-  //   startBeat:number;
-  //   end:number;
-  //   endBeat:number;
-  //   nextInBeat:MeasureGroupItem|null;
-  //   previousInBeat:MeasureGroupItem|null;
-  //   noteType:INoteType;
-  //   isRest:boolean;
-  //   noteItem?:AudibleItem;
-  // }
-
-  // const measureItems:MeasureGroupItem[] = [];
-
-  // let currentOffset = 0;
-
-  // for (let element of measure.notes) {
-  //   let item:MeasureGroupItem = {
-  //     start: currentOffset,
-  //     startBeat: Math.floor(currentOffset / beatLength),
-  //     end: currentOffset + element.duration,
-  //     endBeat: Math.floor((currentOffset + element.duration) / beatLength),
-  //     nextInBeat: null,
-  //     previousInBeat: null,
-  //     noteType: element.noteType,
-  //     isRest: element instanceof MeasureRest,
-  //     noteItem: element instanceof MeasureRest ?
-  //       undefined :
-  //       element as AudibleItem,
-  //   };
-
-  //   currentOffset += element.duration;
-
-  //   let previousAudibleItem:MeasureGroupItem;
-
-  //   let previousMeasureItem:MeasureGroupItem;
-
-  //   if (measureItems.length > 0) {
-  //     previousMeasureItem = measureItems[measureItems.length - 1];
-
-  //     for (
-  //       let itemIndex = measureItems.length - 1;
-  //       itemIndex >= 0 && !previousAudibleItem;
-  //       itemIndex--
-  //     ) {
-  //       if (!measureItems[itemIndex].isRest) {
-  //         previousAudibleItem = measureItems[itemIndex];
-  //       }
-  //     }
-  //   }
-
-  //   const nextItemStart = previousMeasureItem ?
-  //     previousMeasureItem.end :
-  //     0;
-
-  //   if (nextItemStart < item.start) {
-  //     const restDuration = item.start - nextItemStart;
-
-  //     measureItems.push({
-  //       start: nextItemStart,
-  //       startBeat: Math.floor(nextItemStart / beatLength),
-  //       end: item.start - 1,
-  //       endBeat: Math.floor((item.start) / beatLength),
-  //       nextInBeat: null,
-  //       previousInBeat: null,
-  //       noteType: findNoteType(restDuration, ppqn),
-  //       isRest: true,
-  //     });
-  //   }
-
-  //   measureItems.push(item);
-    
-  //   if (!item.isRest && previousAudibleItem && previousAudibleItem.startBeat === item.endBeat) {
-  //     previousAudibleItem.nextInBeat = item;
-  //     item.previousInBeat = previousAudibleItem;
-  //   }
-  // }
-
-  // const measureDuration = beatLength * timeSignature.numerator;
-  // const lastMeasureItem = measureItems[measureItems.length - 1];
-  // // It's possible that a measure has no items, in which case it should just have a rest
-  // // for the duration of the measure
-  // const nextItemStart = lastMeasureItem ?
-  //   lastMeasureItem.end :
-  //   0;
-
-  // for (let measureItem of measureItems) {
   for (let measureItem of measure.measureItems) {
-    if (measureItem.element instanceof MeasureRest) {
-      xmlWriter.startElement("note");
-      xmlWriter.startElement("rest").endElement();
-      xmlWriter.writeElement("type", measureItem.element.noteType.typeName);
-      if (measureItem.element.noteType.dot) {
-        xmlWriter.startElement("dot").endElement();
-      }
-      xmlWriter.writeElement("duration", measureItem.element.noteType.duration);
-      xmlWriter.writeElement("staff", clefNumber);
-      xmlWriter.writeElement("voice", clefNumber);
-      xmlWriter.endElement(); // end <note>
-
-      continue;
-    }
-      
     let notes:(MeasureNote|MeasureRest)[];
     
     if (measureItem.element instanceof MeasureChord) {
@@ -248,7 +147,8 @@ const writeMeasureNotes = (xmlWriter:XMLWriter, measure:Measure, clefNumber:numb
       xmlWriter.writeElement("duration", note.noteType.duration);
       xmlWriter.writeElement("type", note.noteType.typeName);
 
-      if (note.noteType.dot) {
+      
+      for (let dotIndex = 0; dotIndex < measureItem.element.noteType.dotCount; dotIndex++) {
         xmlWriter.startElement("dot").endElement();
       }
       if (measureItem.element instanceof MeasureChord && noteIndex > 0) {
@@ -297,20 +197,55 @@ export async function convertMIDI(
   xmlWriter.startElement("score-partwise");
   xmlWriter.startElement("part-list");
 
-  const tracksByProgramNumber:{
-    [program:number]: ITrackData[]
-  } = {};
+  const tracksByProgramNumber:TracksByProgram = {};
+
+  let clefNumber = 1;
   
   for (let track of measuresByTrack) {
-    if (!track) {
+    if (!track || track.measures.length === 0) {
       continue;
     }
 
-    if (!tracksByProgramNumber[track.info.programNumber]) {
-      tracksByProgramNumber[track.info.programNumber] = [];
+    const { programNumber } = track.info;
+
+    if (!isPiano(programNumber)) {
+      continue;
     }
 
-    tracksByProgramNumber[track.info.programNumber].push(track);
+    let thisClefNumber = clefNumber++;
+
+    // TODO: Better detection of appropriate clefs
+    let clef:"F"|"G" = "G";
+
+    let existingClefInfo:TrackClefInfo = tracksByProgramNumber[programNumber];
+
+    if (!existingClefInfo) {
+      existingClefInfo = tracksByProgramNumber[programNumber] = {};
+    }
+    else {
+      const existingClefNumber = Number(Object.keys(existingClefInfo)[0]);
+      if (existingClefInfo[existingClefNumber].data.info.averageNoteNumber < track.info.averageNoteNumber) {
+        existingClefInfo[existingClefNumber].clef = "F";
+        // Make sure G clef is always higher clef number (i.e. lower in score)
+        tracksByProgramNumber[programNumber][thisClefNumber] = existingClefInfo[existingClefNumber];
+        thisClefNumber = existingClefNumber;
+      }
+      else {
+        clef = "F";
+      }
+
+      existingClefInfo[thisClefNumber] = {
+        clef,
+        clefNumber: thisClefNumber,
+        data: track,
+      };
+    }
+
+    tracksByProgramNumber[track.info.programNumber][track.info.trackNumber] = {
+      data: track,
+      clef,
+      clefNumber: thisClefNumber,
+    };
   }
 
   const programNumberToPartID:{[program:number]: string} = {};
@@ -318,7 +253,7 @@ export async function convertMIDI(
   let partID = 0;
 
   for (let programNumber of Object.keys(tracksByProgramNumber)) {
-    const tracks = tracksByProgramNumber[programNumber];
+    const tracks:TrackClefInfo = tracksByProgramNumber[programNumber];
 
     const id = `P${++partID}`;
     programNumberToPartID[programNumber] = id;
@@ -333,49 +268,23 @@ export async function convertMIDI(
 
   xmlWriter.endElement(); // end <part-list>
 
-  let clefNumber = 0;
+  let hasWrittenAttributes = false;
 
   for (let programNumber of Object.keys(tracksByProgramNumber)) {
-    const tracks:ITrackData[] = tracksByProgramNumber[programNumber];
+    const tracks:TrackClefInfo = tracksByProgramNumber[programNumber];
 
-    let trebleClefTrack:ITrackData;
-    let bassCleffTrack:ITrackData;
-
-    const trebleClefNumber = ++clefNumber;
-    const bassCleffNumber = ++clefNumber;
-
-    // TODO: Better detection of appropriate clefs
-    if (tracks.length === 1) {
-      trebleClefTrack = tracks[0];
-    }
-    else if (tracks.length === 2) {
-      if (tracks[0].info.averageNoteNumber > tracks[1].info.averageNoteNumber) {
-        trebleClefTrack = tracks[0];
-        bassCleffTrack = tracks[1];
-      }
-      else {
-        trebleClefTrack = tracks[1];
-        bassCleffTrack = tracks[0];
-      }
-    }
-    else {
-      throw new Error(`Don't know how to handle more than 2 tracks`);
-    }
+    const track = tracks[Object.keys(tracks)[0]].data;
 
     xmlWriter.startElement("part");
     xmlWriter.writeAttribute("id", programNumberToPartID[programNumber]);
 
-    for (let measureNumber = 1; measureNumber < trebleClefTrack.measures.length; measureNumber++) {
-      const measure = trebleClefTrack.measures[measureNumber];
-
-      const bassCleffMeasure = bassCleffTrack ?
-        bassCleffTrack.measures[measureNumber] :
-        null;
+    for (let measureNumber = 1; measureNumber < track.measures.length; measureNumber++) {
+      const measure = track.measures[measureNumber];
 
       xmlWriter.startElement("measure");
       xmlWriter.writeAttribute("number", measureNumber);
 
-      if (measureNumber === 1) {
+      if (!hasWrittenAttributes) {
         // TODO: write attributes element in case of any change mid-piece (e.g key change, time change)
         xmlWriter.startElement("attributes");
         xmlWriter.writeElement("divisions", ppqn);
@@ -390,30 +299,45 @@ export async function convertMIDI(
         xmlWriter.writeElement("beat-type", measure.timeSignature.denominator);
         xmlWriter.endElement(); // end <time>
 
-        xmlWriter.writeElement("staves", tracks.length);
-        xmlWriter.startElement("clef");
-        xmlWriter.writeAttribute("number", trebleClefNumber);
-        xmlWriter.writeElement("sign", "G");
-        xmlWriter.writeElement("line", 2);
-        xmlWriter.endElement(); // end <clef>
-        xmlWriter.startElement("clef");
-        xmlWriter.writeAttribute("number", bassCleffNumber);
-        xmlWriter.writeElement("sign", "F");
-        xmlWriter.writeElement("line", 4);
-        xmlWriter.endElement(); // end <clef>
+        xmlWriter.writeElement("staves", measuresByTrack.length - 1);
+
+        let clefNumber = 1;
+        for (let programNumber of Object.keys(tracksByProgramNumber)) {
+          const tracks:TrackClefInfo = tracksByProgramNumber[programNumber];
+
+          for (let { clef, clefNumber } of Object.values(tracks).sort((a, b) => a.clefNumber - b.clefNumber)) {
+            xmlWriter.startElement("clef");
+            xmlWriter.writeAttribute("number", clefNumber);
+            if (clef === "G") {
+              xmlWriter.writeElement("sign", "G");
+              xmlWriter.writeElement("line", 2);
+            }
+            else {
+              xmlWriter.writeElement("sign", "F");
+              xmlWriter.writeElement("line", 4);
+            }
+            xmlWriter.endElement(); // end <clef>
+          }
+        }
         xmlWriter.endElement(); // end <attributes>
+
+        hasWrittenAttributes = true;
       }
+
+      const trackValues = Object.values(tracks);
     
-      writeMeasureNotes(xmlWriter, measure, trebleClefNumber, ppqn);
-      
-      if (bassCleffMeasure) {
-        xmlWriter.startElement("backup");
-        xmlWriter.writeElement("duration", measure.totalQuarterNotes * ppqn);
-        xmlWriter.endElement(); // end <backup>
+      for (let index = 0; index < trackValues.length; index++) {
+        const { data, clefNumber } = trackValues[index];
 
-        writeMeasureNotes(xmlWriter, bassCleffMeasure, bassCleffNumber, ppqn);
+        if (index > 0) {
+          xmlWriter.startElement("backup");
+          xmlWriter.writeElement("duration", measure.totalQuarterNotes * ppqn);
+          xmlWriter.endElement(); // end <backup>
+        }
+
+        writeMeasureNotes(xmlWriter, data.measures[measureNumber], clefNumber, ppqn);
       }
-
+      
       xmlWriter.endElement(); // end <measure>
     }
 
