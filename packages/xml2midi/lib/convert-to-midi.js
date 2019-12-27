@@ -45,23 +45,6 @@ var path_1 = require("path");
 var jsdom_1 = require("jsdom");
 var commander_1 = __importDefault(require("commander"));
 var XMLToMIDI_1 = require("./XMLToMIDI");
-/*
-const args = yargs.command(
-  "$0", "Converts a MusicXML file to MIDI.", (yargs) => {
-    return yargs.options({
-      out: {
-        alias: "o",
-        description: "Path to file where the resulting MIDI file should be written (relative to current working directory)",
-      },
-    }).positional("file", {
-      description: "Path to the MusicXML file to parse (relative to current working directory)",
-      type: "string",
-    }).demand(1);
-  }
-)
-.usage("convert-to-midi <file>")
-.help().argv;
-*/
 var filePathArg;
 commander_1.default.option("-o, --out [output path]", "Path to file where the resulting MIDI file should be written\n  If the path is omitted, it will write to the same filename, but with the extension replaced by \".midi\" and in the current working directory.\n  If this option is omitted entirely, it will write the MIDI file to stdout.").arguments("<filename>").action(function (filename) {
     filePathArg = filename;
@@ -113,3 +96,4 @@ new Promise(function (resolve, reject) { return fs_1.readFile(filePath, {
     console.error(err);
     process.exit(1);
 });
+//# sourceMappingURL=convert-to-midi.js.map

@@ -80,7 +80,7 @@ var readMeasuresFromPart = function (partNode, document) {
                     });
                     chordNotes.unshift(itemNode);
                     var notes = chordNotes.map(function (noteNode) {
-                        var pitchNode = itemNode.querySelector("pitch");
+                        var pitchNode = noteNode.querySelector("pitch");
                         var step = pitchNode.querySelector("step").textContent;
                         var octave = Number(pitchNode.querySelector("octave").textContent);
                         var alterNode = pitchNode.querySelector("alter");
@@ -293,3 +293,4 @@ exports.getMIDI = function (document) {
     });
     return file.toArrayBuffer();
 };
+//# sourceMappingURL=XMLToMIDI.js.map
