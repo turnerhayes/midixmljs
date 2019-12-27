@@ -25,5 +25,7 @@
     "url": "https://github.com/turnerhayes/midixmljs/issues"
   },
   "homepage": "https://github.com/turnerhayes/midixmljs#readme",
-  "dependencies": {}
+  "dependencies": {
+    "lerna": "^3.19.0"
+  }
 }
