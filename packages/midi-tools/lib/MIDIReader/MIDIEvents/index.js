@@ -16,5 +16,22 @@ var PitchBend_1 = require("./PitchBend");
 exports.PitchBendEvent = PitchBend_1.PitchBendEvent;
 var SysEx_1 = require("./SysEx");
 exports.SysExEvent = SysEx_1.SysExEvent;
-var Meta = require("./Meta");
-exports.Meta = Meta;
+var Meta_1 = require("./Meta");
+exports.Meta = {
+    SequenceNumberEvent: Meta_1.SequenceNumberEvent,
+    TimeSignatureEvent: Meta_1.TimeSignatureEvent,
+    KeySignatureEvent: Meta_1.KeySignatureEvent,
+    SetTempoEvent: Meta_1.SetTempoEvent,
+    PortPrefixEvent: Meta_1.PortPrefixEvent,
+    ChannelPrefixEvent: Meta_1.ChannelPrefixEvent,
+    CopyrightEvent: Meta_1.CopyrightEvent,
+    TrackNameEvent: Meta_1.TrackNameEvent,
+    TextEvent: Meta_1.TextEvent,
+    InstrumentNameEvent: Meta_1.InstrumentNameEvent,
+    LyricEvent: Meta_1.LyricEvent,
+    MarkerEvent: Meta_1.MarkerEvent,
+    CuePointEvent: Meta_1.CuePointEvent,
+    SMPTEOffsetEvent: Meta_1.SMPTEOffsetEvent,
+    SequencerSpecificEvent: Meta_1.SequencerSpecificEvent,
+};
+//# sourceMappingURL=index.js.map

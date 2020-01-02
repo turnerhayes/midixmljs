@@ -1,0 +1,3 @@
+export {
+  MIDIFile,
+} from "./MIDIFile";

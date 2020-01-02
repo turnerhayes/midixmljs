@@ -9,7 +9,7 @@ export declare class MIDIReader {
     private readonly dataView;
     private readonly trackStartOffset;
     readonly header: IMIDIFileHeader;
-    constructor(buffer: ArrayBufferLike | Buffer);
+    constructor(buffer: ArrayBuffer | DataView | Buffer);
     private readUint32;
     private readUint16;
     private readString;

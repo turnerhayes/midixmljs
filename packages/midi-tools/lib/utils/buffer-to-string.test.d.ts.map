@@ -1,1 +1,1 @@
-{"version":3,"file":"buffer-to-string.test.d.ts","sourceRoot":"","sources":["../../utils/buffer-to-string.test.ts"],"names":[],"mappings":""}
+{"version":3,"file":"buffer-to-string.test.d.ts","sourceRoot":"","sources":["../../src/utils/buffer-to-string.test.ts"],"names":[],"mappings":""}

@@ -9,3 +9,4 @@ var SysExEvent = /** @class */ (function () {
     return SysExEvent;
 }());
 exports.SysExEvent = SysExEvent;
+//# sourceMappingURL=SysEx.js.map

@@ -1,8 +1,9 @@
-export * from './buffer-to-string';
-export * from './variable-length-value';
-export * from './midi-note-converter';
-export * from './IPitch';
-export * from './IKeySignature';
-export * from './Channel';
-export * from './NoteStep';
+export { bufferToString } from './buffer-to-string';
+export { fromVariableLengthValue, toVariableLengthValue, } from './variable-length-value';
+export { NoteNameToNumber, NoteNumberToName, } from './midi-note-converter';
+export { IPitch, } from './IPitch';
+export { IKeySignature, KeySharps, } from './IKeySignature';
+export { ITimeSignature, } from './ITimeSignature';
+export { Channel, } from './Channel';
+export { NoteStep, } from './NoteStep';
 //# sourceMappingURL=index.d.ts.map
