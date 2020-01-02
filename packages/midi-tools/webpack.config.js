@@ -4,6 +4,7 @@
 
 const path = require("path");
 const webpack = require("webpack");
+const TypedocWebpackPlugin = require("typedoc-webpack-plugin");
 const getConfig = require("../../webpack.base.config");
 
 module.exports = getConfig(webpack, {
@@ -14,4 +15,9 @@ module.exports = getConfig(webpack, {
     library: "MIDITools",
     libraryTarget: "umd",
   },
+  plugins: [
+    new TypedocWebpackPlugin({
+      out: path.resolve(__dirname, "docs"),
+    }, "src"),
+  ],
 });
