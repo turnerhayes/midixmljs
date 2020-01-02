@@ -1,4 +1,5 @@
 import { IKeySignature, Channel } from "../utils";
+import { ITimeSignature } from "../utils/ITimeSignature";
 declare const enum MIDIMessageStatus {
     NoteOn = 144,
     NoteOff = 128,
@@ -26,10 +27,7 @@ export declare class MIDIFile {
         track?: number;
         channel?: Channel;
     }): void;
-    timeSignature({ numerator, denominator, }: {
-        numerator: number;
-        denominator: number;
-    }): void;
+    timeSignature({ numerator, denominator, }: ITimeSignature): void;
     keySignature({ keySignature, offset, }: {
         keySignature: IKeySignature;
         offset: number;

@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`MIDIFile should be able to change the tempo 1`] = `TVRoZAAAAAYAAQACAARNVHJrAAAADwD/UQMST4AAkEBAEIBAQE1UcmsAAAAPAP9RAxJPgACQREAQgERA/y8A`;
-
-exports[`MIDIFile should create a MIDI file with the added notes 1`] = `TVRoZAAAAAYAAAABAARNVHJrAAAAEACQQEAEkEJABIBAQASAQkD/LwA=`;
-
-exports[`MIDIFile should set a program change 1`] = `TVRoZAAAAAYAAQACAARNVHJrAAAACwCQQEACwAUOgEBATVRyawAAAAgAkERACIBEQP8vAA==`;

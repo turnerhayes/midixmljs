@@ -1,8 +1,11 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./buffer-to-string"));
-__export(require("./variable-length-value"));
-__export(require("./midi-note-converter"));
+var buffer_to_string_1 = require("./buffer-to-string");
+exports.bufferToString = buffer_to_string_1.bufferToString;
+var variable_length_value_1 = require("./variable-length-value");
+exports.fromVariableLengthValue = variable_length_value_1.fromVariableLengthValue;
+exports.toVariableLengthValue = variable_length_value_1.toVariableLengthValue;
+var midi_note_converter_1 = require("./midi-note-converter");
+exports.NoteNameToNumber = midi_note_converter_1.NoteNameToNumber;
+exports.NoteNumberToName = midi_note_converter_1.NoteNumberToName;
+//# sourceMappingURL=index.js.map

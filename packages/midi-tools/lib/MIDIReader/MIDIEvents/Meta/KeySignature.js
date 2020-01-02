@@ -10,3 +10,4 @@ var KeySignatureEvent = /** @class */ (function () {
     return KeySignatureEvent;
 }());
 exports.KeySignatureEvent = KeySignatureEvent;
+//# sourceMappingURL=KeySignature.js.map

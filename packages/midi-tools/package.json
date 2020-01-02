@@ -1,8 +1,9 @@
 {
   "name": "@thayes/midi-tools",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/index.js",
+  "module": "lib/index",
   "browser": "build/midi-tools.js",
   "scripts": {
     "test": "jest",
@@ -17,6 +18,10 @@
     "clean:compile": "rimraf lib",
     "clean": "npm run clean:compile && npm run clean:build"
   },
+  "files": [
+    "lib",
+    "build"
+  ],
   "author": "Turner Hayes<dev@turnerhayes.com>",
   "license": "ISC",
   "devDependencies": {
@@ -26,11 +31,13 @@
     "@typescript-eslint/eslint-plugin": "^1.3.0",
     "@typescript-eslint/parser": "^1.3.0",
     "eslint": "^5.14.0",
-    "jest": "^24.9.0",
+    "jest": "^23.6.0",
     "rimraf": "^2.6.3",
     "ts-jest": "^23.10.5",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
+    "typedoc": "^0.15.6",
+    "typedoc-webpack-plugin": "^1.1.4",
     "typescript": "^3.3.3",
     "webpack": "^4.29.4",
     "webpack-cli": "^3.2.3"

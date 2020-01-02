@@ -45,6 +45,7 @@ function NoteNumberToName(note) {
     var noteObj = {
         step: step,
         octave: octave,
+        MIDINumber: note,
     };
     if (alter) {
         noteObj.alter = alter;
@@ -103,3 +104,4 @@ function NoteNameToNumber(noteName) {
     return number + ((octave + 1) * 12);
 }
 exports.NoteNameToNumber = NoteNameToNumber;
+//# sourceMappingURL=midi-note-converter.js.map
