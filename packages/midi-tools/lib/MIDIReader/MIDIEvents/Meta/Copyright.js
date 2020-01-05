@@ -9,4 +9,3 @@ var CopyrightEvent = /** @class */ (function () {
     return CopyrightEvent;
 }());
 exports.CopyrightEvent = CopyrightEvent;
-//# sourceMappingURL=Copyright.js.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"ChannelAftertouch.js","sourceRoot":"","sources":["../../../src/MIDIReader/MIDIEvents/ChannelAftertouch.ts"],"names":[],"mappings":";;AAGA;IAOE,gCACE,EAOC;YANC,oBAAO,EACP,sBAAQ;QALI,SAAI,8BAAiD;QAYnE,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;QACvB,IAAI,CAAC,QAAQ,GAAG,QAAQ,CAAC;IAC3B,CAAC;IACH,6BAAC;AAAD,CAAC,AApBD,IAoBC;AApBY,wDAAsB"}

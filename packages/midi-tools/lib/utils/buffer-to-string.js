@@ -8,4 +8,3 @@ exports.bufferToString = function (buffer, startIndex, length) {
     }
     return str;
 };
-//# sourceMappingURL=buffer-to-string.js.map

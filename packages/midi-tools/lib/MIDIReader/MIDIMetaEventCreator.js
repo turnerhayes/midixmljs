@@ -1,27 +1,11 @@
 "use strict";
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var MIDIEvents_1 = require("./MIDIEvents");
 var buffer_to_string_1 = require("../utils/buffer-to-string");
 var variable_length_value_1 = require("../utils/variable-length-value");
 var readStringMetaEvent = function (dataView, startIndex) {
     var index = startIndex;
-    var _a = __read(variable_length_value_1.fromVariableLengthValue(dataView.buffer, dataView.byteOffset + index), 2), bytesRead = _a[0], stringLength = _a[1];
+    var _a = variable_length_value_1.fromVariableLengthValue(dataView.buffer, dataView.byteOffset + index), bytesRead = _a[0], stringLength = _a[1];
     index += bytesRead;
     var str = buffer_to_string_1.bufferToString(dataView.buffer, dataView.byteOffset + index, stringLength);
     index = index + stringLength;
@@ -46,49 +30,49 @@ exports.createMetaEventFromBytes = function (statusByte, dataView, startIndex) {
         });
     }
     else if (metaEventTypeNum === 0x01) {
-        var _a = __read(readStringMetaEvent(dataView, index), 2), bytesRead = _a[0], text = _a[1];
+        var _a = readStringMetaEvent(dataView, index), bytesRead = _a[0], text = _a[1];
         index += bytesRead;
         event = new MIDIEvents_1.Meta.TextEvent({
             text: text,
         });
     }
     else if (metaEventTypeNum === 0x02) {
-        var _b = __read(readStringMetaEvent(dataView, index), 2), bytesRead = _b[0], copyright = _b[1];
+        var _b = readStringMetaEvent(dataView, index), bytesRead = _b[0], copyright = _b[1];
         index += bytesRead;
         event = new MIDIEvents_1.Meta.CopyrightEvent({
             copyright: copyright,
         });
     }
     else if (metaEventTypeNum === 0x03) {
-        var _c = __read(readStringMetaEvent(dataView, index), 2), bytesRead = _c[0], name_1 = _c[1];
+        var _c = readStringMetaEvent(dataView, index), bytesRead = _c[0], name_1 = _c[1];
         index += bytesRead;
         event = new MIDIEvents_1.Meta.TrackNameEvent({
             name: name_1,
         });
     }
     else if (metaEventTypeNum === 0x04) {
-        var _d = __read(readStringMetaEvent(dataView, index), 2), bytesRead = _d[0], name_2 = _d[1];
+        var _d = readStringMetaEvent(dataView, index), bytesRead = _d[0], name_2 = _d[1];
         index += bytesRead;
         event = new MIDIEvents_1.Meta.InstrumentNameEvent({
             name: name_2,
         });
     }
     else if (metaEventTypeNum === 0x05) {
-        var _e = __read(readStringMetaEvent(dataView, index), 2), bytesRead = _e[0], lyric = _e[1];
+        var _e = readStringMetaEvent(dataView, index), bytesRead = _e[0], lyric = _e[1];
         index += bytesRead;
         event = new MIDIEvents_1.Meta.LyricEvent({
             lyric: lyric,
         });
     }
     else if (metaEventTypeNum === 0x06) {
-        var _f = __read(readStringMetaEvent(dataView, index), 2), bytesRead = _f[0], marker = _f[1];
+        var _f = readStringMetaEvent(dataView, index), bytesRead = _f[0], marker = _f[1];
         index += bytesRead;
         event = new MIDIEvents_1.Meta.MarkerEvent({
             marker: marker,
         });
     }
     else if (metaEventTypeNum === 0x07) {
-        var _g = __read(readStringMetaEvent(dataView, index), 2), bytesRead = _g[0], cueText = _g[1];
+        var _g = readStringMetaEvent(dataView, index), bytesRead = _g[0], cueText = _g[1];
         index += bytesRead;
         event = new MIDIEvents_1.Meta.CuePointEvent({
             cueText: cueText,
@@ -119,7 +103,8 @@ exports.createMetaEventFromBytes = function (statusByte, dataView, startIndex) {
     else if (metaEventTypeNum === 0x51) {
         // Next byte is 0x03--skip it
         index += 1;
-        var microsecondsPerQuarterNote = dataView.getUint16(index) << 8 + dataView.getUint8(index + 2);
+        var microsecondsPerQuarterNote = (dataView.getUint8(index) << 16) +
+            (dataView.getUint8(index + 1) << 8) + dataView.getUint8(index + 2);
         index += 3;
         event = new MIDIEvents_1.Meta.SetTempoEvent({
             microsecondsPerQuarterNote: microsecondsPerQuarterNote,
@@ -177,7 +162,7 @@ exports.createMetaEventFromBytes = function (statusByte, dataView, startIndex) {
         });
     }
     else if (metaEventTypeNum === 0x7F) {
-        var _h = __read(variable_length_value_1.fromVariableLengthValue(dataView.buffer, dataView.byteOffset + index), 2), bytesRead = _h[0], length_1 = _h[1];
+        var _h = variable_length_value_1.fromVariableLengthValue(dataView.buffer, dataView.byteOffset + index), bytesRead = _h[0], length_1 = _h[1];
         index += bytesRead;
         var data = new Uint8Array(dataView.buffer, dataView.byteOffset + index, length_1);
         var id = data.slice(0, 1);
@@ -201,4 +186,3 @@ exports.createMetaEventFromBytes = function (statusByte, dataView, startIndex) {
         event,
     ];
 };
-//# sourceMappingURL=MIDIMetaEventCreator.js.map

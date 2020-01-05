@@ -9,4 +9,3 @@ var TextEvent = /** @class */ (function () {
     return TextEvent;
 }());
 exports.TextEvent = TextEvent;
-//# sourceMappingURL=Text.js.map

@@ -13,4 +13,3 @@ var SMPTEOffsetEvent = /** @class */ (function () {
     return SMPTEOffsetEvent;
 }());
 exports.SMPTEOffsetEvent = SMPTEOffsetEvent;
-//# sourceMappingURL=SMPTEOffset.js.map

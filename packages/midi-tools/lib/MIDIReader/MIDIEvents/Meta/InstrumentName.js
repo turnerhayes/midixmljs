@@ -9,4 +9,3 @@ var InstrumentNameEvent = /** @class */ (function () {
     return InstrumentNameEvent;
 }());
 exports.InstrumentNameEvent = InstrumentNameEvent;
-//# sourceMappingURL=InstrumentName.js.map

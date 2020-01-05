@@ -1,1 +1,0 @@
-{"version":3,"file":"ProgramChange.js","sourceRoot":"","sources":["../../../src/MIDIReader/MIDIEvents/ProgramChange.ts"],"names":[],"mappings":";;AAGA;IAOE,4BACE,EAOC;YANC,oBAAO,EACP,gCAAa;QALD,SAAI,0BAA6C;QAY/D,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;QACvB,IAAI,CAAC,aAAa,GAAG,aAAa,CAAC;IACrC,CAAC;IACH,yBAAC;AAAD,CAAC,AApBD,IAoBC;AApBY,gDAAkB"}

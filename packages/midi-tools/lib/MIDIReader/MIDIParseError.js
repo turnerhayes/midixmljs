@@ -21,4 +21,3 @@ var MIDIParseError = /** @class */ (function (_super) {
     return MIDIParseError;
 }(Error));
 exports.MIDIParseError = MIDIParseError;
-//# sourceMappingURL=MIDIParseError.js.map

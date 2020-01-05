@@ -7,4 +7,3 @@ var MIDIFileType;
     MIDIFileType[MIDIFileType["Format2"] = 2] = "Format2";
 })(MIDIFileType = exports.MIDIFileType || (exports.MIDIFileType = {}));
 ;
-//# sourceMappingURL=MIDIFileType.js.map

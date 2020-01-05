@@ -9,4 +9,3 @@ var SetTempoEvent = /** @class */ (function () {
     return SetTempoEvent;
 }());
 exports.SetTempoEvent = SetTempoEvent;
-//# sourceMappingURL=SetTempo.js.map

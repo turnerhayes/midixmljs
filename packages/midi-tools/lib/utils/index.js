@@ -8,4 +8,3 @@ exports.toVariableLengthValue = variable_length_value_1.toVariableLengthValue;
 var midi_note_converter_1 = require("./midi-note-converter");
 exports.NoteNameToNumber = midi_note_converter_1.NoteNameToNumber;
 exports.NoteNumberToName = midi_note_converter_1.NoteNumberToName;
-//# sourceMappingURL=index.js.map

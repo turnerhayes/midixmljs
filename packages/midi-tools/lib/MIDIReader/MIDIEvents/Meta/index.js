@@ -30,4 +30,3 @@ var SMPTEOffset_1 = require("./SMPTEOffset");
 exports.SMPTEOffsetEvent = SMPTEOffset_1.SMPTEOffsetEvent;
 var SequencerSpecific_1 = require("./SequencerSpecific");
 exports.SequencerSpecificEvent = SequencerSpecific_1.SequencerSpecificEvent;
-//# sourceMappingURL=index.js.map

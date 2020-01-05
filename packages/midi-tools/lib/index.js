@@ -13,4 +13,3 @@ exports.fromVariableLengthValue = utils_1.fromVariableLengthValue;
 exports.toVariableLengthValue = utils_1.toVariableLengthValue;
 exports.NoteNameToNumber = utils_1.NoteNameToNumber;
 exports.NoteNumberToName = utils_1.NoteNumberToName;
-//# sourceMappingURL=index.js.map

@@ -11,4 +11,3 @@ var NoteOffEvent = /** @class */ (function () {
     return NoteOffEvent;
 }());
 exports.NoteOffEvent = NoteOffEvent;
-//# sourceMappingURL=NoteOff.js.map

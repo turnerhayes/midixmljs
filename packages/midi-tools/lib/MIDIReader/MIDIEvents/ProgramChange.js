@@ -10,4 +10,3 @@ var ProgramChangeEvent = /** @class */ (function () {
     return ProgramChangeEvent;
 }());
 exports.ProgramChangeEvent = ProgramChangeEvent;
-//# sourceMappingURL=ProgramChange.js.map

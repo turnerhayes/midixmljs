@@ -159,7 +159,8 @@ export const createMetaEventFromBytes = (
   else if (metaEventTypeNum === 0x51) {
     // Next byte is 0x03--skip it
     index += 1;
-    const microsecondsPerQuarterNote = dataView.getUint16(index) << 8 + dataView.getUint8(index + 2);
+    const microsecondsPerQuarterNote = (dataView.getUint8(index) << 16) +
+      (dataView.getUint8(index + 1) << 8) + dataView.getUint8(index + 2);
     index += 3;
 
     event = new Events.SetTempoEvent({

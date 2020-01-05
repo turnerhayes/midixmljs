@@ -9,4 +9,3 @@ var LyricEvent = /** @class */ (function () {
     return LyricEvent;
 }());
 exports.LyricEvent = LyricEvent;
-//# sourceMappingURL=Lyric.js.map

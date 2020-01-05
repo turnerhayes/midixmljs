@@ -9,4 +9,3 @@ var TrackNameEvent = /** @class */ (function () {
     return TrackNameEvent;
 }());
 exports.TrackNameEvent = TrackNameEvent;
-//# sourceMappingURL=TrackName.js.map

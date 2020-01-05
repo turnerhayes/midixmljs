@@ -9,4 +9,3 @@ var MarkerEvent = /** @class */ (function () {
     return MarkerEvent;
 }());
 exports.MarkerEvent = MarkerEvent;
-//# sourceMappingURL=Marker.js.map

@@ -10,4 +10,3 @@ var ChannelAftertouchEvent = /** @class */ (function () {
     return ChannelAftertouchEvent;
 }());
 exports.ChannelAftertouchEvent = ChannelAftertouchEvent;
-//# sourceMappingURL=ChannelAftertouch.js.map

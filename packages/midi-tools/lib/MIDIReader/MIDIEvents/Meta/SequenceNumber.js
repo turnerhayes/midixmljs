@@ -9,4 +9,3 @@ var SequenceNumberEvent = /** @class */ (function () {
     return SequenceNumberEvent;
 }());
 exports.SequenceNumberEvent = SequenceNumberEvent;
-//# sourceMappingURL=SequenceNumber.js.map

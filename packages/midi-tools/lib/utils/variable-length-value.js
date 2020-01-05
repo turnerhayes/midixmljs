@@ -29,4 +29,3 @@ function fromVariableLengthValue(buffer, startIndex) {
 }
 exports.fromVariableLengthValue = fromVariableLengthValue;
 ;
-//# sourceMappingURL=variable-length-value.js.map

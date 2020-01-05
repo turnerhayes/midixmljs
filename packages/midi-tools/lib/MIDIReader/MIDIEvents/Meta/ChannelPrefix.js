@@ -9,4 +9,3 @@ var ChannelPrefixEvent = /** @class */ (function () {
     return ChannelPrefixEvent;
 }());
 exports.ChannelPrefixEvent = ChannelPrefixEvent;
-//# sourceMappingURL=ChannelPrefix.js.map

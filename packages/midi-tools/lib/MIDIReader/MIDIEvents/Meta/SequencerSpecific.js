@@ -10,4 +10,3 @@ var SequencerSpecificEvent = /** @class */ (function () {
     return SequencerSpecificEvent;
 }());
 exports.SequencerSpecificEvent = SequencerSpecificEvent;
-//# sourceMappingURL=SequencerSpecific.js.map

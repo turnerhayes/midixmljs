@@ -12,4 +12,3 @@ var TimeSignatureEvent = /** @class */ (function () {
     return TimeSignatureEvent;
 }());
 exports.TimeSignatureEvent = TimeSignatureEvent;
-//# sourceMappingURL=TimeSignature.js.map
