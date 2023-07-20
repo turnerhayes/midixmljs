@@ -1,11 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var TextEvent = /** @class */ (function () {
-    function TextEvent(_a) {
-        var text = _a.text;
-        this.type = 2048 /* MetaText */;
+export class TextEvent {
+    constructor({ text, }) {
+        this.type = 2048 /* MIDIEventType.MetaText */;
         this.text = text;
     }
-    return TextEvent;
-}());
-exports.TextEvent = TextEvent;
+}

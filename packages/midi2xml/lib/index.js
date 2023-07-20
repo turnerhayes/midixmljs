@@ -1,30 +1,26 @@
-"use strict";
 /* eslint-disable */
-Object.defineProperty(exports, "__esModule", { value: true });
 // const MIDI = require("midi");
-var path = require("path");
-var fs = require("fs");
-var text_encoding_1 = require("text-encoding");
-var jasmid_ts_1 = require("jasmid.ts");
-var xml_writer_1 = require("xml-writer");
-var midi_tools_1 = require("midi-tools");
-var midi_instruments_1 = require("./midi-instruments");
-global.TextDecoder = text_encoding_1.TextDecoder;
-var samplePath = path.resolve(__dirname, "..", "..", "sample-midi", "Aha - Take On Me.mid");
+import * as path from "path";
+import * as fs from "fs";
+import { TextDecoder } from "text-encoding";
+import { parseMidiFile } from "jasmid.ts";
+import XMLWriter from "xml-writer";
+import { NoteNumberToName } from "@thayes/midi-tools";
+import { getInstrumentName } from "./midi-instruments";
+global.TextDecoder = TextDecoder;
+const samplePath = path.resolve(__dirname, "..", "..", "sample-midi", "Aha - Take On Me.mid");
 // const samplePath:string = path.resolve(__dirname, "..", "..", "sample-midi", "Asia - Heat Of The Moment.mid");
 // const samplePath:string = resolve(__dirname, "..", "..", "sample-midi", "house_of_the_rising_sun.mid");
-var midi = jasmid_ts_1.parseMidiFile(fs.readFileSync(samplePath).buffer);
+const midi = parseMidiFile(fs.readFileSync(samplePath).buffer);
 // fs.writeFileSync(
 //   path.resolve(__dirname, "take-on-me--parsed.json"),
 //   JSON.stringify(midi, null, "  ")
 // );
-function writeNotes(_a) {
-    var notes = _a.notes, writer = _a.writer, divisions = _a.divisions, timeSignature = _a.timeSignature;
-    var measureNumber = 0;
-    notes.forEach(function (_a) {
-        var note = _a.note, duration = _a.duration;
+function writeNotes({ notes, writer, divisions, timeSignature }) {
+    let measureNumber = 0;
+    notes.forEach(({ note, duration }) => {
         measureNumber += 1;
-        var noteDescription = midi_tools_1.NoteNumberToName(note);
+        const noteDescription = NoteNumberToName(note);
         // <key>
         //   <fifths>-3</fifths>
         //   <mode>minor</mode>
@@ -60,29 +56,28 @@ function writeNotes(_a) {
         writer.endElement(); // </measure>
     });
 }
-function toMusicXML(_a) {
-    var header = _a.header, tracks = _a.tracks;
-    var ticksPerBeat = header.ticksPerBeat;
-    var notesByTrack = [];
-    var currentNotesByTrack = {};
-    var instrumentIdsByChannel = {};
-    for (var channel = 0; channel < 16; channel++) {
+function toMusicXML({ header, tracks }) {
+    const ticksPerBeat = header.ticksPerBeat;
+    const notesByTrack = [];
+    const currentNotesByTrack = {};
+    const instrumentIdsByChannel = {};
+    for (let channel = 0; channel < 16; channel++) {
         instrumentIdsByChannel[channel] = 1; // default to instrument 1
     }
-    var track = midi.tracks[0];
-    var timeSignature = {
+    const track = midi.tracks[0];
+    let timeSignature = {
         numerator: null,
         denominator: null,
     };
-    midi.tracks.forEach(function (track, trackNumber) {
+    midi.tracks.forEach((track, trackNumber) => {
         currentNotesByTrack[trackNumber] = [];
-        track.forEach(function (event) {
+        track.forEach((event) => {
             if (event.deltaTime > 0) {
-                currentNotesByTrack[trackNumber].forEach(function (note) { return note.duration += event.deltaTime; });
+                currentNotesByTrack[trackNumber].forEach((note) => note.duration += event.deltaTime);
             }
-            var channel = event.channel;
+            const channel = event.channel;
             if (event.subType === "programChange") {
-                var program = event.program;
+                const program = event.program;
                 if (program === 0) {
                     console.log("setting program to 0", event);
                 }
@@ -97,16 +92,13 @@ function toMusicXML(_a) {
             if (event.subType === "noteOn") {
                 currentNotesByTrack[trackNumber].push({
                     note: event.note,
-                    channel: channel,
+                    channel,
                     duration: 0,
                     instrumentId: instrumentIdsByChannel[channel],
                 });
             }
             else if (event.subType === "noteOff") {
-                var noteIndex = currentNotesByTrack[trackNumber].findIndex(function (_a) {
-                    var note = _a.note;
-                    return note === event.note;
-                });
+                const noteIndex = currentNotesByTrack[trackNumber].findIndex(({ note }) => note === event.note);
                 if (noteIndex < 0) {
                     // should never happen--means we have a noteOff for a note that has not had a noteOn
                     return;
@@ -124,18 +116,18 @@ function toMusicXML(_a) {
             }
         });
     });
-    var measureNumber = 0;
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = (now.getMonth() + 1).toString();
+    let measureNumber = 0;
+    const now = new Date();
+    const year = now.getFullYear();
+    let month = (now.getMonth() + 1).toString();
     if (month.length === 1) {
         month = "0" + month;
     }
-    var date = now.getDate().toString();
+    let date = now.getDate().toString();
     if (date.length === 1) {
         date = "0" + date;
     }
-    var writer = new xml_writer_1.default("  ");
+    const writer = new XMLWriter("  ");
     writer.startDocument("1.0", "UTF-8", false);
     writer.writeDocType("score-partwise", "-//Recordare//DTD MusicXML 3.1 Partwise//EN", "http://www.musicxml.org/dtds/partwise.dtd");
     writer.startElement("score-partwise").writeAttribute("version", "3.1");
@@ -148,15 +140,15 @@ function toMusicXML(_a) {
     writer.endElement(); // </encoding>
     writer.endElement(); // </identification>
     writer.startElement("part-list");
-    Object.keys(notesByTrack).forEach(function (trackNumber) {
-        var partId = "P" + trackNumber;
-        var instrumentId = notesByTrack[trackNumber][0].instrumentId;
-        var instrumentName = midi_instruments_1.getInstrumentName({ instrumentId: instrumentId });
+    Object.keys(notesByTrack).forEach((trackNumber) => {
+        const partId = `P${trackNumber}`;
+        const instrumentId = notesByTrack[trackNumber][0].instrumentId;
+        const instrumentName = getInstrumentName({ instrumentId });
         console.log({
-            instrumentId: instrumentId,
-            instrumentName: instrumentName,
+            instrumentId,
+            instrumentName,
         });
-        var instrumentIdString = partId + "-I1";
+        const instrumentIdString = `${partId}-I1`;
         writer.startElement("score-part")
             .writeAttribute("id", partId);
         writer.startElement("part-name").text(instrumentName).endElement();
@@ -168,10 +160,10 @@ function toMusicXML(_a) {
         writer.endElement(); // </score-part>
     });
     writer.endElement(); // </part-list>
-    Object.keys(notesByTrack).forEach(function (trackNumber) {
-        var notes = notesByTrack[trackNumber];
-        writer.startElement("part").writeAttribute("id", "P" + trackNumber);
-        writeNotes({ notes: notes, writer: writer, divisions: ticksPerBeat, timeSignature: timeSignature });
+    Object.keys(notesByTrack).forEach((trackNumber) => {
+        const notes = notesByTrack[trackNumber];
+        writer.startElement("part").writeAttribute("id", `P${trackNumber}`);
+        writeNotes({ notes, writer, divisions: ticksPerBeat, timeSignature });
         writer.endElement(); // </part>
     });
     writer.endElement(); // </score-partwise>
@@ -179,12 +171,12 @@ function toMusicXML(_a) {
     return writer.toString();
 }
 function writeXML(xml) {
-    return new Promise(function (resolve, reject) { return fs.writeFile(path.resolve(__dirname, "main.xml"), xml, function (err) {
+    return new Promise((resolve, reject) => fs.writeFile(path.resolve(__dirname, "main.xml"), xml, (err) => {
         if (err) {
             reject(err);
             return;
         }
         resolve();
-    }); });
+    }));
 }
-writeXML(toMusicXML(midi)).then(function () { return console.log("wrote main.xml"); }).catch(function (err) { return console.error("ERROR:", err); });
+writeXML(toMusicXML(midi)).then(() => console.log("wrote main.xml")).catch((err) => console.error("ERROR:", err));

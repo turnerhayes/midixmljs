@@ -1,0 +1,79 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "test",
+          "test:dev",
+          "lint",
+          "lint:fix",
+          "precompile",
+          "compile",
+          "prebuild",
+          "build"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "test:dev": {
+      "dependsOn": [
+        "^test:dev"
+      ]
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "lint:fix": {
+      "dependsOn": [
+        "^lint:fix"
+      ]
+    },
+    "precompile": {
+      "dependsOn": [
+        "^precompile"
+      ]
+    },
+    "compile": {
+      "dependsOn": [
+        "^compile"
+      ],
+      "outputs": [
+        "{projectRoot}/build"
+      ]
+    },
+    "prebuild": {
+      "dependsOn": [
+        "^prebuild"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "clean:build": {
+      "dependsOn": [
+        "^clean:build"
+      ]
+    },
+    "clean:compile": {
+      "dependsOn": [
+        "^clean:compile"
+      ]
+    },
+    "clean": {
+      "dependsOn": [
+        "^clean"
+      ]
+    }
+  }
+}

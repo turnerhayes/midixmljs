@@ -1,1 +1,1 @@
-{"version":3,"file":"XMLToMIDI.d.ts","sourceRoot":"","sources":["../src/XMLToMIDI.ts"],"names":[],"mappings":"AACA;;;;;;GAMG;AA8VH,eAAO,MAAM,OAAO,8CA+KnB,CAAC"}
+{"version":3,"file":"XMLToMIDI.d.ts","sourceRoot":"","sources":["../src/XMLToMIDI.ts"],"names":[],"mappings":"AACA;;;;;;GAMG;AAWH,OAAO,EAAS,SAAS,EAAE,MAAM,OAAO,CAAC;AA+VzC,eAAO,MAAM,OAAO,aAAc,MAAM,GAAG,QAAQ,cAAc,SAAS,KAAG,WAsL5E,CAAC"}

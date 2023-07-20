@@ -2,13 +2,10 @@ import { IPitch } from "./IPitch";
 import { NoteStep } from "./NoteStep";
 
 export function NoteNumberToName(note: number): IPitch {
-  let step;
-  let alter;
-  // eslint-disable-next-line no-magic-numbers
+  let step: NoteStep;
+  let alter: 1 | undefined;
   let octave = Math.floor(note / 12) - 1;
 
-  /* eslint-disable no-fallthrough */
-  /* eslint-disable no-magic-numbers */
   switch (note % 12) {
     case 1:
       alter = 1;
@@ -42,9 +39,7 @@ export function NoteNumberToName(note: number): IPitch {
       step = "B";
       break;
   }
-  /* eslint-enable no-magic-numbers */
-  /* eslint-enable no-fallthrough */
-  
+
   const noteObj: IPitch = {
     step,
     octave,
@@ -70,20 +65,20 @@ const stepToNumber = {
 
 const steps = "ABCDEFG";
 
-export function NoteNameToNumber(noteName: string|IPitch): number {
+export function NoteNameToNumber(noteName: string | IPitch): number {
   let step: NoteStep;
   let octave: number;
-  let alter: number|undefined;
+  let alter: -1 | 1 | undefined;
 
   if (typeof noteName === "string") {
     const matches = /^([A-G])([#b])?(-?\d+)$/.exec(noteName);
-  
+
     if (!matches) {
       return null;
     }
 
     let alterString: string = matches[2];
-    
+
     step = matches[1] as NoteStep;
 
     octave = Number(matches[3]);
@@ -93,7 +88,7 @@ export function NoteNameToNumber(noteName: string|IPitch): number {
     } else if (alterString === "#") {
       alter = 1;
     }
-  
+
   } else {
     step = (noteName as IPitch).step;
     alter = (noteName as IPitch).alter;
@@ -106,7 +101,7 @@ export function NoteNameToNumber(noteName: string|IPitch): number {
     const initialStepIndex = steps.indexOf(step);
 
     step = steps[
-      (steps.indexOf(step) + steps.length - 1) % steps.length 
+      (steps.indexOf(step) + steps.length - 1) % steps.length
     ] as NoteStep;
 
     // e.g. going from Ab4 -> G#3
@@ -121,6 +116,5 @@ export function NoteNameToNumber(noteName: string|IPitch): number {
     number += 1;
   }
 
-  // eslint-disable-next-line no-magic-numbers
   return number + ((octave + 1) * 12);
 }

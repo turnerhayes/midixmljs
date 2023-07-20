@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var instruments = {
+const instruments = {
     "1": {
         "name": "Acoustic Grand Piano",
     },
@@ -386,15 +384,13 @@ var instruments = {
         "name": "Gunshot",
     },
 };
-function getInstrumentName(_a) {
-    var instrumentId = _a.instrumentId;
+export function getInstrumentName({ instrumentId }) {
     instrumentId += 1;
     console.log({
-        instrumentId: instrumentId,
+        instrumentId,
     });
     if (!(instrumentId in instruments)) {
         return undefined;
     }
     return instruments[instrumentId].name;
 }
-exports.getInstrumentName = getInstrumentName;

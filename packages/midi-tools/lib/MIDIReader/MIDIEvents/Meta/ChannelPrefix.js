@@ -1,11 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ChannelPrefixEvent = /** @class */ (function () {
-    function ChannelPrefixEvent(_a) {
-        var channelNumber = _a.channelNumber;
-        this.type = 1024 /* MetaChannelPrefix */;
+export class ChannelPrefixEvent {
+    constructor({ channelNumber, }) {
+        this.type = 1024 /* MIDIEventType.MetaChannelPrefix */;
         this.channelNumber = channelNumber;
     }
-    return ChannelPrefixEvent;
-}());
-exports.ChannelPrefixEvent = ChannelPrefixEvent;
+}

@@ -16,6 +16,7 @@ import {
   NoteNameToNumber,
   MIDIFile,
 } from "@thayes/midi-tools";
+import { JSDOM, DOMWindow } from "jsdom";
 
 
 interface ITimeSignature {
@@ -82,17 +83,19 @@ const getChordNoteNodes = (
     document,
     itemNode,
     staff,
+    window,
   }: {
-    document: Document,
-    itemNode: Element,
-    staff: number,
+    document: Document;
+    itemNode: Element;
+    staff: number;
+    window: DOMWindow;
   },
 ) => {
   const siblingsIterator = document.evaluate(
     `following-sibling::note[staff/text() = "${staff}"]`,
     itemNode,
     null,
-    (window as any).XPathResult.ORDERED_NODE_ITERATOR_TYPE,
+    window.XPathResult.ORDERED_NODE_ITERATOR_TYPE,
     null
   );
 
@@ -102,7 +105,7 @@ const getChordNoteNodes = (
 
   while (nextNoteNode && nextNoteNode.querySelector("chord")) {
     siblings.push(nextNoteNode);
-    
+
     nextNoteNode = siblingsIterator.iterateNext() as Element | null;
   }
 
@@ -110,7 +113,7 @@ const getChordNoteNodes = (
 };
 
 
-const readMeasuresFromPart = (partNode: Element, document: Document): MeasureMap => {
+const readMeasuresFromPart = (partNode: Element, document: Document, window: DOMWindow): MeasureMap => {
   return Array.from(partNode.querySelectorAll("measure")).reduce(
     (measureReduction: MeasureMap, measureNode: Element) => {
       const measureNumber = Number(measureNode.getAttribute("number"));
@@ -118,18 +121,18 @@ const readMeasuresFromPart = (partNode: Element, document: Document): MeasureMap
       const attributesNode = measureNode.querySelector("attributes");
 
       let timeSignature: ITimeSignature | undefined;
-      
+
       let divisions: number | undefined;
 
       let keySignature: IKeySignature | undefined;
-      
+
       if (attributesNode) {
         const divisionsNode: Element = attributesNode.querySelector("divisions");
-        
+
         if (divisionsNode) {
           divisions = Number(divisionsNode.textContent);
         }
-        
+
         const timeSignatureNode: Element = attributesNode.querySelector("time");
 
         if (timeSignatureNode) {
@@ -173,7 +176,7 @@ const readMeasuresFromPart = (partNode: Element, document: Document): MeasureMap
         ".//note[not(chord)]",
         measureNode,
         null,
-        (window as any).XPathResult.ORDERED_NODE_ITERATOR_TYPE,
+        window.XPathResult.ORDERED_NODE_ITERATOR_TYPE,
         null
       );
 
@@ -184,7 +187,7 @@ const readMeasuresFromPart = (partNode: Element, document: Document): MeasureMap
       while (itemNode) {
         const duration = Number(itemNode.querySelector("duration").textContent);
         const staffNode = itemNode.querySelector("staff");
-        let staff;
+        let staff: number;
 
         if (staffNode) {
           staff = Number(staffNode.textContent);
@@ -193,12 +196,13 @@ const readMeasuresFromPart = (partNode: Element, document: Document): MeasureMap
             duration,
             staff,
           };
-          
+
           if (!itemNode.querySelector("rest")) {
             const chordNotes = getChordNoteNodes({
               document,
               itemNode,
               staff,
+              window,
             });
 
             chordNotes.unshift(itemNode);
@@ -206,25 +210,25 @@ const readMeasuresFromPart = (partNode: Element, document: Document): MeasureMap
             const notes: IPitch[] = chordNotes.map(
               (noteNode) => {
                 const pitchNode = itemNode.querySelector("pitch");
-      
+
                 const step: NoteStep = pitchNode.querySelector("step").textContent as NoteStep;
                 const octave = Number(pitchNode.querySelector("octave").textContent);
-      
+
                 const alterNode = pitchNode.querySelector("alter");
-      
+
                 const pitch: IPitch = {
                   step,
                   octave,
                 };
-      
+
                 if (alterNode) {
                   pitch.alter = Number(alterNode.textContent);
                 }
 
                 const midiNumber = NoteNameToNumber(pitch);
-      
+
                 pitch.MIDINumber = midiNumber;
-      
+
                 return pitch;
               }
             );
@@ -274,14 +278,14 @@ const readParts = (partListNode: Element): PartMap => {
         ) => {
           const instrumentID = instrumentNode.getAttribute("id");
           const instrumentName = instrumentNode.querySelector("instrument-name").textContent;
-  
+
           const midiInfo: IInstrumentMIDIInfo = {};
-  
+
           const midiDeviceNode = partNode.querySelector(`midi-device[id="${instrumentID}"]`);
-  
+
           if (midiDeviceNode) {
             const port = midiDeviceNode.getAttribute("port");
-            
+
             if (port) {
               midiInfo.port = Number(port);
             }
@@ -355,14 +359,25 @@ const readParts = (partListNode: Element): PartMap => {
   );
 };
 
-export const getMIDI = (document: string|Document): ArrayBuffer => {
-  if (typeof document === "string") {
-    document = new (window as any).DOMParser().parseFromString(document, "application/xml") as Document;
+function getWindow(): DOMWindow {
+  if (typeof window === "undefined") {
+    return new JSDOM().window;
   }
 
-  let isTimewise;
+  return window as unknown as DOMWindow;
+}
+
+export const getMIDI = (document: string | Document, windowObj?: DOMWindow): ArrayBuffer => {
+  if (!windowObj) {
+    windowObj = getWindow();
+  }
+  if (typeof document === "string") {
+    document = new windowObj.DOMParser().parseFromString(document, "application/xml") as Document;
+  }
+
+  let isTimewise: boolean;
   let root = document.querySelector("score-partwise");
-  
+
   if (root) {
     isTimewise = false;
   }
@@ -389,8 +404,12 @@ export const getMIDI = (document: string|Document): ArrayBuffer => {
       partNode: Element) => {
       const partID = partNode.getAttribute("id");
 
-      measuresReduction[partID] = readMeasuresFromPart(partNode, document as Document);
-      
+      measuresReduction[partID] = readMeasuresFromPart(
+        partNode,
+        document as Document,
+        windowObj
+      );
+
       return measuresReduction;
     },
     {}
@@ -452,7 +471,7 @@ export const getMIDI = (document: string|Document): ArrayBuffer => {
           return;
         }
 
-        let channel = instrument.midi.channel as Channel|undefined;
+        let channel = instrument.midi.channel as Channel | undefined;
 
         if (channel === undefined) {
           channel = 1 as Channel;
@@ -487,7 +506,7 @@ export const getMIDI = (document: string|Document): ArrayBuffer => {
       Object.keys(measurePart).forEach(
         (measureNumber: string) => {
           const notesByStaff: MeasureItemMap = measurePart[measureNumber].notes;
-          
+
           Object.keys(notesByStaff).forEach(
             (staffNumber: string) => {
               notesByStaff[staffNumber].forEach(
@@ -496,7 +515,7 @@ export const getMIDI = (document: string|Document): ArrayBuffer => {
                     offsetByStaff[note.staff] = 0;
                   }
 
-                  let notes: IPitch[]|undefined;
+                  let notes: IPitch[] | undefined;
 
                   if ((note as IChord).notes) {
                     // chord
@@ -518,7 +537,7 @@ export const getMIDI = (document: string|Document): ArrayBuffer => {
                       })
                     );
                   }
-                  
+
                   offsetByStaff[note.staff] += note.duration;
                 }
               )

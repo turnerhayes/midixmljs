@@ -1,11 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var MarkerEvent = /** @class */ (function () {
-    function MarkerEvent(_a) {
-        var marker = _a.marker;
-        this.type = 1048576 /* MetaMarker */;
+export class MarkerEvent {
+    constructor({ marker, }) {
+        this.type = 1048576 /* MIDIEventType.MetaMarker */;
         this.marker = marker;
     }
-    return MarkerEvent;
-}());
-exports.MarkerEvent = MarkerEvent;
+}

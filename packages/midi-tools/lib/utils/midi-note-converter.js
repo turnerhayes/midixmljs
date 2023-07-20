@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function NoteNumberToName(note) {
-    var step;
-    var alter;
+export function NoteNumberToName(note) {
+    let step;
+    let alter;
     // eslint-disable-next-line no-magic-numbers
-    var octave = Math.floor(note / 12) - 1;
+    let octave = Math.floor(note / 12) - 1;
     /* eslint-disable no-fallthrough */
     /* eslint-disable no-magic-numbers */
     switch (note % 12) {
@@ -42,9 +40,9 @@ function NoteNumberToName(note) {
     }
     /* eslint-enable no-magic-numbers */
     /* eslint-enable no-fallthrough */
-    var noteObj = {
-        step: step,
-        octave: octave,
+    const noteObj = {
+        step,
+        octave,
         MIDINumber: note,
     };
     if (alter) {
@@ -52,8 +50,7 @@ function NoteNumberToName(note) {
     }
     return noteObj;
 }
-exports.NoteNumberToName = NoteNumberToName;
-var stepToNumber = {
+const stepToNumber = {
     C: 0,
     D: 2,
     E: 4,
@@ -62,17 +59,17 @@ var stepToNumber = {
     A: 9,
     B: 11,
 };
-var steps = "ABCDEFG";
-function NoteNameToNumber(noteName) {
-    var step;
-    var octave;
-    var alter;
+const steps = "ABCDEFG";
+export function NoteNameToNumber(noteName) {
+    let step;
+    let octave;
+    let alter;
     if (typeof noteName === "string") {
-        var matches = /^([A-G])([#b])?(-?\d+)$/.exec(noteName);
+        const matches = /^([A-G])([#b])?(-?\d+)$/.exec(noteName);
         if (!matches) {
             return null;
         }
-        var alterString = matches[2];
+        let alterString = matches[2];
         step = matches[1];
         octave = Number(matches[3]);
         if (alterString === "b") {
@@ -89,18 +86,17 @@ function NoteNameToNumber(noteName) {
     }
     if (alter === -1) {
         alter = 1;
-        var initialStepIndex = steps.indexOf(step);
+        const initialStepIndex = steps.indexOf(step);
         step = steps[(steps.indexOf(step) + steps.length - 1) % steps.length];
         // e.g. going from Ab4 -> G#3
         if (steps.indexOf(step) > initialStepIndex) {
             octave -= 1;
         }
     }
-    var number = stepToNumber[step];
+    let number = stepToNumber[step];
     if (alter === 1) {
         number += 1;
     }
     // eslint-disable-next-line no-magic-numbers
     return number + ((octave + 1) * 12);
 }
-exports.NoteNameToNumber = NoteNameToNumber;

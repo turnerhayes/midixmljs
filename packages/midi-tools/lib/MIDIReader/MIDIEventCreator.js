@@ -1,46 +1,34 @@
-"use strict";
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var Events = __importStar(require("./MIDIEvents"));
-var MIDIMetaEventCreator_1 = require("./MIDIMetaEventCreator");
-var variable_length_value_1 = require("../utils/variable-length-value");
-var createNoteOffEventFromBytes = function (statusByte, dataView, startIndex) {
-    if (startIndex === void 0) { startIndex = 0; }
-    var channel = (statusByte & 0xF) + 1;
-    var noteNumber = dataView.getUint8(startIndex);
-    var release = dataView.getUint8(startIndex + 1);
+import * as Events from './MIDIEvents';
+import { createMetaEventFromBytes } from "./MIDIMetaEventCreator";
+import { fromVariableLengthValue } from "../utils/variable-length-value";
+const createNoteOffEventFromBytes = (statusByte, dataView, startIndex = 0) => {
+    const channel = (statusByte & 0xF) + 1;
+    const noteNumber = dataView.getUint8(startIndex);
+    const release = dataView.getUint8(startIndex + 1);
     return [
         2,
         new Events.NoteOffEvent({
-            channel: channel,
-            noteNumber: noteNumber,
-            release: release,
+            channel,
+            noteNumber,
+            release,
         })
     ];
 };
-var createNoteOnEventFromBytes = function (statusByte, dataView, startIndex) {
-    if (startIndex === void 0) { startIndex = 0; }
-    var channel = (statusByte & 0xF) + 1;
-    var noteNumber = dataView.getUint8(startIndex);
-    var velocity = dataView.getUint8(startIndex + 1);
+const createNoteOnEventFromBytes = (statusByte, dataView, startIndex = 0) => {
+    const channel = (statusByte & 0xF) + 1;
+    const noteNumber = dataView.getUint8(startIndex);
+    const velocity = dataView.getUint8(startIndex + 1);
     return [
         2,
         new Events.NoteOnEvent({
-            channel: channel,
-            noteNumber: noteNumber,
-            velocity: velocity,
+            channel,
+            noteNumber,
+            velocity,
         })
     ];
 };
-var createSysexEventFromBytes = function (statusByte, dataView, startIndex) {
-    if (startIndex === void 0) { startIndex = 0; }
-    var _a = variable_length_value_1.fromVariableLengthValue(dataView.buffer, dataView.byteOffset + startIndex), bytesRead = _a[0], dataLength = _a[1];
+const createSysexEventFromBytes = (statusByte, dataView, startIndex = 0) => {
+    const [bytesRead, dataLength] = fromVariableLengthValue(dataView.buffer, dataView.byteOffset + startIndex);
     return [
         bytesRead + dataLength,
         new Events.SysExEvent({
@@ -48,70 +36,68 @@ var createSysexEventFromBytes = function (statusByte, dataView, startIndex) {
         })
     ];
 };
-var createProgramChangeEventFromBytes = function (statusByte, dataView, startIndex) {
-    if (startIndex === void 0) { startIndex = 0; }
-    var channel = (statusByte & 0xF) + 1;
-    var programNumber = dataView.getUint8(startIndex);
+const createProgramChangeEventFromBytes = (statusByte, dataView, startIndex = 0) => {
+    const channel = (statusByte & 0xF) + 1;
+    const programNumber = dataView.getUint8(startIndex);
     return [
         1,
         new Events.ProgramChangeEvent({
-            channel: channel,
-            programNumber: programNumber,
+            channel,
+            programNumber,
         })
     ];
 };
-var createControllerChangeEventFromBytes = function (statusByte, dataView, startIndex) {
-    if (startIndex === void 0) { startIndex = 0; }
-    var channel = (statusByte & 0xF) + 1;
-    var controllerNumber = dataView.getUint8(startIndex);
-    var controllerValue = dataView.getUint8(startIndex + 1);
+const createControllerChangeEventFromBytes = (statusByte, dataView, startIndex = 0) => {
+    const channel = (statusByte & 0xF) + 1;
+    const controllerNumber = dataView.getUint8(startIndex);
+    const controllerValue = dataView.getUint8(startIndex + 1);
     return [
         2,
         new Events.ControllerChangeEvent({
-            channel: channel,
-            controllerNumber: controllerNumber,
-            controllerValue: controllerValue,
+            channel,
+            controllerNumber,
+            controllerValue,
         })
     ];
 };
-var createPolyphonicAftertouchEventFromBytes = function (statusByte, dataView, startIndex) {
-    var channel = (statusByte & 0xF) + 1;
-    var noteNumber = dataView.getUint8(startIndex);
-    var pressure = dataView.getUint8(startIndex + 1);
+const createPolyphonicAftertouchEventFromBytes = (statusByte, dataView, startIndex) => {
+    const channel = (statusByte & 0xF) + 1;
+    const noteNumber = dataView.getUint8(startIndex);
+    const pressure = dataView.getUint8(startIndex + 1);
     return [
         2,
         new Events.PolyphonicAftertouchEvent({
-            channel: channel,
-            noteNumber: noteNumber,
-            pressure: pressure,
+            channel,
+            noteNumber,
+            pressure,
         })
     ];
 };
-var createChannelAftertouchEventFromBytes = function (statusByte, dataView, startIndex) {
-    var channel = (statusByte & 0xF) + 1;
-    var pressure = dataView.getUint8(startIndex + 1);
+const createChannelAftertouchEventFromBytes = (statusByte, dataView, startIndex) => {
+    const channel = (statusByte & 0xF) + 1;
+    const pressure = dataView.getUint8(startIndex + 1);
     return [
         1,
         new Events.ChannelAftertouchEvent({
-            channel: channel,
-            pressure: pressure,
+            channel,
+            pressure,
         })
     ];
 };
-var createPitchBendEventFromBytes = function (statusByte, dataView, startIndex) {
-    var channel = (statusByte & 0xF) + 1;
-    var leastSignificantByte = dataView.getUint8(startIndex);
-    var mostSignificantByte = dataView.getUint8(startIndex + 1);
-    var value = ((mostSignificantByte & 0x7F) << 7) + (leastSignificantByte & 0x7F);
+const createPitchBendEventFromBytes = (statusByte, dataView, startIndex) => {
+    const channel = (statusByte & 0xF) + 1;
+    const leastSignificantByte = dataView.getUint8(startIndex);
+    const mostSignificantByte = dataView.getUint8(startIndex + 1);
+    const value = ((mostSignificantByte & 0x7F) << 7) + (leastSignificantByte & 0x7F);
     return [
         2,
         new Events.PitchBendEvent({
-            channel: channel,
-            value: value,
+            channel,
+            value,
         })
     ];
 };
-var getCreateFunction = function (statusByte) {
+const getCreateFunction = (statusByte) => {
     if (statusByte >> 4 === 0x8) {
         return createNoteOffEventFromBytes;
     }
@@ -137,16 +123,14 @@ var getCreateFunction = function (statusByte) {
         return createSysexEventFromBytes;
     }
     if (statusByte === 0xFF) {
-        return MIDIMetaEventCreator_1.createMetaEventFromBytes;
+        return createMetaEventFromBytes;
     }
     return null;
 };
-exports.eventFromBytes = function (dataView, startIndex, previousStatusByte) {
-    if (startIndex === void 0) { startIndex = 0; }
-    if (previousStatusByte === void 0) { previousStatusByte = null; }
-    var statusByte = dataView.getUint8(startIndex);
-    var createFunction = getCreateFunction(statusByte);
-    var bytesRead = 0;
+export const eventFromBytes = (dataView, startIndex = 0, previousStatusByte = null) => {
+    let statusByte = dataView.getUint8(startIndex);
+    let createFunction = getCreateFunction(statusByte);
+    let bytesRead = 0;
     if (createFunction === null && previousStatusByte !== null) {
         statusByte = previousStatusByte;
         createFunction = getCreateFunction(statusByte);
@@ -157,12 +141,12 @@ exports.eventFromBytes = function (dataView, startIndex, previousStatusByte) {
         bytesRead += 1;
     }
     if (createFunction !== null) {
-        var _a = createFunction(statusByte, dataView, startIndex), eventBytesRead = _a[0], event_1 = _a[1];
+        const [eventBytesRead, event] = createFunction(statusByte, dataView, startIndex);
         bytesRead += eventBytesRead;
         return {
-            bytesRead: bytesRead,
-            event: event_1,
-            statusByte: statusByte,
+            bytesRead,
+            event,
+            statusByte,
         };
     }
     return null;

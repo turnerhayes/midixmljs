@@ -2,11 +2,11 @@
 
 "use strict";
 
-module.exports = function(webpack, options = {}) {
+module.exports = function (webpack, options = {}) {
   const {
     entry,
     output,
-    module:moduleOptions,
+    module: moduleOptions,
     plugins = [],
     resolve,
     ...otherOptions
@@ -59,7 +59,7 @@ module.exports = function(webpack, options = {}) {
       ],
       ...resolve
     },
-    devtool: "inline-sourcemap",
+    devtool: "inline-source-map",
     target: "web",
     mode: process.env.NODE_ENV || "development",
     ...otherOptions

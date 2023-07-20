@@ -15,7 +15,7 @@ import { getInstrumentName } from "./midi-instruments";
 (global as any).TextDecoder = TextDecoder;
 
 
-const samplePath:string = path.resolve(__dirname, "..", "..", "sample-midi", "Aha - Take On Me.mid");
+const samplePath: string = path.resolve(__dirname, "..", "..", "sample-midi", "Aha - Take On Me.mid");
 // const samplePath:string = path.resolve(__dirname, "..", "..", "sample-midi", "Asia - Heat Of The Moment.mid");
 // const samplePath:string = resolve(__dirname, "..", "..", "sample-midi", "house_of_the_rising_sun.mid");
 
@@ -76,7 +76,7 @@ function toMusicXML({ header, tracks }) {
 
   const notesByTrack: {
     [trackNumber: number]: NoteItem[]
-   } = [];
+  } = [];
 
   const currentNotesByTrack: {
     [trackNumber: number]: NoteItem[]
@@ -113,18 +113,18 @@ function toMusicXML({ header, tracks }) {
             const program = (event as any).program;
             if (program === 0) {
               console.log("setting program to 0", event);
-              
+
             }
             instrumentIdsByChannel[channel] = program;
           }
-    
+
           if (event.type === "meta") {
             if (event.subType === "timeSignature") {
               timeSignature.numerator = (event as any).numerator;
               timeSignature.denominator = (event as any).denominator;
             }
           }
-    
+
           if (event.subType === "noteOn") {
             currentNotesByTrack[trackNumber].push({
               note: (event as any).note,
@@ -137,7 +137,7 @@ function toMusicXML({ header, tracks }) {
             const noteIndex = currentNotesByTrack[trackNumber].findIndex(
               ({ note }) => note === (event as any).note
             );
-    
+
             if (noteIndex < 0) {
               // should never happen--means we have a noteOff for a note that has not had a noteOn
               return;
@@ -146,14 +146,14 @@ function toMusicXML({ header, tracks }) {
             if (!(trackNumber in notesByTrack)) {
               notesByTrack[trackNumber] = [];
             }
-    
+
             notesByTrack[trackNumber].push({
               note: currentNotesByTrack[trackNumber][noteIndex].note,
               channel: currentNotesByTrack[trackNumber][noteIndex].channel,
               duration: currentNotesByTrack[trackNumber][noteIndex].duration,
               instrumentId: currentNotesByTrack[trackNumber][noteIndex].instrumentId,
             });
-    
+
             currentNotesByTrack[trackNumber].splice(noteIndex, 1);
           }
         }
@@ -162,17 +162,17 @@ function toMusicXML({ header, tracks }) {
   );
 
   let measureNumber: number = 0;
-  
+
   const now = new Date();
-  
+
   const year = now.getFullYear();
 
-  let month:string = (now.getMonth() + 1).toString();
+  let month: string = (now.getMonth() + 1).toString();
   if (month.length === 1) {
     month = "0" + month;
   }
 
-  let date:string = now.getDate().toString();
+  let date: string = now.getDate().toString();
   if (date.length === 1) {
     date = "0" + date;
   }
@@ -204,7 +204,7 @@ function toMusicXML({ header, tracks }) {
         instrumentId,
         instrumentName,
       });
-      
+
       const instrumentIdString = `${partId}-I1`;
 
       writer.startElement("score-part")
@@ -238,7 +238,7 @@ function toMusicXML({ header, tracks }) {
 }
 
 function writeXML(xml) {
-  return new Promise(
+  return new Promise<void>(
     (resolve, reject) => fs.writeFile(
       path.resolve(__dirname, "main.xml"),
       xml,
@@ -253,7 +253,7 @@ function writeXML(xml) {
     )
   );
 }
-  
+
 writeXML(toMusicXML(midi)).then(
   () => console.log("wrote main.xml")
 ).catch(

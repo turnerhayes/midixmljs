@@ -3,7 +3,7 @@
 <score-partwise version="3.1">
   <work>
     <work-title>Not Perfect</work-title>
-    </work>
+  </work>
   <identification>
     <creator type="composer">Tim Minchin</creator>
     <creator type="lyricist">Tim Minchin</creator>
@@ -157,7 +157,7 @@
         <stem>up</stem>
         <staff>1</staff>
         <beam number="1">continue</beam>
-        </note>
+      </note>
       <note default-x="162.89" default-y="-60.00">
         <pitch>
           <step>A</step>

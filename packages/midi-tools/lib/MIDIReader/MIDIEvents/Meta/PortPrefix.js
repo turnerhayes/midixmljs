@@ -1,11 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var PortPrefixEvent = /** @class */ (function () {
-    function PortPrefixEvent(_a) {
-        var portNumber = _a.portNumber;
-        this.type = 512 /* MetaPortPrefix */;
+export class PortPrefixEvent {
+    constructor({ portNumber, }) {
+        this.type = 512 /* MIDIEventType.MetaPortPrefix */;
         this.portNumber = portNumber;
     }
-    return PortPrefixEvent;
-}());
-exports.PortPrefixEvent = PortPrefixEvent;
+}

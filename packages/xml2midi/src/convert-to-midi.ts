@@ -3,7 +3,7 @@
 import { readFile, writeFile } from "fs";
 import { resolve, basename } from "path";
 import { JSDOM } from "jsdom";
-import commander from "commander";
+import { program as commander } from "commander";
 
 import { getMIDI } from "./XMLToMIDI";
 
@@ -30,13 +30,13 @@ let filePathArg;
 
 commander.option(
   "-o, --out [output path]",
-`Path to file where the resulting MIDI file should be written
+  `Path to file where the resulting MIDI file should be written
   If the path is omitted, it will write to the same filename, but with the extension replaced by ".midi" and in the current working directory.
   If this option is omitted entirely, it will write the MIDI file to stdout.`
 ).arguments(
   "<filename>"
 ).action(
-  function(filename) {
+  function (filename) {
     filePathArg = filename;
   }
 ).parse(process.argv);
@@ -48,7 +48,7 @@ if (!filePathArg) {
 
 const filePath = resolve(process.cwd(), filePathArg);
 
-let outPath:string|boolean = commander.out as string|boolean;
+let outPath: string | boolean = commander['out'] as string | boolean;
 
 if (outPath === true) {
   outPath = `${basename(filePath).replace(/\.[^.]+$/, "")}.midi`;
@@ -81,7 +81,7 @@ new Promise(
 ).then(
   async (file) => {
     if (outPath && typeof outPath === "string") {
-      return new Promise(
+      return new Promise<void>(
         (resolve, reject) => writeFile(
           outPath as string,
           Buffer.from(file),

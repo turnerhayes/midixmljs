@@ -1,14 +1,14 @@
 import { readFile, writeFile } from "fs";
-import  * as path from "path";
+import * as path from "path";
 
 import { MIDIFile } from './MIDIFile';
 
 expect.addSnapshotSerializer({
-  test(value) {
+  test(value: unknown) {
     return value instanceof ArrayBuffer;
   },
-  print(value) {
-    return new Buffer(value).toString('base64');
+  print(value: ArrayBuffer) {
+    return Buffer.from(value).toString('base64');
   }
 });
 
@@ -28,7 +28,7 @@ const readCachedFile = (name) => {
 }
 
 const writeCachedFile = (name, data) => {
-  return new Promise(
+  return new Promise<void>(
     (resolve, reject) => writeFile(
       path.resolve(__dirname, name),
       data,
@@ -43,7 +43,7 @@ const writeCachedFile = (name, data) => {
   );
 }
 
-const validateMIDIFile = (file:Buffer, numTracks:number = 1):void => {
+const validateMIDIFile = (file: Buffer, numTracks: number = 1): void => {
   const fileChunkHeader = file.toString("ascii", 0, 4);
 
   let index = 4;
@@ -107,7 +107,7 @@ describe('MIDIFile', () => {
       track: 1,
       offset: 0,
     });
-    
+
 
     file.note({
       note: 674,
@@ -115,7 +115,7 @@ describe('MIDIFile', () => {
       track: 2,
       offset: 8,
     });
-    
+
     validateMIDIFile(Buffer.from(file.toArrayBuffer()), 2);
   });
 

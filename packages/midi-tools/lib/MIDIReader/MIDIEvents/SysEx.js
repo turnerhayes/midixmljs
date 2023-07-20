@@ -1,11 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var SysExEvent = /** @class */ (function () {
-    function SysExEvent(_a) {
-        var eventData = _a.eventData;
-        this.type = 128 /* Sysex */;
+export class SysExEvent {
+    constructor({ eventData, }) {
+        this.type = 128 /* MIDIEventType.Sysex */;
         this.eventData = eventData;
     }
-    return SysExEvent;
-}());
-exports.SysExEvent = SysExEvent;
+}

@@ -1,28 +1,24 @@
 {
   "name": "midixmljs",
-  "version": "1.0.0",
   "description": "Javascript library to convert between MIDI data and MusicXML",
-  "main": "index.js",
-  "scripts": {
-    "test": "lerna run test",
-    "compile": "lerna run compile",
-    "build": "lerna run build",
-    "clean": "lerna run clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/turnerhayes/midixmljs.git"
-  },
-  "keywords": [
-    "midi",
-    "musicxml",
-    "converter"
-  ],
+  "version": "1.0.0",
   "author": "Turner Hayes <dev@turnerhayes.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/turnerhayes/midixmljs/issues"
-  },
+  "bugs": "https://github.com/turnerhayes/midixmljs/issues",
   "homepage": "https://github.com/turnerhayes/midixmljs#readme",
-  "dependencies": {}
+  "keywords": [
+    "converter",
+    "midi",
+    "musicxml"
+  ],
+  "license": "MIT",
+  "repository": "turnerhayes/midixmljs.git",
+  "scripts": {
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "compile": "lerna run compile",
+    "test": "lerna run test"
+  },
+  "dependencies": {
+    "jsdom": "^22.1.0"
+  }
 }

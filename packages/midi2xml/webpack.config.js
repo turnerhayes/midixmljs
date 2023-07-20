@@ -7,7 +7,7 @@ const webpack = require("webpack");
 const getConfig = require("../../webpack.base.config");
 
 module.exports = getConfig(webpack, {
-  entry: path.join(__dirname, "index.ts"),
+  entry: path.join(__dirname, "src", "index.ts"),
   output: {
     filename: "midi2xml.js",
     path: path.join(__dirname, "build"),

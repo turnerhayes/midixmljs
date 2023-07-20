@@ -4,7 +4,6 @@ import * as path from 'path';
 import { MIDIReader } from './midi-reader';
 import { ProgramChangeEvent, NoteOnEvent, NoteOffEvent } from './MIDIEvents';
 import { TimeSignatureEvent } from './MIDIEvents/Meta';
-import { MIDIEventType } from './MIDIEventType';
 
 describe('midi-reader', () => {
   it('should generate the correct header information', () => {

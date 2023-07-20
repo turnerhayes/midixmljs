@@ -5,5 +5,6 @@
  *  - within a staff
  *  - not sure this ever actually happens, but is *technically* possible
  */
-export declare const getMIDI: (document: string | Document) => ArrayBuffer;
+import { DOMWindow } from "jsdom";
+export declare const getMIDI: (document: string | Document, windowObj?: DOMWindow) => ArrayBuffer;
 //# sourceMappingURL=XMLToMIDI.d.ts.map

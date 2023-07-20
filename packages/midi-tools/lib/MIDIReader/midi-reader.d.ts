@@ -18,10 +18,10 @@ export declare class MIDIReader {
     private readFileHeader;
     readTracks({ eventTypes, }?: {
         eventTypes?: MIDIEventType;
-    }): IterableIterator<{
+    }): Generator<{
         trackNumber: number;
         deltaTime: number;
         event: IMIDIEvent;
-    }>;
+    }, void, unknown>;
 }
 //# sourceMappingURL=midi-reader.d.ts.map

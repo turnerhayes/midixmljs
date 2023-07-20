@@ -1,20 +1,18 @@
-/* eslint-env node */
-"use strict";
-
 module.exports = {
   moduleFileExtensions: [
-    "ts",
-    "js"
+    'js',
+    'ts',
   ],
   transform: {
-    "^.+\\.ts$": "ts-jest"
-  },
-  globals: {
-    "ts-jest": {
-      tsConfig: "tsconfig.json"
-    }
+    '^.+\\.ts$': [
+      'ts-jest',
+      {
+        tsconfig: 'tsconfig.json',
+      },
+    ],
   },
   testMatch: [
-    "**/**/*.test.{js,ts}",
+    '**/**/*.test.{js,ts}',
   ],
-};
+  preset: 'ts-jest',
+}
