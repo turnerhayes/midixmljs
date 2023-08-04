@@ -36,7 +36,7 @@
     "clean": "npm run clean:compile && npm run clean:build",
     "clean:build": "rimraf build",
     "clean:compile": "rimraf lib",
-    "compile": "tsc",
+    "compile": "tsc --project tsconfig.build.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prebuild": "npm run clean:build",
