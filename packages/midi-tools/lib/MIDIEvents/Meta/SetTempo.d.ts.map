@@ -1,0 +1,1 @@
+{"version":3,"file":"SetTempo.d.ts","sourceRoot":"","sources":["../../../src/MIDIEvents/Meta/SetTempo.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAC/C,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,aAAc,YAAW,cAAc;IAClD,SAAgB,0BAA0B,EAAE,MAAM,CAAC;IAEnD,SAAgB,IAAI,EAAE,aAAa,CAA8B;gBAG/D,EACE,0BAA0B,GAC3B,EACC;QACE,0BAA0B,EAAE,MAAM,CAAC;KACpC;CAIN"}

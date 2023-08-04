@@ -1,0 +1,1 @@
+{"version":3,"file":"Marker.d.ts","sourceRoot":"","sources":["../../../src/MIDIEvents/Meta/Marker.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAC/C,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,WAAY,YAAW,cAAc;IAChD,SAAgB,MAAM,EAAE,MAAM,CAAC;IAE/B,SAAgB,IAAI,EAAE,aAAa,CAA4B;gBAG7D,EACE,MAAM,GACP,EACC;QACE,MAAM,EAAE,MAAM,CAAC;KAChB;CAIN"}

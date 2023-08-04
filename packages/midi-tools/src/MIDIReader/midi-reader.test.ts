@@ -2,8 +2,7 @@ import { readFileSync } from 'fs';
 import * as path from 'path';
 
 import { MIDIReader } from './midi-reader';
-import { ProgramChangeEvent, NoteOnEvent, NoteOffEvent } from './MIDIEvents';
-import { TimeSignatureEvent } from './MIDIEvents/Meta';
+import { ProgramChangeEvent, NoteOnEvent, NoteOffEvent, TimeSignatureEvent } from '../MIDIEvents';
 
 describe('midi-reader', () => {
   it('should generate the correct header information', () => {

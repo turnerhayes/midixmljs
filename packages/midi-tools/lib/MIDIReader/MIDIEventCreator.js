@@ -1,6 +1,32 @@
-import * as Events from './MIDIEvents';
-import { createMetaEventFromBytes } from "./MIDIMetaEventCreator";
-import { fromVariableLengthValue } from "../utils/variable-length-value";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.eventFromBytes = void 0;
+const Events = __importStar(require("../MIDIEvents"));
+const MIDIMetaEventCreator_1 = require("./MIDIMetaEventCreator");
+const variable_length_value_1 = require("../utils/variable-length-value");
 const createNoteOffEventFromBytes = (statusByte, dataView, startIndex = 0) => {
     const channel = (statusByte & 0xF) + 1;
     const noteNumber = dataView.getUint8(startIndex);
@@ -28,7 +54,7 @@ const createNoteOnEventFromBytes = (statusByte, dataView, startIndex = 0) => {
     ];
 };
 const createSysexEventFromBytes = (statusByte, dataView, startIndex = 0) => {
-    const [bytesRead, dataLength] = fromVariableLengthValue(dataView.buffer, dataView.byteOffset + startIndex);
+    const [bytesRead, dataLength] = (0, variable_length_value_1.fromVariableLengthValue)(dataView.buffer, dataView.byteOffset + startIndex);
     return [
         bytesRead + dataLength,
         new Events.SysExEvent({
@@ -123,11 +149,11 @@ const getCreateFunction = (statusByte) => {
         return createSysexEventFromBytes;
     }
     if (statusByte === 0xFF) {
-        return createMetaEventFromBytes;
+        return MIDIMetaEventCreator_1.createMetaEventFromBytes;
     }
     return null;
 };
-export const eventFromBytes = (dataView, startIndex = 0, previousStatusByte = null) => {
+const eventFromBytes = (dataView, startIndex = 0, previousStatusByte = null) => {
     let statusByte = dataView.getUint8(startIndex);
     let createFunction = getCreateFunction(statusByte);
     let bytesRead = 0;
@@ -151,3 +177,4 @@ export const eventFromBytes = (dataView, startIndex = 0, previousStatusByte = nu
     }
     return null;
 };
+exports.eventFromBytes = eventFromBytes;

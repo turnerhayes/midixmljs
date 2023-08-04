@@ -1,11 +1,11 @@
-import { IMIDIMetaEvent } from "./IMIDIEvent";
-import { Meta as Events } from "./MIDIEvents";
+import { IMIDIMetaEvent } from "../MIDIEvents/IMIDIEvent";
+import { Meta as Events } from "../MIDIEvents";
 import { bufferToString } from '../utils/buffer-to-string';
 import { fromVariableLengthValue } from '../utils/variable-length-value';
 
 const readStringMetaEvent = (
-  dataView:DataView,
-  startIndex:number
+  dataView: DataView,
+  startIndex: number
 ): [number, string] => {
   let index = startIndex;
 
@@ -27,10 +27,10 @@ const readStringMetaEvent = (
 }
 
 export const createMetaEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number = 0,
-):[number, IMIDIMetaEvent] => {
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number = 0,
+): [number, IMIDIMetaEvent] => {
   let index = startIndex;
 
   const metaEventTypeNum = dataView.getUint8(index);
@@ -236,7 +236,7 @@ export const createMetaEventFromBytes = (
     );
 
     let id = data.slice(0, 1);
-    
+
     if (id[0] === 0) {
       id = data.slice(0, 3);
       data = data.slice(3);
@@ -244,7 +244,7 @@ export const createMetaEventFromBytes = (
     else {
       data = data.slice(1);
     }
-    
+
     event = new Events.SequencerSpecificEvent({
       id,
       data,

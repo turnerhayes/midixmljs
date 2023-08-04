@@ -1,1 +1,1 @@
-{"version":3,"file":"MIDIMetaEventCreator.d.ts","sourceRoot":"","sources":["../../src/MIDIReader/MIDIMetaEventCreator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,cAAc,CAAC;AA4B9C,eAAO,MAAM,wBAAwB,eACxB,MAAM,YACR,QAAQ,eACN,MAAM,KACjB,CAAC,MAAM,EAAE,cAAc,CAoOxB,CAAA"}
+{"version":3,"file":"MIDIMetaEventCreator.d.ts","sourceRoot":"","sources":["../../src/MIDIReader/MIDIMetaEventCreator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,0BAA0B,CAAC;AA4B1D,eAAO,MAAM,wBAAwB,eACvB,MAAM,YACR,QAAQ,eACN,MAAM,KACjB,CAAC,MAAM,EAAE,cAAc,CAoOzB,CAAA"}

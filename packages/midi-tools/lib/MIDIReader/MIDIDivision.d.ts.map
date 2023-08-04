@@ -1,1 +1,0 @@
-{"version":3,"file":"MIDIDivision.d.ts","sourceRoot":"","sources":["../../src/MIDIReader/MIDIDivision.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,oBAAoB;IACnC,KAAK,EAAE,MAAM,CAAC;CACf;AAED,MAAM,WAAW,MAAM;IACrB,iBAAiB,EAAE,MAAM,CAAC;IAC1B,uBAAuB,EAAE,MAAM,CAAC;CACjC"}

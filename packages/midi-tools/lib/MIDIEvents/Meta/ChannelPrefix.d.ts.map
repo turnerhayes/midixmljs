@@ -1,0 +1,1 @@
+{"version":3,"file":"ChannelPrefix.d.ts","sourceRoot":"","sources":["../../../src/MIDIEvents/Meta/ChannelPrefix.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAC/C,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,kBAAmB,YAAW,cAAc;IACvD,SAAgB,aAAa,EAAE,MAAM,CAAC;IAEtC,SAAgB,IAAI,EAAE,aAAa,CAAmC;gBAGpE,EACE,aAAa,GACd,EACC;QACE,aAAa,EAAE,MAAM,CAAC;KACvB;CAIN"}

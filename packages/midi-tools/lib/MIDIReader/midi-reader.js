@@ -1,9 +1,11 @@
-import { MIDIFileType } from './MIDIFileType';
-import { MIDIParseError } from './MIDIParseError';
-import { eventFromBytes } from './MIDIEventCreator';
-import { fromVariableLengthValue } from '../utils/variable-length-value';
-import { bufferToString } from '../utils/buffer-to-string';
-export class MIDIReader {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MIDIReader = void 0;
+const __1 = require("../");
+const MIDIEventCreator_1 = require("./MIDIEventCreator");
+const variable_length_value_1 = require("../utils/variable-length-value");
+const buffer_to_string_1 = require("../utils/buffer-to-string");
+class MIDIReader {
     constructor(buffer) {
         if (buffer instanceof DataView) {
             this.bufferOffset = buffer.byteOffset;
@@ -25,7 +27,7 @@ export class MIDIReader {
         }
         const fileHeaderChunk = this.readString(0, 4);
         if (fileHeaderChunk !== 'MThd') {
-            throw new MIDIParseError('File does not start with a header chunk');
+            throw new __1.MIDIParseError('File does not start with a header chunk');
         }
         const [trackStartOffset, header] = this.readFileHeader(4);
         this.trackStartOffset = trackStartOffset + 4;
@@ -38,18 +40,18 @@ export class MIDIReader {
         return this.dataView.getUint16(startIndex);
     }
     readString(startIndex, length) {
-        return bufferToString(this.buffer, this.bufferOffset + startIndex, length);
+        return (0, buffer_to_string_1.bufferToString)(this.buffer, this.bufferOffset + startIndex, length);
     }
     readVariableLength(startIndex) {
-        return fromVariableLengthValue(this.buffer, this.bufferOffset + startIndex);
+        return (0, variable_length_value_1.fromVariableLengthValue)(this.buffer, this.bufferOffset + startIndex);
     }
     readMIDIEvent(startIndex, trackNumber, previousStatusByte) {
         const [bytesRead, deltaTime] = this.readVariableLength(startIndex);
         let index = startIndex + bytesRead;
-        const eventOrNull = eventFromBytes(this.dataView, index, previousStatusByte);
+        const eventOrNull = (0, MIDIEventCreator_1.eventFromBytes)(this.dataView, index, previousStatusByte);
         if (eventOrNull === null) {
             const statusByte = this.dataView.getUint8(index);
-            throw new MIDIParseError(`Unknown MIDI event status 0x${statusByte.toString(16).toUpperCase()}`);
+            throw new __1.MIDIParseError(`Unknown MIDI event status 0x${statusByte.toString(16).toUpperCase()}`);
         }
         const { bytesRead: eventBytesRead, event, statusByte } = eventOrNull;
         return {
@@ -70,16 +72,16 @@ export class MIDIReader {
         index += 2;
         let fileType;
         if (fileTypeNumber === 0) {
-            fileType = MIDIFileType.Format0;
+            fileType = __1.MIDIFileType.Format0;
         }
         else if (fileTypeNumber === 1) {
-            fileType = MIDIFileType.Format1;
+            fileType = __1.MIDIFileType.Format1;
         }
         else if (fileTypeNumber === 2) {
-            fileType = MIDIFileType.Format2;
+            fileType = __1.MIDIFileType.Format2;
         }
         else {
-            throw new MIDIParseError(`Unknown MIDI file type: ${fileTypeNumber}`);
+            throw new __1.MIDIParseError(`Unknown MIDI file type: ${fileTypeNumber}`);
         }
         const trackCount = this.dataView.getUint16(index);
         index += 2;
@@ -122,7 +124,7 @@ export class MIDIReader {
                 const chunkType = this.readString(index, 4);
                 index += 4;
                 if (chunkType !== 'MTrk') {
-                    throw new MIDIParseError('No track header found at start of track');
+                    throw new __1.MIDIParseError('No track header found at start of track');
                 }
                 const length = this.readUint32(index);
                 index += 4;
@@ -143,3 +145,4 @@ export class MIDIReader {
         }
     }
 }
+exports.MIDIReader = MIDIReader;

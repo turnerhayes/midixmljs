@@ -11,6 +11,9 @@ module.exports = {
       },
     ],
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!@thayes)',
+  ],
   testMatch: [
     '**/**/*.test.{js,ts}',
   ],

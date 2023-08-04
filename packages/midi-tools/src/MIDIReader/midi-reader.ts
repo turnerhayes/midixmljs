@@ -1,10 +1,13 @@
-import { MIDIFileType } from './MIDIFileType';
-import { IMIDIFileHeader } from './IMIDIFileHeader';
-import { MIDIParseError } from './MIDIParseError';
-import { ITicksPerQuarterNote, ISMPTE } from './MIDIDivision';
-import { IMIDIEvent } from './IMIDIEvent';
+import {
+  MIDIFileType,
+  MIDIEventType,
+  IMIDIFileHeader,
+  MIDIParseError,
+  ITicksPerQuarterNoteDivision,
+  ISMPTEDivision,
+} from '../';
+import { IMIDIEvent } from '../MIDIEvents/IMIDIEvent';
 import { eventFromBytes } from './MIDIEventCreator';
-import { MIDIEventType } from './MIDIEventType';
 import { fromVariableLengthValue } from '../utils/variable-length-value';
 import { bufferToString } from '../utils/buffer-to-string';
 
@@ -19,20 +22,20 @@ interface IReadEventResult {
 }
 
 export class MIDIReader {
-  private readonly buffer:ArrayBufferLike
+  private readonly buffer: ArrayBufferLike
 
-  private readonly bufferOffset:number;
+  private readonly bufferOffset: number;
 
-  private readonly bufferLength:number;
+  private readonly bufferLength: number;
 
-  private readonly dataView:DataView;
+  private readonly dataView: DataView;
 
-  private readonly trackStartOffset:number;
+  private readonly trackStartOffset: number;
 
-  public readonly header:IMIDIFileHeader;
+  public readonly header: IMIDIFileHeader;
 
   constructor(
-    buffer: ArrayBuffer|DataView|Buffer
+    buffer: ArrayBuffer | DataView | Buffer
   ) {
     if (
       buffer instanceof DataView
@@ -67,26 +70,26 @@ export class MIDIReader {
     this.header = header;
   }
 
-  private readUint32(startIndex:number): number {
+  private readUint32(startIndex: number): number {
     return this.dataView.getUint32(startIndex);
   }
 
-  private readUint16(startIndex:number): number {
+  private readUint16(startIndex: number): number {
     return this.dataView.getUint16(startIndex);
   }
 
-  private readString(startIndex:number, length:number): string {
+  private readString(startIndex: number, length: number): string {
     return bufferToString(this.buffer, this.bufferOffset + startIndex, length);
   }
 
-  private readVariableLength(startIndex:number): [number, number] {
+  private readVariableLength(startIndex: number): [number, number] {
     return fromVariableLengthValue(this.buffer, this.bufferOffset + startIndex);
   }
 
   private readMIDIEvent(
-    startIndex:number,
-    trackNumber:number,
-    previousStatusByte?:number,
+    startIndex: number,
+    trackNumber: number,
+    previousStatusByte?: number,
   ): IReadEventResult {
     const [bytesRead, deltaTime] = this.readVariableLength(startIndex);
     let index = startIndex + bytesRead;
@@ -113,9 +116,9 @@ export class MIDIReader {
     };
   }
 
-  private readFileHeader(startIndex:number): [number, IMIDIFileHeader] {
+  private readFileHeader(startIndex: number): [number, IMIDIFileHeader] {
     const length = this.dataView.getUint32(startIndex);
-    
+
     // Add 4 bytes for the length field
     let index = startIndex + 4;
 
@@ -143,7 +146,7 @@ export class MIDIReader {
     const divisionNum = this.dataView.getUint16(index);
     index += 2;
 
-    let division: ITicksPerQuarterNote|ISMPTE;
+    let division: ITicksPerQuarterNoteDivision | ISMPTEDivision;
 
     // high bit set = SMPTE
     if (divisionNum >> 15 === 1) {
@@ -156,7 +159,7 @@ export class MIDIReader {
     }
     else {
       division = {
-        ticks: divisionNum & 0x7FFF, 
+        ticks: divisionNum & 0x7FFF,
       };
     }
 
@@ -175,9 +178,9 @@ export class MIDIReader {
     {
       eventTypes = MIDIEventType.All,
     }:
-    {
-      eventTypes?:MIDIEventType,
-    } = {}
+      {
+        eventTypes?: MIDIEventType,
+      } = {}
   ) {
     let index = this.trackStartOffset;
     let inHeader = false;
@@ -190,11 +193,11 @@ export class MIDIReader {
       if (currentTrackEndIndex === null) {
         const chunkType = this.readString(index, 4);
         index += 4;
-  
+
         if (chunkType !== 'MTrk') {
           throw new MIDIParseError('No track header found at start of track');
         }
-        
+
         const length = this.readUint32(index);
         index += 4;
         currentTrackEndIndex = index + length;
@@ -206,7 +209,7 @@ export class MIDIReader {
           trackNumber,
           previousStatusByte
         );
-        
+
         index += bytesRead;
 
         previousStatusByte = statusByte;

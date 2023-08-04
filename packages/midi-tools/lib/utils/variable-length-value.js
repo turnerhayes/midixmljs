@@ -1,4 +1,7 @@
-export function toVariableLengthValue(num) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.fromVariableLengthValue = exports.toVariableLengthValue = void 0;
+function toVariableLengthValue(num) {
     const bytes = [];
     do {
         let byte = num & 0x7F;
@@ -10,8 +13,9 @@ export function toVariableLengthValue(num) {
     } while (num > 0);
     return new Uint8Array(bytes);
 }
+exports.toVariableLengthValue = toVariableLengthValue;
 ;
-export function fromVariableLengthValue(buffer, startIndex = 0) {
+function fromVariableLengthValue(buffer, startIndex = 0) {
     const uArray = new Uint8Array(buffer, startIndex);
     let value = 0;
     let index = -1;
@@ -23,4 +27,5 @@ export function fromVariableLengthValue(buffer, startIndex = 0) {
     } while (uArray[index] & 0x80);
     return [bytesRead, value];
 }
+exports.fromVariableLengthValue = fromVariableLengthValue;
 ;

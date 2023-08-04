@@ -1,20 +1,23 @@
 export {
   MIDIFile,
-} from './MIDIWriter';
+} from './MIDIFile/MIDIFile';
+
+export { MIDIFileType } from './MIDIFileType';
+
+export { IMIDIEvent } from './MIDIEvents/IMIDIEvent';
+
+export { MIDIEventType } from './MIDIEventType';
+
+export { IMIDIFileHeader } from './IMIDIFileHeader';
+
+export { MIDIParseError } from './MIDIParseError';
 
 export {
-  IMIDIEvent,
-  IMIDIChannelEvent,
-  IMIDIMetaEvent,
-  IMIDIFileHeader,
-  ISMPTEDivision,
-  ITicksPerQuarterNoteDivision,
-  MIDIEventType,
-  MIDIEvents,
-  MIDIFileType,
-  MIDIParseError,
-  MIDIReader,
-} from './MIDIReader';
+  ISMPTE as ISMPTEDivision,
+  ITicksPerQuarterNote as ITicksPerQuarterNoteDivision,
+} from './MIDIDivision';
+
+export { MIDIReader } from './MIDIReader';
 
 export {
   bufferToString,

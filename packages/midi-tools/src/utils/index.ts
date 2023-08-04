@@ -17,7 +17,7 @@ export {
 export {
   IKeySignature,
   KeySharps,
-} from './IKeySignature';
+} from '../IKeySignature';
 
 export {
   ITimeSignature,
@@ -30,3 +30,9 @@ export {
 export {
   NoteStep,
 } from './NoteStep';
+
+export {
+  stringToCharCodeArray
+} from './string-to-buffer';
+
+export { MIDIParseError } from '../MIDIParseError';

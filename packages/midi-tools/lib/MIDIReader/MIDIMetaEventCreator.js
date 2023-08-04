@@ -1,18 +1,21 @@
-import { Meta as Events } from "./MIDIEvents";
-import { bufferToString } from '../utils/buffer-to-string';
-import { fromVariableLengthValue } from '../utils/variable-length-value';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createMetaEventFromBytes = void 0;
+const MIDIEvents_1 = require("../MIDIEvents");
+const buffer_to_string_1 = require("../utils/buffer-to-string");
+const variable_length_value_1 = require("../utils/variable-length-value");
 const readStringMetaEvent = (dataView, startIndex) => {
     let index = startIndex;
-    const [bytesRead, stringLength] = fromVariableLengthValue(dataView.buffer, dataView.byteOffset + index);
+    const [bytesRead, stringLength] = (0, variable_length_value_1.fromVariableLengthValue)(dataView.buffer, dataView.byteOffset + index);
     index += bytesRead;
-    const str = bufferToString(dataView.buffer, dataView.byteOffset + index, stringLength);
+    const str = (0, buffer_to_string_1.bufferToString)(dataView.buffer, dataView.byteOffset + index, stringLength);
     index = index + stringLength;
     return [
         bytesRead + stringLength,
         str
     ];
 };
-export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) => {
+const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) => {
     let index = startIndex;
     const metaEventTypeNum = dataView.getUint8(index);
     index += 1;
@@ -22,56 +25,56 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         index += 1;
         const sequenceNumber = dataView.getUint16(index);
         index += 2;
-        event = new Events.SequenceNumberEvent({
+        event = new MIDIEvents_1.Meta.SequenceNumberEvent({
             sequenceNumber,
         });
     }
     else if (metaEventTypeNum === 0x01) {
         const [bytesRead, text] = readStringMetaEvent(dataView, index);
         index += bytesRead;
-        event = new Events.TextEvent({
+        event = new MIDIEvents_1.Meta.TextEvent({
             text,
         });
     }
     else if (metaEventTypeNum === 0x02) {
         const [bytesRead, copyright] = readStringMetaEvent(dataView, index);
         index += bytesRead;
-        event = new Events.CopyrightEvent({
+        event = new MIDIEvents_1.Meta.CopyrightEvent({
             copyright,
         });
     }
     else if (metaEventTypeNum === 0x03) {
         const [bytesRead, name] = readStringMetaEvent(dataView, index);
         index += bytesRead;
-        event = new Events.TrackNameEvent({
+        event = new MIDIEvents_1.Meta.TrackNameEvent({
             name,
         });
     }
     else if (metaEventTypeNum === 0x04) {
         const [bytesRead, name] = readStringMetaEvent(dataView, index);
         index += bytesRead;
-        event = new Events.InstrumentNameEvent({
+        event = new MIDIEvents_1.Meta.InstrumentNameEvent({
             name,
         });
     }
     else if (metaEventTypeNum === 0x05) {
         const [bytesRead, lyric] = readStringMetaEvent(dataView, index);
         index += bytesRead;
-        event = new Events.LyricEvent({
+        event = new MIDIEvents_1.Meta.LyricEvent({
             lyric,
         });
     }
     else if (metaEventTypeNum === 0x06) {
         const [bytesRead, marker] = readStringMetaEvent(dataView, index);
         index += bytesRead;
-        event = new Events.MarkerEvent({
+        event = new MIDIEvents_1.Meta.MarkerEvent({
             marker,
         });
     }
     else if (metaEventTypeNum === 0x07) {
         const [bytesRead, cueText] = readStringMetaEvent(dataView, index);
         index += bytesRead;
-        event = new Events.CuePointEvent({
+        event = new MIDIEvents_1.Meta.CuePointEvent({
             cueText,
         });
     }
@@ -80,7 +83,7 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         index += 1;
         const channelNumber = dataView.getUint8(index);
         index += 1;
-        event = new Events.ChannelPrefixEvent({
+        event = new MIDIEvents_1.Meta.ChannelPrefixEvent({
             channelNumber,
         });
     }
@@ -89,7 +92,7 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         index += 1;
         const portNumber = dataView.getUint8(index);
         index += 1;
-        event = new Events.PortPrefixEvent({
+        event = new MIDIEvents_1.Meta.PortPrefixEvent({
             portNumber,
         });
     }
@@ -103,7 +106,7 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         const microsecondsPerQuarterNote = (dataView.getUint8(index) << 16) +
             (dataView.getUint8(index + 1) << 8) + dataView.getUint8(index + 2);
         index += 3;
-        event = new Events.SetTempoEvent({
+        event = new MIDIEvents_1.Meta.SetTempoEvent({
             microsecondsPerQuarterNote,
         });
     }
@@ -120,7 +123,7 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         index += 1;
         const fractionalFrames = dataView.getUint8(index);
         index += 1;
-        event = new Events.SMPTEOffsetEvent({
+        event = new MIDIEvents_1.Meta.SMPTEOffsetEvent({
             hours,
             minutes,
             seconds,
@@ -139,7 +142,7 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         index += 1;
         const thirtySecondNotes = dataView.getUint8(index);
         index += 1;
-        event = new Events.TimeSignatureEvent({
+        event = new MIDIEvents_1.Meta.TimeSignatureEvent({
             numerator,
             denominator,
             clocksPerTick,
@@ -153,13 +156,13 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         index += 1;
         const isMajor = dataView.getUint8(index) === 0;
         index += 1;
-        event = new Events.KeySignatureEvent({
+        event = new MIDIEvents_1.Meta.KeySignatureEvent({
             sharps,
             isMajor,
         });
     }
     else if (metaEventTypeNum === 0x7F) {
-        const [bytesRead, length] = fromVariableLengthValue(dataView.buffer, dataView.byteOffset + index);
+        const [bytesRead, length] = (0, variable_length_value_1.fromVariableLengthValue)(dataView.buffer, dataView.byteOffset + index);
         index += bytesRead;
         let data = new Uint8Array(dataView.buffer, dataView.byteOffset + index, length);
         let id = data.slice(0, 1);
@@ -170,7 +173,7 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         else {
             data = data.slice(1);
         }
-        event = new Events.SequencerSpecificEvent({
+        event = new MIDIEvents_1.Meta.SequencerSpecificEvent({
             id,
             data,
         });
@@ -183,3 +186,4 @@ export const createMetaEventFromBytes = (statusByte, dataView, startIndex = 0) =
         event,
     ];
 };
+exports.createMetaEventFromBytes = createMetaEventFromBytes;

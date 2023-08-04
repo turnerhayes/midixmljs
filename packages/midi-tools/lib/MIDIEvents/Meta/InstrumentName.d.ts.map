@@ -1,0 +1,1 @@
+{"version":3,"file":"InstrumentName.d.ts","sourceRoot":"","sources":["../../../src/MIDIEvents/Meta/InstrumentName.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAC/C,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,mBAAoB,YAAW,cAAc;IACxD,SAAgB,IAAI,EAAE,MAAM,CAAC;IAE7B,SAAgB,IAAI,EAAE,aAAa,CAAoC;gBAGrE,EACE,IAAI,GACL,EACC;QACE,IAAI,EAAE,MAAM,CAAC;KACd;CAIN"}

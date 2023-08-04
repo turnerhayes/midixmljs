@@ -1,1 +1,0 @@
-{"version":3,"file":"Text.d.ts","sourceRoot":"","sources":["../../../../src/MIDIReader/MIDIEvents/Meta/Text.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAClD,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,SAAU,YAAW,cAAc;IAC9C,SAAgB,IAAI,EAAC,MAAM,CAAC;IAE5B,SAAgB,IAAI,EAAC,aAAa,CAA0B;gBAG1D,EACE,IAAI,GACL,EACD;QACE,IAAI,EAAC,MAAM,CAAC;KACb;CAIJ"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Copyright.d.ts","sourceRoot":"","sources":["../../../src/MIDIEvents/Meta/Copyright.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAC/C,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,cAAe,YAAW,cAAc;IACnD,SAAgB,SAAS,EAAE,MAAM,CAAC;IAElC,SAAgB,IAAI,EAAE,aAAa,CAA+B;gBAGhE,EACE,SAAS,GACV,EACC;QACE,SAAS,EAAE,MAAM,CAAC;KACnB;CAIN"}

@@ -1,14 +1,14 @@
-import { IMIDIEvent } from "./IMIDIEvent";
-import * as Events from './MIDIEvents';
+import { IMIDIEvent } from "../MIDIEvents/IMIDIEvent";
+import * as Events from '../MIDIEvents';
 import { createMetaEventFromBytes } from "./MIDIMetaEventCreator";
 import { fromVariableLengthValue } from "../utils/variable-length-value";
 import { bufferToString } from "../utils/buffer-to-string";
 
 
 const createNoteOffEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number = 0,
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number = 0,
 ): [number, Events.NoteOffEvent] => {
   const channel = (statusByte & 0xF) + 1;
   const noteNumber = dataView.getUint8(startIndex);
@@ -25,9 +25,9 @@ const createNoteOffEventFromBytes = (
 };
 
 const createNoteOnEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number = 0,
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number = 0,
 ): [number, Events.NoteOnEvent] => {
   const channel = (statusByte & 0xF) + 1;
   const noteNumber = dataView.getUint8(startIndex);
@@ -44,9 +44,9 @@ const createNoteOnEventFromBytes = (
 };
 
 const createSysexEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number = 0,
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number = 0,
 ): [number, Events.SysExEvent] => {
   const [bytesRead, dataLength] = fromVariableLengthValue(dataView.buffer, dataView.byteOffset + startIndex);
 
@@ -63,10 +63,10 @@ const createSysexEventFromBytes = (
 };
 
 const createProgramChangeEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number = 0,
-):[number, Events.ProgramChangeEvent] => {
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number = 0,
+): [number, Events.ProgramChangeEvent] => {
   const channel = (statusByte & 0xF) + 1;
   const programNumber = dataView.getUint8(startIndex);
 
@@ -80,9 +80,9 @@ const createProgramChangeEventFromBytes = (
 };
 
 const createControllerChangeEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number = 0,
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number = 0,
 ): [number, Events.ControllerChangeEvent] => {
   const channel = (statusByte & 0xF) + 1;
   const controllerNumber = dataView.getUint8(startIndex);
@@ -99,9 +99,9 @@ const createControllerChangeEventFromBytes = (
 };
 
 const createPolyphonicAftertouchEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number,
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number,
 ): [number, Events.PolyphonicAftertouchEvent] => {
   const channel = (statusByte & 0xF) + 1;
   const noteNumber = dataView.getUint8(startIndex);
@@ -118,9 +118,9 @@ const createPolyphonicAftertouchEventFromBytes = (
 }
 
 const createChannelAftertouchEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number,
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number,
 ): [number, Events.ChannelAftertouchEvent] => {
   const channel = (statusByte & 0xF) + 1;
   const pressure = dataView.getUint8(startIndex + 1);
@@ -135,9 +135,9 @@ const createChannelAftertouchEventFromBytes = (
 }
 
 const createPitchBendEventFromBytes = (
-  statusByte:number,
-  dataView:DataView,
-  startIndex:number,
+  statusByte: number,
+  dataView: DataView,
+  startIndex: number,
 ): [number, Events.PitchBendEvent] => {
   const channel = (statusByte & 0xF) + 1;
   const leastSignificantByte = dataView.getUint8(startIndex);
@@ -153,7 +153,7 @@ const createPitchBendEventFromBytes = (
   ];
 }
 
-const getCreateFunction = (statusByte:number) => {
+const getCreateFunction = (statusByte: number) => {
   if (statusByte >> 4 === 0x8) {
     return createNoteOffEventFromBytes;
   }
@@ -194,10 +194,10 @@ const getCreateFunction = (statusByte:number) => {
 };
 
 export const eventFromBytes = (
-  dataView:DataView,
-  startIndex:number = 0,
-  previousStatusByte:number|null = null,
-): {bytesRead:number, event:IMIDIEvent, statusByte:number}|null => {
+  dataView: DataView,
+  startIndex: number = 0,
+  previousStatusByte: number | null = null,
+): { bytesRead: number, event: IMIDIEvent, statusByte: number } | null => {
   let statusByte = dataView.getUint8(startIndex);
 
   let createFunction = getCreateFunction(statusByte);

@@ -1,7 +1,6 @@
 /// <reference types="node" />
-import { IMIDIFileHeader } from './IMIDIFileHeader';
-import { IMIDIEvent } from './IMIDIEvent';
-import { MIDIEventType } from './MIDIEventType';
+import { MIDIEventType, IMIDIFileHeader } from '../';
+import { IMIDIEvent } from '../MIDIEvents/IMIDIEvent';
 export declare class MIDIReader {
     private readonly buffer;
     private readonly bufferOffset;

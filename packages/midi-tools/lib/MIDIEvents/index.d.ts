@@ -1,0 +1,56 @@
+import { NoteOffEvent } from './NoteOff';
+import { NoteOnEvent } from './NoteOn';
+import { ProgramChangeEvent } from './ProgramChange';
+import { ControllerChangeEvent } from './ControllerChange';
+import { PolyphonicAftertouchEvent } from './PolyphonicAftertouch';
+import { ChannelAftertouchEvent } from './ChannelAftertouch';
+import { PitchBendEvent } from './PitchBend';
+import { SysExEvent } from './SysEx';
+export { NoteOffEvent, NoteOnEvent, ProgramChangeEvent, ControllerChangeEvent, PolyphonicAftertouchEvent, ChannelAftertouchEvent, PitchBendEvent, SysExEvent, };
+import { SequenceNumberEvent, TimeSignatureEvent, KeySignatureEvent, SetTempoEvent, PortPrefixEvent, ChannelPrefixEvent, CopyrightEvent, TrackNameEvent, TextEvent, InstrumentNameEvent, LyricEvent, MarkerEvent, CuePointEvent, SMPTEOffsetEvent, SequencerSpecificEvent } from './Meta';
+export { SequenceNumberEvent, TimeSignatureEvent, KeySignatureEvent, SetTempoEvent, PortPrefixEvent, ChannelPrefixEvent, CopyrightEvent, TrackNameEvent, TextEvent, InstrumentNameEvent, LyricEvent, MarkerEvent, CuePointEvent, SMPTEOffsetEvent, SequencerSpecificEvent, };
+export declare const Meta: {
+    SequenceNumberEvent: typeof SequenceNumberEvent;
+    TimeSignatureEvent: typeof TimeSignatureEvent;
+    KeySignatureEvent: typeof KeySignatureEvent;
+    SetTempoEvent: typeof SetTempoEvent;
+    PortPrefixEvent: typeof PortPrefixEvent;
+    ChannelPrefixEvent: typeof ChannelPrefixEvent;
+    CopyrightEvent: typeof CopyrightEvent;
+    TrackNameEvent: typeof TrackNameEvent;
+    TextEvent: typeof TextEvent;
+    InstrumentNameEvent: typeof InstrumentNameEvent;
+    LyricEvent: typeof LyricEvent;
+    MarkerEvent: typeof MarkerEvent;
+    CuePointEvent: typeof CuePointEvent;
+    SMPTEOffsetEvent: typeof SMPTEOffsetEvent;
+    SequencerSpecificEvent: typeof SequencerSpecificEvent;
+};
+export declare const MIDIEvents: {
+    NoteOffEvent: typeof NoteOffEvent;
+    NoteOnEvent: typeof NoteOnEvent;
+    ProgramChangeEvent: typeof ProgramChangeEvent;
+    ControllerChangeEvent: typeof ControllerChangeEvent;
+    PolyphonicAftertouchEvent: typeof PolyphonicAftertouchEvent;
+    ChannelAftertouchEvent: typeof ChannelAftertouchEvent;
+    PitchBendEvent: typeof PitchBendEvent;
+    SysExEvent: typeof SysExEvent;
+    Meta: {
+        SequenceNumberEvent: typeof SequenceNumberEvent;
+        TimeSignatureEvent: typeof TimeSignatureEvent;
+        KeySignatureEvent: typeof KeySignatureEvent;
+        SetTempoEvent: typeof SetTempoEvent;
+        PortPrefixEvent: typeof PortPrefixEvent;
+        ChannelPrefixEvent: typeof ChannelPrefixEvent;
+        CopyrightEvent: typeof CopyrightEvent;
+        TrackNameEvent: typeof TrackNameEvent;
+        TextEvent: typeof TextEvent;
+        InstrumentNameEvent: typeof InstrumentNameEvent;
+        LyricEvent: typeof LyricEvent;
+        MarkerEvent: typeof MarkerEvent;
+        CuePointEvent: typeof CuePointEvent;
+        SMPTEOffsetEvent: typeof SMPTEOffsetEvent;
+        SequencerSpecificEvent: typeof SequencerSpecificEvent;
+    };
+};
+//# sourceMappingURL=index.d.ts.map

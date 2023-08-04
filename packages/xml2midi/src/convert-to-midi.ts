@@ -26,13 +26,15 @@ const args = yargs.command(
 .help().argv;
 */
 
-let filePathArg;
+let filePathArg: string | undefined;
 
 commander.option(
   "-o, --out [output path]",
   `Path to file where the resulting MIDI file should be written
-  If the path is omitted, it will write to the same filename, but with the extension replaced by ".midi" and in the current working directory.
-  If this option is omitted entirely, it will write the MIDI file to stdout.`
+  If the path is omitted, it will write to the same filename, 
+  but with the extension replaced by ".midi" and in the current working
+  directory. If this option is omitted entirely, it will write the MIDI
+  file to stdout.`
 ).arguments(
   "<filename>"
 ).action(

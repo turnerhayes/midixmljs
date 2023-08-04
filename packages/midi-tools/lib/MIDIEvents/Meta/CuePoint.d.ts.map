@@ -1,0 +1,1 @@
+{"version":3,"file":"CuePoint.d.ts","sourceRoot":"","sources":["../../../src/MIDIEvents/Meta/CuePoint.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAC/C,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,aAAc,YAAW,cAAc;IAClD,SAAgB,OAAO,EAAE,MAAM,CAAC;IAEhC,SAAgB,IAAI,EAAE,aAAa,CAA8B;gBAG/D,EACE,OAAO,GACR,EACC;QACE,OAAO,EAAE,MAAM,CAAC;KACjB;CAIN"}

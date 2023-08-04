@@ -1,10 +1,10 @@
-export function NoteNumberToName(note) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NoteNameToNumber = exports.NoteNumberToName = void 0;
+function NoteNumberToName(note) {
     let step;
     let alter;
-    // eslint-disable-next-line no-magic-numbers
     let octave = Math.floor(note / 12) - 1;
-    /* eslint-disable no-fallthrough */
-    /* eslint-disable no-magic-numbers */
     switch (note % 12) {
         case 1:
             alter = 1;
@@ -38,8 +38,6 @@ export function NoteNumberToName(note) {
             step = "B";
             break;
     }
-    /* eslint-enable no-magic-numbers */
-    /* eslint-enable no-fallthrough */
     const noteObj = {
         step,
         octave,
@@ -50,6 +48,7 @@ export function NoteNumberToName(note) {
     }
     return noteObj;
 }
+exports.NoteNumberToName = NoteNumberToName;
 const stepToNumber = {
     C: 0,
     D: 2,
@@ -60,7 +59,7 @@ const stepToNumber = {
     B: 11,
 };
 const steps = "ABCDEFG";
-export function NoteNameToNumber(noteName) {
+function NoteNameToNumber(noteName) {
     let step;
     let octave;
     let alter;
@@ -97,6 +96,6 @@ export function NoteNameToNumber(noteName) {
     if (alter === 1) {
         number += 1;
     }
-    // eslint-disable-next-line no-magic-numbers
     return number + ((octave + 1) * 12);
 }
+exports.NoteNameToNumber = NoteNameToNumber;

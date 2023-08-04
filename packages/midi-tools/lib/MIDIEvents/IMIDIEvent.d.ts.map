@@ -1,0 +1,1 @@
+{"version":3,"file":"IMIDIEvent.d.ts","sourceRoot":"","sources":["../../src/MIDIEvents/IMIDIEvent.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,kBAAkB,CAAC;AAEjD,MAAM,WAAW,UAAU;IACzB,IAAI,EAAE,aAAa,CAAC;CACrB;AAED,MAAM,WAAW,iBAAkB,SAAQ,UAAU;IACnD,OAAO,EAAE,MAAM,CAAC;CACjB;AAED,MAAM,WAAW,cAAe,SAAQ,UAAU;CAAI"}

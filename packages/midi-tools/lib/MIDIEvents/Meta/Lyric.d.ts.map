@@ -1,0 +1,1 @@
+{"version":3,"file":"Lyric.d.ts","sourceRoot":"","sources":["../../../src/MIDIEvents/Meta/Lyric.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAC/C,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,qBAAa,UAAW,YAAW,cAAc;IAC/C,SAAgB,KAAK,EAAE,MAAM,CAAC;IAE9B,SAAgB,IAAI,EAAE,aAAa,CAA2B;gBAG5D,EACE,KAAK,GACN,EACC;QACE,KAAK,EAAE,MAAM,CAAC;KACf;CAIN"}
