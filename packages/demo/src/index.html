@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <meta charset="UTF8" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script defer
+    src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0">
+    </script>
+</head>
+
+<body>
+  <div>
+    <header>
+      <h3>
+        XML to MIDI
+      </h3>
+    </header>
+    <div class="control-container">
+      <label class="file-input-label">
+        Choose an XML file
+        <input type="file" id="xml-file" />
+      </label>
+
+      <div>
+        <midi-player id="midi-player" sound-font visualizer="#midi-player-visualizer">
+        </midi-player>
+      </div>
+    </div>
+  </div>
+  <div>
+    <header>
+      <h3>
+        MIDI to XML
+      </h3>
+    </header>
+    <div class="control-container">
+      <label class="file-input-label">
+        Choose a MIDI file
+        <input type="file" id="midi-file" />
+      </label>
+
+      <button disabled id="show-xml-button">
+        Show XML
+      </button>
+      <dialog class="dialog" id="xml-dialog">
+        <header class="dialog-header">
+          <h1>MusicXML</h1>
+          <div>
+            <button class="open-in-new-window-button">⧉</button>
+            <button class="dialog-close-button">✖</button>
+          </div>
+        </header>
+        <div class="spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="dialog-body">
+        </div>
+      </dialog>
+
+      <button disabled id="show-sheet-music-button">
+        Show sheet music
+      </button>
+      <dialog class="dialog" id="sheet-music-dialog">
+        <header class="dialog-header">
+          <h1>Sheet Music</h1>
+          <div>
+            <button class="open-in-new-window-button">⧉</button>
+            <button class="dialog-close-button">✖</button>
+          </div>
+        </header>
+        <div class="spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="dialog-body">
+        </div>
+      </dialog>
+    </div>
+  </div>
+</body>
+
+</html>

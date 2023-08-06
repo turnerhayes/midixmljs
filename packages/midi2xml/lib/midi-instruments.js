@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getInstrumentName = void 0;
 const instruments = {
     "1": {
         "name": "Acoustic Grand Piano",
@@ -384,7 +387,7 @@ const instruments = {
         "name": "Gunshot",
     },
 };
-export function getInstrumentName({ instrumentId }) {
+function getInstrumentName({ instrumentId }) {
     instrumentId += 1;
     console.log({
         instrumentId,
@@ -394,3 +397,4 @@ export function getInstrumentName({ instrumentId }) {
     }
     return instruments[instrumentId].name;
 }
+exports.getInstrumentName = getInstrumentName;

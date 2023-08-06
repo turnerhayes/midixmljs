@@ -1,0 +1,1 @@
+export { getXML } from './MIDIToXML';

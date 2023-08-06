@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <meta charset="UTF8" />
+  <title>
+    MIDI-XML Demo
+  </title>
+<script defer src="./index.js"></script></head>
+
+<body>
+  <div>
+    <header>
+      <h3>
+        XML to MIDI
+      </h3>
+    </header>
+    <div>
+      <label>
+        Choose an XML file
+        <input type="file" id="xml-file" />
+      </label>
+
+      <midi-player id="midi-player"></midi-player>
+    </div>
+  </div>
+  <div>
+    <header>
+      <h3>
+        MIDI to XML
+      </h3>
+    </header>
+    <div>
+      <label>
+        Choose a MIDI file
+        <input type="file" id="midi-file" />
+      </label>
+
+      <button disabled id="show-xml-button">
+        Show XML
+      </button>
+      <dialog class="dialog" id="xml-dialog">
+        <header class="dialog-header">
+          <h1>MusicXML</h1>
+          <div>
+            <button class="open-in-new-window-button">⧉</button>
+            <button class="dialog-close-button">✖</button>
+          </div>
+        </header>
+        <div class="spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="dialog-body">
+        </div>
+      </dialog>
+
+      <button disabled id="show-sheet-music-button">
+        Show sheet music
+      </button>
+      <dialog class="dialog" id="sheet-music-dialog">
+        <header class="dialog-header">
+          <h1>Sheet Music</h1>
+          <div>
+            <button class="open-in-new-window-button">⧉</button>
+            <button class="dialog-close-button">✖</button>
+          </div>
+        </header>
+        <div class="spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="dialog-body">
+        </div>
+      </dialog>
+    </div>
+  </div>
+</body>
+
+</html>
