@@ -56,4 +56,7 @@ module.exports = getConfig(webpack, {
       publicPath: '.',
     }),
   ],
+  watchOptions: {
+    ignored: /node_modules\/(?!@thayes\/)/,
+  },
 });
